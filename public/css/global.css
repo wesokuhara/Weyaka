@@ -1,0 +1,52 @@
+/**
+ * global.css
+ * Styling for all pages
+ * 
+ * Weyaka
+ * Wes Okuhara, Yashna Bowen, Kathy Hoang
+ */
+
+/***** GLOBAL *****/
+html {
+    padding: 2%;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #D8EBE7;
+} 
+
+.jumbotron {
+    background-color: rgba(200, 200, 200, 0.6);
+    text-align: center;
+}
+
+/* the container cannot be wider than 540px */
+.container {
+    max-width: 540px;
+    height: 100%;
+}
+
+/* from 0px to 300px, set the font size */
+@media screen and (max-width: 540px) {
+    .jumbotron {
+        font-size: 20px;
+    }
+}
+
+/***** LOGIN *****/
+#loginForm {
+    padding: 5%;
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: rgba(200, 200, 200, 0.6);
+    border-radius: 8px;
+}
+
+/***** HOME *****/
+.icon {
+    padding: 4%;
+    width: 50%;
+    float: left;
+}
