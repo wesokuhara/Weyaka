@@ -11,9 +11,10 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 
-// LOAD MODULES /////////////////////////////////////////////////////
+// LOAD JS MODULES //////////////////////////////////////////////////
 var login = require('./routes/login');
 var home = require('./routes/home');
+var digest = require('./routes/digest');
 /////////////////////////////////////////////////////////////////////
 
 var app = express();
@@ -38,9 +39,10 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-// ROUTES - CALLS CONTROLLER METHOD /////////////////////////////////
+// ROUTES - CALLS JS CONTROLLER METHOD //////////////////////////////
 app.get('/', login.view); //login page
 app.post('/home', home.view); //home page
+app.get('/digest', digest.view); //digest page
 /////////////////////////////////////////////////////////////////////
 
 http.createServer(app).listen(app.get('port'), function(){

@@ -8,7 +8,8 @@
 
 /***** GLOBAL *****/
 html {
-    padding: 2%;
+    padding: 3%;
+    padding-top: 5%;
     height: 100%;
 }
 
@@ -18,30 +19,23 @@ body {
 } 
 
 .jumbotron {
-    background-color: rgba(200, 200, 200, 0.6);
+    background-color: #edeff1;
     text-align: center;
 }
 
-/* the container cannot be wider than 540px */
 .container {
     max-width: 540px;
     height: 100%;
 }
 
-/* from 0px to 300px, set the font size */
-@media screen and (max-width: 540px) {
-    .jumbotron {
-        font-size: 20px;
-    }
+/***** LOGIN *****/
+#login-body {
+    background-color: #1abc9c;
 }
 
-/***** LOGIN *****/
-#loginForm {
-    padding: 5%;
+.login-form {
     max-width: 300px;
     margin: 0 auto;
-    background-color: rgba(200, 200, 200, 0.6);
-    border-radius: 8px;
 }
 
 /***** HOME *****/
