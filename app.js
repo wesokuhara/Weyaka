@@ -41,7 +41,10 @@ if ('development' == app.get('env')) {
 
 // ROUTES - CALLS JS CONTROLLER METHOD //////////////////////////////
 app.get('/', login.view); //login page
+
+app.get('/home', home.view); //home page
 app.post('/home', home.view); //home page
+
 app.get('/digest', digest.view); //digest page
 /////////////////////////////////////////////////////////////////////
 
