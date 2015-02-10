@@ -29,7 +29,11 @@ body {
 }
 
 .nav {
-    padding-right: 3%;
+    padding-right: 4%;
+}
+
+.nav li {
+    height: 45px;
 }
 
 /***** LOGIN *****/
