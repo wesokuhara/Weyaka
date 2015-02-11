@@ -4,7 +4,7 @@
 <head>
 	<title>Weyaka - {{username}}</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<!-- Import CSS -->
 	<link href="css/bootstrap.css" rel="stylesheet">
@@ -31,7 +31,7 @@
 				<li><a href="#traffic" class="digest-link">Traffic</a></li>
 				<li><a href="#weather" class="digest-link">Weather</a></li>
 				<li><a href="#notes" class="digest-link">Notes</a></li>
-				<li><a href="#schedule" class="digest-link">Schedule</a></li>
+				<li><a href="#calendar" class="digest-link">Calendar</a></li>
 				<li class="nav-divider"></li>
 			</ul>
 
@@ -72,11 +72,14 @@
 		<hr>
 	</div>
 
-	<!-- SCHEDULE SECTION -->
-	<div class="container" id="schedule">
+	<!-- CALENDAR SECTION -->
+	<div class="container" id="calendar">
 		<br>
-		<h4>Schedule</h4>
+		<h4>Calendar</h4>
 		<hr>
+
+		<iframe	id="calendar" src="https://www.google.com/calendar/embed?src=qqjra2o5r6j02cp33v8no2qp6c%40group.calendar.google.com&ctz=America/Los_Angeles" scrolling="no">
+		</iframe>
 	</div>
 
 	<!-- SETTINGS SECTION -->
@@ -84,6 +87,13 @@
 		<br>
 		<h4>Settings</h4>
 		<hr>
+		<p><b>Developed by:</b><br>
+			Wes Okuhara<br>
+			Yashna Bowen<br>
+			Kathy Hoang<br>
+			<br>
+
+			&copy 2015</p>
 	</div>
 
   	<!-- Link Javascript -->

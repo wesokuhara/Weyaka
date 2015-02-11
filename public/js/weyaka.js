@@ -10,18 +10,6 @@
 
 $(document).ready( function() {
 
-	/* Function to hide the navbar dropdown
-	 * when dropdown is open and the user clicks outside the dropdown
-	 *
-	$('html').click(function () {
-		console.log("document clicked");
-		// if dropdown is displayed, collapse it
-	 	if ($('.navbar-toggle').css('display') != 'none') {
-	    	$('.navbar-collapse').collapse('hide');
-	    }
-    });
-*/
-
 	/* When a digest link is clicked, collapse the navbar dropdown
 	 * if it is open and then scroll to that section of the page
 	 */

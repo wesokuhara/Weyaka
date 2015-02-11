@@ -1,6 +1,6 @@
 /**
  * global.css
- * Styling for all pages
+ * Custom styling for all pages
  * 
  * Weyaka
  * Wes Okuhara, Yashna Bowen, Kathy Hoang
@@ -16,19 +16,30 @@ body {
     background-color: #D8EBE7;
 } 
 
+hr {
+    border-top: 3px solid #F3F3F3;
+    border-radius: 10px;
+}
+
 .jumbotron {
     background-color: #edeff1;
     text-align: center;
 }
 
 .container {
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 115px;
     max-width: 540px;
     height: 100%;
 }
 
 /***** NAVBAR STYLING *****/
+
+/* Padding to the right of the navbar brand */
+.navbar-brand {
+    padding-top: 11px;
+    padding-right: 50px;
+}
 
 /* Set the divider to be a little transparent */
 .nav-divider {
@@ -73,7 +84,7 @@ body {
 }
 
 .login-form {
-    max-width: 300px;
+    max-width: 320px;
     margin: 0 auto;
 }
 
@@ -86,6 +97,14 @@ body {
 
 /***** TRAFFIC SECTION *****/
 #googleMap {
-    height: 50%;
+    width: 100%;
+    height: calc(100% - 200px);
+    border-radius: 10px;
+}
+
+/***** CALENDAR SECTION *****/
+#calendar { 
+    width: 100%;
+    height: calc(100% - 50px);
     border-radius: 10px;
 }
