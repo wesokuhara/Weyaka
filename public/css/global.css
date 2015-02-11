@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    height: 100%;
+    height: 600px;
     background-color: #D8EBE7;
 } 
 
@@ -30,11 +30,10 @@ hr {
     padding-top: 30px;
     padding-bottom: 115px;
     max-width: 540px;
-    height: 100%;
+    height: 100%; /* fill width of static body */
 }
 
 /***** NAVBAR STYLING *****/
-
 /* Padding to the right of the navbar brand */
 .navbar-brand {
     padding-top: 11px;
@@ -90,21 +89,21 @@ hr {
 
 /***** HOME PAGE  *****/
 .icon {
-    padding: 4%;
-    width: 50%;
+    padding: 13px;
+    width: 50%; /* fill half width of static container */
     float: left;
 }
 
 /***** TRAFFIC SECTION *****/
 #googleMap {
-    width: 100%;
-    height: calc(100% - 200px);
+    width: 100%; /* fill width of static container */
+    height: 380px; 
     border-radius: 10px;
 }
 
 /***** CALENDAR SECTION *****/
-#calendar { 
-    width: 100%;
-    height: calc(100% - 50px);
+#googleCalendar { 
+    width: 100%; /* fill width of static container */
+    height: 420px;
     border-radius: 10px;
 }
