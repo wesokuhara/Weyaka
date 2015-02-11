@@ -4108,8 +4108,8 @@ fieldset[disabled] .input-group-btn .btn-default.active {
   }
 .navbar-brand {
   height: 53px;
-  padding: 14px 21px;
-  font-size: 24px;
+  padding: 10px 30px 9px 20px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 1.042;
   }
@@ -4311,7 +4311,7 @@ select[multiple].navbar-form .select2-search input[type="text"] {
   }
 .navbar-nav > li > .dropdown-menu {
   min-width: 100%;
-  margin-top: 9px;
+  margin-top: 0px; /* was 9px */
   border-radius: 4px;
   }
 @media (max-width: 767px) {

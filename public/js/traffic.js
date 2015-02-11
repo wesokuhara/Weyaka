@@ -1,4 +1,5 @@
-/* traffic.js
+/**
+ * traffic.js
  * 
  * JS file to intialize the map
  *

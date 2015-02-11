@@ -16,7 +16,6 @@
 	<!-- NAVBAR -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="navbar-header">
-			<!-- When screen size is small, convert to drop down menu -->
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
 				<span class="sr-only">Toggle navigation</span>
 			</button>
@@ -27,18 +26,21 @@
 
 		<!-- Navbar contents -->
 		<div class="collapse navbar-collapse" id="menu">
+			<!-- Navbar links -->
 			<ul class="nav navbar-nav">
-				<li class="digest-link"><a href="#traffic">Traffic</a></li>
-				<li class="digest-link"><a href="#weather">Weather</a></li>
-				<li class="digest-link"><a href="#notes">Notes</a></li>
-				<li class="digest-link"><a href="#schedule">Schedule</a></li>
+				<li><a href="#traffic" class="digest-link">Traffic</a></li>
+				<li><a href="#weather" class="digest-link">Weather</a></li>
+				<li><a href="#notes" class="digest-link">Notes</a></li>
+				<li><a href="#schedule" class="digest-link">Schedule</a></li>
+				<li class="nav-divider"></li>
 			</ul>
+
+			<!-- User settings dropdown -->
 			<ul class="nav navbar-nav navbar-right">
-				<!-- User settings dropdown -->
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle fui-user" data-toggle="dropdown" role="button"><span class="caret"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Username<span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="#settings">Settings</a></li>
+						<li><a href="#settings" class="digest-link">Settings</a></li>
 						<li><a href="/" class="logout-button">Logout</a></li>
 					</ul>
 				</li>

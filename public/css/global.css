@@ -28,8 +28,43 @@ body {
     height: 100%;
 }
 
-.navbar-right {
-    padding-right: 30px;
+/***** NAVBAR STYLING *****/
+
+/* Set the divider to be a little transparent */
+.nav-divider {
+    opacity: 0.3;
+}
+
+/* Increase font size of links */
+.navbar ul li a {
+    font-size: 18px;
+}
+
+/* In mobile view, space out each link in the menu */
+@media (max-width: 767px) {
+    .navbar-nav li a {
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+}
+
+/* In desktop view, add padding on the right of the dropdown */
+@media (min-width: 768px) {
+    .dropdown {
+        padding-right: 17px;
+    }
+}
+
+/* Increase the maximum height for the menu dropdown */
+.navbar-fixed-top .navbar-collapse,
+.navbar-fixed-bottom .navbar-collapse {
+    max-height: 370px;
+}
+
+/* Increase padding for User settings dropdown */
+.navbar-nav .open .dropdown-menu > li > a,
+.navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 12px 15px 12px 31px !important;
 }
 
 /***** LOGIN PAGE *****/
