@@ -28,15 +28,11 @@ body {
     height: 100%;
 }
 
-.nav {
-    padding-right: 4%;
+.navbar-right {
+    padding-right: 30px;
 }
 
-.nav li {
-    height: 45px;
-}
-
-/***** LOGIN *****/
+/***** LOGIN PAGE *****/
 #login-body {
     background-color: #1abc9c;
 }
@@ -46,14 +42,14 @@ body {
     margin: 0 auto;
 }
 
-/***** HOME *****/
+/***** HOME PAGE  *****/
 .icon {
     padding: 4%;
     width: 50%;
     float: left;
 }
 
-/***** TRAFFIC *****/
+/***** TRAFFIC SECTION *****/
 #googleMap {
     height: 50%;
     border-radius: 10px;

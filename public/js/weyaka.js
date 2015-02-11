@@ -8,51 +8,39 @@
  * Wes Okuhara, Yashna Bowen, Kathy Hoang
  */
 
-/* Function to hide the navbar dropdown
- * when a link in the dropdown is clicked
- */
-$('.nav a').on('click', function(){
- 	if ($('.navbar-toggle').css('display') != 'none'){
-    	$('.navbar-collapse').collapse('hide');
-    }
-});
+$(document).ready( function() {
 
-/* When links in the navbar on the digest page take you to the
- * digest page, scroll to the section 
- */
-$('.digest-link a').click(function(event) {
-	event.preventDefault(); //do not perform href action
+	/* Function to hide the navbar dropdown
+	 * when dropdown is open and the user clicks outside the dropdown
+	 */
+	$(document).click(function() {
+		//if dropdown is displayed, collapse it
+	 	if ($('.navbar-toggle').css('display') != 'none'){
+	    	$('.navbar-collapse').collapse('hide');
+	    }
+    });
 
-	$('html, body').scrollTo(this.hash, this.hash);
-	$(this).hover(false);
-});
+	/* Function to collapse the dropdown menu
+	 * if it is open and a link is clicked
+	 * 
+	 * Function also scrolls to specified section of page
+	 * when user is on the digest page and a link in the navbar
+	 * dropdown is clicked
+	 */
+	$('.digest-link a').click(function (event) {
+		//collapse dropdown if open
+		if ($('.navbar-toggle').css('display') != 'none'){
+	    	$('.navbar-collapse').collapse('hide');
+	    }
 
-
-
-/*
-$(document).ready(function() {
-	$('#traffic').hover(function() {
-		$('#traffic-link').addClass('active');
-	}, function() {
-		$('#traffic-link').removeClass('active');
+		//do not perform href action and scroll to id
+		event.preventDefault();
+		$('html, body').scrollTo(this.hash, this.hash);
 	});
 
-	$('#weather').hover(function() {
-		$('#weather-link').addClass('active');
-	}, function() {
-		$('#weather-link').removeClass('active');
-	});
-
-	$('#notes').hover(function() {
-		$('#notes-link').addClass('active');
-	}, function() {
-		$('#notes-link').removeClass('active');
-	});
-
-	$('#schedule').hover(function() {
-		$('#schedule-link').addClass('active');
-	}, function() {
-		$('#schedule-link').removeClass('active');
+	/* Function to confirm with the user they want to logout
+	 */
+	$('.logout-button').click( function() {
+		return confirm('Logout?');
 	});
 });
-*/
