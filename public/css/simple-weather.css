@@ -89,17 +89,7 @@ i {
 #simpleWeather h2 {
   margin: 0 0 8px;
   color: #2f4154;
-  font-size: 100px;
+  font-size: 90px;
   font-weight: 300;
-  text-align: center;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
-}
-
-#simpleWeather p {
-  margin: 0 auto;
-  width: 80%;
-  font-size: 25px;
-  background: rgba(255,255,255,0.8);
-  padding: 20px;
-  border-radius: 10px;
 }

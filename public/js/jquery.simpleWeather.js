@@ -7,10 +7,25 @@
  * Wes Okuhara, Yashna Bowen, Kathy Hoang
  */
 
+/* When the page loads, get the weather */
 $(document).ready(function() {
+
+  //Try to get the weather
+  navigator.geolocation.getCurrentPosition(function(position) {
+    loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
+  },
+  //if geolocation is disabled, notify user
+  function (error) {
+    if (error.code == error.PERMISSION_DENIED) {
+      $("#simpleWeather").html("<p>Please enable your browser geolocation service to use this feature.</p>");
+    }
+  });
+});
+
+function loadWeather(location, woeid) {
   $.simpleWeather( {
-    location: 'Austin, TX',
-    woeid: '',
+    location: location,
+    woeid: woeid,
     unit: 'f',
     success: function(weather) {
       html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
@@ -24,7 +39,7 @@ $(document).ready(function() {
       $("#simpleWeather").html('<p>'+error+'</p>');
     }
   });
-});
+}
 
 /*! simpleWeather v3.0.2 - http://simpleweatherjs.com */
 (function($) {
