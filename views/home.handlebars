@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>Weyaka - {{guest.username}}</title>
+	<title>Weyaka - {{username}}</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -40,7 +40,7 @@
 			<!-- User settings dropdown -->
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">{{guest.username}}<span class="caret"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">{{username}}<span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="digest#settings">Settings</a></li>
 						<li><a href="/" class="logout-button">Logout</a></li>
@@ -67,10 +67,12 @@
 			</div>
 
 			<!-- WEATHER -->
-			<div class="icon">
+			<div class="weather-icon">
+				<h1 id="simpleWeather"></h1>
 				<a href="digest#weather">
-					<img src="images/home/weather.png" 
-					class="img-responsive">
+					<img src="images/home/weather.png"
+					class="img-responsive"/>
+
 				</a>
 			</div>
 		</div>
@@ -100,5 +102,6 @@
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/weyaka.js"></script>
+	<script src="js/jquery.simpleWeatherTemp.js"></script>
 </body>
 </html>

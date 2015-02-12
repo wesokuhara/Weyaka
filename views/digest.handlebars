@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>Weyaka - {{guest.username}}</title>
+	<title>Weyaka - {{username}}</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -10,6 +10,7 @@
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/flat-ui.css" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">
+	<link href="css/simple-weather.css" rel="stylesheet">
 </head>
 
 <body>
@@ -38,7 +39,7 @@
 			<!-- User settings dropdown -->
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">{{guest.username}}<span class="caret"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">{{username}}<span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="#settings" class="digest-link">Settings</a></li>
 						<li><a href="/" class="logout-button">Logout</a></li>
@@ -63,6 +64,8 @@
 		<br>
 		<h4>Weather</h4>
 		<hr>
+
+		<div id="simpleWeather"></div>
 	</div>
 
 	<!-- NOTES SECTION -->
@@ -77,8 +80,8 @@
 		<br>
 		<h4>Calendar</h4>
 		<hr>
-		<script type="text/javascript" src="https:apis.google.com/js/client.js?onload=init"></script>
-		<button id="calendarlogin" >Login to Google Calendar</button>
+		<button id="calendarlogin">Login to Google Calendar</button>
+		
 		<iframe	id="googleCalendar"  src="https://www.google.com/calendar/embed?src=qqjra2o5r6j02cp33v8no2qp6c%40group.calendar.google.com&ctz=America/Los_Angeles" scrolling="no">
 		</iframe>
 	</div>
@@ -108,6 +111,13 @@
 	<script type="text/javascript"
       	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB2vaEbg0YNSzZt2WDARdb27113XOSSjo"></script>
     <script src="js/traffic.js"></script>
+
+    <!-- Simple Weather JS imports -->
+    <script src="js/jquery.simpleWeather.js"></script>
+    <script src="js/moment.js"></script>
+
+    <!-- Google Sign in -->
+    <script type="text/javascript" src="https:apis.google.com/js/client.js?onload=init"></script>
 
 </body>
 </html>

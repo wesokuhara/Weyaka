@@ -22,21 +22,21 @@
 
 		<div class="login-form">
 			<!-- LOGIN FORM -->
-			<form role="form" method="post" action="/home">
+			<form role="form" method="get" action="#">
 				<!-- USERNAME -->
 			    <div class="form-group">
-			    	<input type="text" class="form-control login-field" id="login-user" placeholder="Username">
-			    	<label class="login-field-icon fui-user" for"login-user"></label>
+			    	<input type="text" class="form-control login-field" id="user" name="username" placeholder="Username">
+			    	<label class="login-field-icon fui-user" for"user"></label>
 			    </div>
 
 			    <!-- PASSWORD -->
 			    <div class="form-group">
-			    	<input type="password" class="form-control login-field" id="login-pass" placeholder="Password">
-			    	<label class="login-field-icon fui-lock" for="login-pass"></label>
+			    	<input type="password" class="form-control login-field" id="pass" name="password" placeholder="Password">
+			    	<label class="login-field-icon fui-lock" for="pass"></label>
 			    </div>
 
 			    <!-- LOGIN BUTTON -->
-			    <button type="submit" class="btn btn-primary btn-hg btn-block" id="login-btn">See my day!</button>
+			    <button type="submit" class="btn btn-primary btn-hg btn-block" id="login-btn" name="login-btn">See my day!</button>
 
 			    <!-- FORGOT PASSWORD -->
 			    <a class="login-link" href="#">Lost your password?</a>
@@ -61,6 +61,6 @@
   	<!-- Link Javascript -->
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
-
+	<script src="js/login-page.js"></script>
 </body>
 </html>

@@ -9,6 +9,7 @@
 /***** GLOBAL *****/
 html {
     height: 100%;
+    width: 100%;
 }
 
 body {
@@ -20,6 +21,7 @@ hr {
     border-top: 3px solid #F3F3F3;
     border-radius: 10px;
 }
+
 
 .jumbotron {
     background-color: #edeff1;
@@ -87,11 +89,33 @@ hr {
     margin: 0 auto;
 }
 
-/***** HOME PAGE  *****/
+/******** HOME PAGE  ********/
 .icon {
     padding: 13px;
     width: 50%; /* fill half width of static container */
     float: left;
+}
+
+/** Weather icon **/
+.weather-icon {
+
+    position:relative;
+    padding: 13px;
+    width: 50%; /* fill half width of static container */
+    float: left;
+}
+
+.weather-icon h1 {
+    position:absolute;
+    margin:50% 35%;
+    padding:10px;
+    float:left;
+    /*!
+    position: absolute;
+    padding: 13px;
+    width: 50%; /* fill half width of static container 
+    float:right;
+    */
 }
 
 /***** TRAFFIC SECTION *****/
@@ -105,5 +129,15 @@ hr {
 #googleCalendar { 
     width: 100%; /* fill width of static container */
     height: 420px;
+    border-radius: 10px;
+}
+
+#simpleWeather p, #googleMap p {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 25px;
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
     border-radius: 10px;
 }
