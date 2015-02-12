@@ -10,6 +10,7 @@
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/flat-ui.css" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">
+	<link href="css/simple-weather.css" rel="stylesheet">
 </head>
 
 <body>
@@ -63,6 +64,8 @@
 		<br>
 		<h4>Weather</h4>
 		<hr>
+
+		<div id="simpleWeather"></div>
 	</div>
 
 	<!-- NOTES SECTION -->
@@ -77,8 +80,7 @@
 		<br>
 		<h4>Calendar</h4>
 		<hr>
-		<script type="text/javascript" src="https:apis.google.com/js/client.js?onload=init"></script>
-		<button id="calendarlogin" >Login to Google Calendar</button>
+		<button id="calendarlogin">Login to Google Calendar</button>
 		
 		<iframe	id="googleCalendar"  src="https://www.google.com/calendar/embed?src=qqjra2o5r6j02cp33v8no2qp6c%40group.calendar.google.com&ctz=America/Los_Angeles" scrolling="no">
 		</iframe>
@@ -109,6 +111,12 @@
 	<script type="text/javascript"
       	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB2vaEbg0YNSzZt2WDARdb27113XOSSjo"></script>
     <script src="js/traffic.js"></script>
+
+    <!-- Simple Weather JS imports -->
+    <script src="js/jquery.simpleWeather.js"></script>
+
+    <!-- Google Sign in -->
+    <script type="text/javascript" src="https:apis.google.com/js/client.js?onload=init"></script>
 
 </body>
 </html>
