@@ -1,13 +1,15 @@
-function callingnow() {
 
-    function init(){
+
+  
+      $("#calendarlogin").click (
+        function init(event){
 
     	startAuth();
     	console.log("somethign happed");
-    }
-    </script>
-    <script type="text/javascript" src="https:apis.google.com/js/client.js?onload=init"></script>
-    <script>
+    });
+
+
+    
 
       var clientId = '897711787704-888q3u8rs86thukmam35s6eai6qa626h.apps.googleusercontent.com';
       var authorizationUrlBase = 'https://accounts.google.com/o/oauth2/auth';
@@ -35,4 +37,3 @@ function callingnow() {
       }
 
         
-}
