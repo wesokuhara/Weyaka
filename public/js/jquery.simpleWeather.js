@@ -12,7 +12,11 @@ $(document).ready(function() {
 
   //Try to get the weather
   navigator.geolocation.getCurrentPosition(function(position) {
-    loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
+    var lat = position.coords.latitude;
+    var lng = position.coords.longitude;
+
+    loadWeather(lat+','+lng); //load weather using your lat/lng coordinates
+    setInterval(loadWeather, 60000, lat+','+lng); //update every minute
   },
   //if geolocation is disabled, notify user
   function (error) {
@@ -31,8 +35,11 @@ function loadWeather(location, woeid) {
       html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
       html += '<p>'+weather.city+', '+weather.region+'<br>';
       html += weather.currently+'<br>';
-      html += weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</p>';
-  
+      html += weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</p><br>';
+      
+      var timestamp = moment(weather.updated);
+      html += 'Weather updated '+moment(timestamp).fromNow();
+          
       $("#simpleWeather").html(html);
     },
     error: function(error) {
