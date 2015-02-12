@@ -42,6 +42,7 @@ hr {
     padding-right: 50px;
 }
 
+/* Styling for the home icon on the navbar */
 .navbar-brand .fui-home {
     padding-left: 5px;
     font-size: 25px;
@@ -99,19 +100,17 @@ hr {
     padding: 13px;
     width: 50%; /* fill half width of static container */
     float: left;
-}
-
-/** Weather icon on the home page **/
-.weather-icon {
     position: relative;
 }
 
+/* Styling for the temperature on the weather icon */
 .weather-icon div {
     position: absolute;
     padding: 50% 20% 20% 25%;
     float: left;
 }
 
+/* styling for the temperature text on the weather icon */
 #simpleWeatherHome h2, #simpleWeatherHome .glyphicon {
     font-size: 10vmin;
     color: #fff;
@@ -120,7 +119,8 @@ hr {
 
 /***** TRAFFIC SECTION *****/
 #googleMap {
-    width: 100%; /* fill width of static container */
+    margin: 0 auto;
+    width: 85%; /* fill 85% width of static container */
     height: 350px; 
     border-radius: 10px;
 }
