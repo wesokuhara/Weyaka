@@ -42,6 +42,11 @@ hr {
     padding-right: 50px;
 }
 
+.navbar-brand .fui-home {
+    padding-left: 5px;
+    font-size: 25px;
+}
+
 /* Set the divider to be a little transparent */
 .nav-divider {
     opacity: 0.3;
