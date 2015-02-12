@@ -13,20 +13,24 @@
 
       var clientId = '897711787704-888q3u8rs86thukmam35s6eai6qa626h.apps.googleusercontent.com';
       var authorizationUrlBase = 'https://accounts.google.com/o/oauth2/auth';
-      var redirect = 'https://weyaka.heroku.com/home';
+      var redirect = 'https://weyaka.heroku.com/digest';
       var scopes = 'https://www.googleapis.com/auth/calendar';
 
 
 
       function startAuth(){
       	var url = authorizationUrlBase;
-      	url += '?response_type=token'
+      	url += '?response_type=code'
       		+ '&redirect_uri='+encodeURIComponent(redirect)
       		+ '&client_id=' +encodeURIComponent(clientId)
       		+ '&scope=' + encodeURIComponent(scopes);
 
-      		console.log("im here");
-      		var w= window.open(url,'oauth','width=500, height=500');
+      		
+
+
+          console.log("im here");
+      		window.location.href=url;
+
       }
 
 
