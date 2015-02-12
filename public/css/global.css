@@ -22,6 +22,7 @@ hr {
     border-radius: 10px;
 }
 
+
 .jumbotron {
     background-color: #edeff1;
     text-align: center;
@@ -88,11 +89,33 @@ hr {
     margin: 0 auto;
 }
 
-/***** HOME PAGE  *****/
+/******** HOME PAGE  ********/
 .icon {
     padding: 13px;
     width: 50%; /* fill half width of static container */
     float: left;
+}
+
+/** Weather icon **/
+.weather-icon {
+
+    position:relative;
+    padding: 13px;
+    width: 50%; /* fill half width of static container */
+    float: left;
+}
+
+.weather-icon h1 {
+    position:absolute;
+    margin:50% 35%;
+    padding:10px;
+    float:left;
+    /*!
+    position: absolute;
+    padding: 13px;
+    width: 50%; /* fill half width of static container 
+    float:right;
+    */
 }
 
 /***** TRAFFIC SECTION *****/
