@@ -28,4 +28,21 @@
    
       		window.location.href=url;
 
+
+
+
    }
+
+   $("#loggedin").click(function dothis(event){
+
+    console.log("posting");
+    $.post("https://www.googleapis.com/calendar/v3/calendars", listEvent);
+
+
+   });
+
+function listEvent(result)
+{
+  console.log("result");
+}
+
