@@ -6,8 +6,8 @@
  * Wes Okuhara, Yashna Bowen, Kathy Hoang
  */
 
-// Load JSON databases
-var data = require('../data.json'); //looks for and loads data.json file
+// Load JSON data
+var data = require('../data.json'); 
 
 exports.view = function(req, res) {
 	console.log("# Loading home page...");
