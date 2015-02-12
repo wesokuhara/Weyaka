@@ -13,7 +13,8 @@ function initMap() {
 	//set map options
 	var mapOptions = {
 		zoom: 14,
-		scrollwheel: false
+		zoomControl: false, //no zoom buttons
+		panControl: false //no pan buttons
 	};
 
 	//initialize the map
