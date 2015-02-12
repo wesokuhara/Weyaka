@@ -79,7 +79,6 @@ i {
 
 /* Fill the weather container and center-align it */
 #simpleWeather {
-  padding-top: 20px;
   width: 100%;
   margin: 0px auto;
   text-align: center;

@@ -42,6 +42,12 @@ hr {
     padding-right: 50px;
 }
 
+/* Styling for the home icon on the navbar */
+.navbar-brand .fui-home {
+    padding-left: 5px;
+    font-size: 25px;
+}
+
 /* Set the divider to be a little transparent */
 .nav-divider {
     opacity: 0.3;
@@ -94,34 +100,28 @@ hr {
     padding: 13px;
     width: 50%; /* fill half width of static container */
     float: left;
+    position: relative;
 }
 
-/** Weather icon **/
-.weather-icon {
-
-    position:relative;
-    padding: 13px;
-    width: 50%; /* fill half width of static container */
+/* Styling for the temperature on the weather icon */
+.weather-icon div {
+    position: absolute;
+    padding: 50% 20% 20% 25%;
     float: left;
 }
 
-.weather-icon h1 {
-    position:absolute;
-    margin:50% 35%;
-    padding:10px;
-    float:left;
-    /*!
-    position: absolute;
-    padding: 13px;
-    width: 50%; /* fill half width of static container 
-    float:right;
-    */
+/* styling for the temperature text on the weather icon */
+#simpleWeatherHome h2, #simpleWeatherHome .glyphicon {
+    font-size: 10vmin;
+    color: #fff;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 /***** TRAFFIC SECTION *****/
 #googleMap {
-    width: 100%; /* fill width of static container */
-    height: 380px; 
+    margin: 0 auto;
+    width: 85%; /* fill 85% width of static container */
+    height: 350px; 
     border-radius: 10px;
 }
 
@@ -132,6 +132,8 @@ hr {
     border-radius: 10px;
 }
 
+/* Paragraphs for weather and map api objects
+ * to be used when geolocation is disabled */
 #simpleWeather p, #googleMap p {
     text-align: center;
     margin: 0 auto;

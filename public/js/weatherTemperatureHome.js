@@ -1,5 +1,5 @@
 /**
- * jquery.simpleWeatherTemp.js
+ * weatherTemperatureHome.js
  * 
  * JS file to inject weather information
  *
@@ -17,7 +17,7 @@ $(document).ready(function() {
   //if geolocation is disabled, notify user
   function (error) {
     if (error.code == error.PERMISSION_DENIED) {
-      $("#simpleWeather").html("<p>Please enable your browser geolocation service to use this feature.</p>");
+      $("#simpleWeatherHome").html("<span class='glyphicon glyphicon-ban-circle'></span>");
     }
   });
 });
@@ -28,18 +28,12 @@ function loadWeather(location, woeid) {
     woeid: woeid,
     unit: 'f',
     success: function(weather) {
-      html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-      
-      /*!
-      html += '<p>'+weather.city+', '+weather.region+'<br>';
-      html += weather.currently+'<br>';
-      html += weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</p>';
-      */
+      html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
 
-      $("#simpleWeather").html(html);
+      $("#simpleWeatherHome").html(html);
     },
     error: function(error) {
-      $("#simpleWeather").html('<p>'+error+'</p>');
+      $("#simpleWeatherHome").html('<p>'+error+'</p>');
     }
   });
 }

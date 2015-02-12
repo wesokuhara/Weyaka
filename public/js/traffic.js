@@ -45,6 +45,9 @@ function initMap(lat, lng) {
 	//add traffic layer to map
 	var trafficLayer = new google.maps.TrafficLayer();
 	trafficLayer.setMap(map);
+
+	//add the locate button
+	$("#map-locate-btn").html('<button type="button" class="btn btn-inverse">Locate me!</button>');
 }
 
 //map will load when the page loads
