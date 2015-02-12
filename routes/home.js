@@ -7,10 +7,11 @@
  */
 
 // Load JSON databases
-var data = require('../data.json');
+var data = require('../data.json'); //looks for and loads data.json file
 
 exports.view = function(req, res) {
 	console.log("# Loading home page...");
+	console.log(data);
 
 	res.render('home', data); //pass data into the home page
 };
