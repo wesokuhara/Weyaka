@@ -1,7 +1,7 @@
 
 
   
-      $("#calendarlogin").click(
+      $("#googleLink").click(
         function init(event){
 
     	startAuth();
@@ -17,7 +17,7 @@
       var scopes = 'https://www.googleapis.com/auth/calendar';
 
 
-var url;
+    var url;
       function startAuth(event){
       	url = authorizationUrlBase;
       	url += '?response_type=token'
@@ -27,24 +27,25 @@ var url;
    
    
       		window.open(url);
-
-
-
-
    }
-
+var timecount=0;
    function showEvent(event)
 
    {
+
+  
    var title = document.getElementById("calendarform").elements[0].value;
    var location = document.getElementById("calendarform").elements[1].value;
    var date = document.getElementById("calendarform").elements[2].value;
    var time = document.getElementById("calendarform").elements[3].value;
 
-   var eventhtml = "Event title= \"" + title +"\""+
+   var eventhtml = "<b>Event Added :</b><br>"+
+          "Event title= \"" + title +"\""+
           "<br>Location= \" "+ location + "\" "+
           "<br>Date: " + date+"\""+
           "<br>Time: "+ time +"\"<br> <br>";
+
+          
 
         $("#currenteventlist").html(eventhtml);
 
