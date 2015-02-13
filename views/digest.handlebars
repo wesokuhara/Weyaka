@@ -76,6 +76,13 @@
 		<br>
 		<h4>Notes</h4>
 		<hr>
+		<p id="notespace"></p>
+		<textarea id="notetext"> </textarea>
+		<button id="newnotebutton" onclick="showNote()">Add New Note</button>
+
+			<br><br>
+
+
 	</div>
 
 	<!-- CALENDAR SECTION -->
@@ -104,8 +111,9 @@
 			<div id="googleLinkDiv">
 			<button id="googleLink">Login to Google Calendar</button>
 			</div>
+
 			<div class = "container" id="currenteventlist">
-				<p class = "details"></P>
+			<p class = "details"></p>
 			</div>
 		</div>
 	</div>
@@ -144,6 +152,7 @@
 	<script type="text/javascript"
       	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB2vaEbg0YNSzZt2WDARdb27113XOSSjo"></script>
     <script src="js/traffic.js"></script>
+    <script type="text/javascript" src="js/notes.js"></script>
 
     <!-- Simple Weather JS imports -->
     <script src="js/jquery.simpleWeather.js"></script>
