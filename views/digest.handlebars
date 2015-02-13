@@ -79,17 +79,42 @@
 
 	<!-- CALENDAR SECTION -->
 	<div class="container" id="calendar">
-		<br>
 		<h4>Calendar</h4>
 		<hr>
-		<button id="calendarlogin">Login to Google Calendar</button>
-		<button id="loggedin"> Create Event</button>
+		
+		<div class = "container">
+			<form id="calendarform">
+			New Sceduled Event Title:
+			<input type="text" name="title">
+			<br>Event Location:
+			<input type="text" name="location">
+			<br>Event Date:
+			<input type = "date" name = "date">
+			<br>Event Time:
+			<input type = "time">
+			<br><br>
+			</form>
+
+			<button id = "calendarsubmit" onclick="showEvent()">SUBMIT</button>
+
+			<h5>Optional Scheduler:</h5>
+			<button id="calendarlogin">Login to Google Calendar</button>
+		
+			<div class = "container" id="currenteventlist">
+				<p class = "details"></P>
+			</div>
+		</div>
+	</div>
+
+		<!--<button id="loggedin"> Create Event</button>
 		<iframe	id="googleCalendar"  src="https://www.google.com/calendar/embed?src=qqjra2o5r6j02cp33v8no2qp6c%40group.calendar.google.com&ctz=America/Los_Angeles" scrolling="no">
 		</iframe>
 
+		<div style="width:195px; text-align:center;">
+  <iframe src="http://www.eventbrite.com/calendar-widget?eid=4653432542" frameborder="0" height="382" width="195" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true"></iframe>
+</div>
+-->
 				
-	</div>
-
 	<!-- SETTINGS SECTION -->
 	<div class="container" id="settings">
 		<br>
