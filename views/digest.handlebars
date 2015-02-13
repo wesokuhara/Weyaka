@@ -11,6 +11,7 @@
 	<link href="css/flat-ui.css" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">
 	<link href="css/simple-weather.css" rel="stylesheet">
+	<link href="css/calendarevent.css" rel="stylesheet">
 </head>
 
 <body>
@@ -83,6 +84,7 @@
 		<h4>Calendar</h4>
 		<hr>
 		
+<<<<<<< HEAD
 		Schedule a new event:
 		<div class = "container">
 			<form id="calendarform">
@@ -95,13 +97,29 @@
 			<br>Time:
 			<input type = "time">
 			<br><br>
+=======
+		<div class="container" id="formbegins">
+			<form id="calendarform">
+				New Sceduled Event Title:
+				<input type="text" name="title" >
+				<br>Event Location:
+				<input type="text" name="location">
+				<br>Event Date:
+				<input type = "date" name = "date">
+				<br>Event Time:
+				<input type = "time">
+				<br><br>
+>>>>>>> b0f67b46f820e7169157f79f8b469f7590f73885
 			</form>
-
+			<div id="submitbutton">
 			<button id = "calendarsubmit" onclick="showEvent()">SUBMIT</button>
+			</div>
 
-			<h5>Optional Scheduler:</h5>
-			<button id="calendarlogin">Login to Google Calendar</button>
-		
+			<h5 id="googleHeader">Optional Scheduler:</h5>
+			
+			<div id="googleLinkDiv">
+			<button id="googleLink">Login to Google Calendar</button>
+			</div>
 			<div class = "container" id="currenteventlist">
 				<p class = "details"></P>
 			</div>
