@@ -66,6 +66,7 @@
 		<div id="simpleWeather"></div>
 	</div>
 
+
 	<!-- NOTES SECTION -->
 	<div class="container" id="notes">
 		<br>
@@ -73,8 +74,9 @@
 		<hr>
 		<p id="notespace"></p>
 		<textarea id="notetext"> </textarea>
-		<button id="newnotebutton" onclick="showNote()">Add New Note</button>
-
+		<div>
+		<button id="newnotebutton" class = "btn btn-primary btn-hg btn-block" onclick="showNote()">Add New Note</button>
+</div>
 			<br><br>
 
 
@@ -100,13 +102,13 @@
 				
 			</form>
 			<div id="submitbutton">
-			<button id = "calendarsubmit" onclick="showEvent()">SUBMIT</button>
+			<button id = "calendarsubmit" class ="btn btn-primary btn-hg btn-block" onclick="showEvent()">SUBMIT</button>
 			</div>
 
-			<h5 id="googleHeader">Optional Scheduler:</h5>
+			<!--<h5 id="googleHeader">Optional Scheduler:</h5>-->
 			
 			<div id="googleLinkDiv">
-			<button id="googleLink">Login to Google Calendar</button>
+			<button id="googleLink" class = "btn btn-primary btn-hg btn-block">Login to Google Calendar</button>
 			</div>
 
 			<div class = "container" id="currenteventlist">

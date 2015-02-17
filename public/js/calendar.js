@@ -39,11 +39,7 @@ var timecount=0;
    var date = document.getElementById("calendarform").elements[2].value;
    var time = document.getElementById("calendarform").elements[3].value;
 
-   var eventhtml = "<b>Event Added :</b><br>"+
-          "Event title= \"" + title +"\""+
-          "<br>Location= \" "+ location + "\" "+
-          "<br>Date: " + date+"\""+
-          "<br>Time: "+ time +"\"<br> <br>";
+   var eventhtml = "Event Added :"+"<br>Event title= \"" + title +"\""+"<br>Location= \" "+ location + "\" "+"<br>Date: " + date+"\""+"<br>Time: "+ time +"\"<br> <br>";
 
           
 

@@ -2,8 +2,9 @@
 {
 	overflow:scroll;
 	box-shadow: 10px, 10px 10px 10px;
-	max-height: 50%;
-	max-width: 50%;
+	height: 80%;
+	width: 100%;
+  overflow:scroll;
 }
 .formbegins 
 {
@@ -17,9 +18,13 @@ form
   box-shadow:0 4px 4px 4px #888888;
  color:$white;
 }
+
 #details
 {
+  width: 100%;
 	font-size: 10px;
+  float: left;
+  text-align: left;
 }
 
 input, textarea {
@@ -32,10 +37,14 @@ input, textarea {
 
 #submitbutton
 {
-	padding-top:1%;
-	padding-left: 44%;
+
+	padding-top:5%;
+	position: center;
+  margin-left: 25%;
+  width: 50%;
 }
 #calendarsubmit
+
 {
    border-radius:1px;
    float:left;
@@ -49,23 +58,39 @@ input, textarea {
 #googleHeader
 {
 	float: left;
-	width: 50%;
+	width: 25%;
 
 }
 
 #googleLinkDiv
 {
+  vertical-align: bottom;
 	padding-top: 8%;
+  margin-left: 25%;
+  width:30%;
 }
 
 #googleLink
 {
-width: 50%;
+  padding-top: 2%;
+  width: 60%;
 	border-radius:1px;
   font-size:1rem;
   text-transform:uppercase;
   letter-spacing:.1em;
-  vertical-align:baseline;
-float: right;
-padding-top: 2px;
+  padding-top: 2px;
+  margin-left: 55%;
+}
+
+#notetext
+{
+  height: 50%;
+  overflow: scroll;
+  box-shadow: 10px, 10px, 10px, 10px;
+   width:100%;
+}
+
+#newnotediv
+{
+  padding-top: 20%;
 }
