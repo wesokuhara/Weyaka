@@ -92,3 +92,13 @@ i {
   font-weight: 300;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
 }
+
+#simpleWeather p {
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  font-size: 30px;
+  background: rgba(255,255,255,0.8);
+  padding: 20px;
+  border-radius: 10px;
+}

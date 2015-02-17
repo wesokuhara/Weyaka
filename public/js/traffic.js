@@ -15,7 +15,7 @@ function checkGeolocation() {
   //if geolocation is disabled, notify user
   function (error) {
     if (error.code == error.PERMISSION_DENIED) {
-      $("#googleMap").html("<p>Please enable your browser geolocation service to use this feature.</p>");
+      $("#googleMap").html("<p class='noLocationError'>Please enable your browser geolocation service to use this feature.</p>");
     }
   });
 }

@@ -66,13 +66,6 @@ hr {
     }
 }
 
-/* In desktop view, add padding on the right of the dropdown */
-@media (min-width: 768px) {
-    .dropdown {
-        padding-right: 17px;
-    }
-}
-
 /* Increase the maximum height for the menu dropdown */
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
@@ -80,9 +73,8 @@ hr {
 }
 
 /* Increase padding for User settings dropdown */
-.navbar-nav .open .dropdown-menu > li > a,
-.navbar-nav .open .dropdown-menu .dropdown-header {
-    padding: 12px 15px 12px 15px !important;
+.navbar-right {
+    padding-right: 25px;
 }
 
 /***** LOGIN PAGE *****/
@@ -105,22 +97,37 @@ hr {
 
 /* Styling for the temperature on the weather icon */
 .weather-icon div {
-    position: absolute;
+    position: absolute; /* the position of the temperature is fixed */
     padding: 50% 20% 20% 25%;
     float: left;
 }
 
 /* styling for the temperature text on the weather icon */
-#simpleWeatherHome h2, #simpleWeatherHome .glyphicon {
-    font-size: 10vmin;
+#simpleWeatherHome h2 {
+    font-size: 9vmin;
     color: #fff;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling for the glyphicon ban-icon */
+#simpleWeatherHome .glyphicon {
+    font-size: 10vmin;
+}
+
+/* In mobile, edit the font size of the temperature on the weather icon */
+@media (max-width: 767px) {
+    #simpleWeatherHome h2 {
+        font-size: 11vmin;
+    }
+    .weather-icon div {
+        padding-left: 19%;
+    }
 }
 
 /***** TRAFFIC SECTION *****/
 #googleMap {
     margin: 0 auto;
-    width: 85%; /* fill 85% width of static container */
+    width: 85%; /* fill 85% width of static container for scrolling */
     height: 350px; 
     border-radius: 10px;
 }
@@ -134,7 +141,7 @@ hr {
 
 /* Paragraphs for weather and map api objects
  * to be used when geolocation is disabled */
-#simpleWeather p, #googleMap p {
+.noLocationError {
     text-align: center;
     margin: 0 auto;
     width: 80%;

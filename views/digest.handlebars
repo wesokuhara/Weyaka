@@ -39,13 +39,8 @@
 
 			<!-- User settings dropdown -->
 			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">{{username}}<span class="caret"></span></a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="#settings" class="digest-link">Settings</a></li>
-						<li><a href="/" class="logout-button">Logout</a></li>
-					</ul>
-				</li>
+				<li><a href="#settings" class="digest-link">Settings</a></li>
+				<li><a href="/" class="logout-button">Logout</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -90,21 +85,7 @@
 		<br>
 		<h4>Calendar</h4>
 		<hr>
-		
-<<<<<<< HEAD
-		Schedule a new event:
-		<div class = "container">
-			<form id="calendarform">
-			Title:
-			<input type="text" name="title">
-			<br>Location:
-			<input type="text" name="location">
-			<br>Date:
-			<input type = "date" name = "date">
-			<br>Time:
-			<input type = "time">
-			<br><br>
-=======
+
 		<div class="container" id="formbegins">
 			<form id="calendarform">
 				New Sceduled Event Title:
@@ -116,7 +97,7 @@
 				<br>Event Time:
 				<input type = "time">
 				<br><br>
->>>>>>> b0f67b46f820e7169157f79f8b469f7590f73885
+				
 			</form>
 			<div id="submitbutton">
 			<button id = "calendarsubmit" onclick="showEvent()">SUBMIT</button>
@@ -154,7 +135,7 @@
 			Kathy Hoang<br>
 			<br>
 
-			&copy 2015</p>
+			2015</p>
 	</div>
 
   	<!-- Link Javascript -->
@@ -172,7 +153,7 @@
 
     <!-- Simple Weather JS imports -->
     <script src="js/jquery.simpleWeather.js"></script>
-    <script src="js/moment.js"></script>
+    <script src="js/jquery.moment.js"></script>
 
     <!-- Google Sign in -->
     <script type="text/javascript" src="https:apis.google.com/js/client.js?onload=init"></script>

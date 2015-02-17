@@ -1,5 +1,5 @@
 /**
- * weatherTemperatureHome.js
+ * temp-home.js
  * 
  * JS file to inject weather information
  *
@@ -18,6 +18,7 @@ $(document).ready(function() {
   function (error) {
     if (error.code == error.PERMISSION_DENIED) {
       $("#simpleWeatherHome").html("<span class='glyphicon glyphicon-ban-circle'></span>");
+      //$(".weather-icon a").html("<span class='glyphicon glyphicon-ban-circle'></span>");
     }
   });
 });
