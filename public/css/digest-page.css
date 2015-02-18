@@ -1,0 +1,56 @@
+/**
+ * digest-page.css
+ * Custom styling for digest page
+ * 
+ * Weyaka
+ * Wes Okuhara, Yashna Bowen, Kathy Hoang
+ */
+
+/* Spacing for scrolling */
+h4 {
+    padding-top: 30px;
+}
+
+
+
+
+
+/***** TRAFFIC SECTION *****/
+#googleMap {
+    margin: 0 auto;
+    width: 85%; /* fill 85% width of static container for scrolling */
+    height: 350px; 
+    border-radius: 10px;
+}
+
+#address-input, #geocode-btn {
+    float: left;
+    padding-bottom: 10px;
+}
+
+#address-input {
+    padding-right: 10px;
+    width: 65%;
+}
+
+
+
+
+/***** CALENDAR SECTION *****/
+#googleCalendar { 
+    width: 100%; /* fill width of static container */
+    height: 420px;
+    border-radius: 10px;
+}
+
+/* Paragraphs for weather and map api objects
+ * to be used when geolocation is disabled */
+.noLocationError {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 25px;
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
+    border-radius: 10px;
+}

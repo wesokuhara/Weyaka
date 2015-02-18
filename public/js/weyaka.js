@@ -28,9 +28,4 @@ $(document).ready( function() {
 	$('.logout-button').click( function() {
 		return confirm('Are you sure you want to logout?');
 	});
-
-	/* When the locate me button is clicked, re-center the map */
-	$("#map-locate-btn").click( function() {
-		checkGeolocation();
-	});
 });

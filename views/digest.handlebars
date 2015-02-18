@@ -10,6 +10,7 @@
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/flat-ui.css" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">
+	<link href="css/digest-page.css" rel="stylesheet">
 	<link href="css/simple-weather.css" rel="stylesheet">
 	<link href="css/calendarevent.css" rel="stylesheet">
 </head>
@@ -37,7 +38,7 @@
 				<li class="nav-divider"></li>
 			</ul>
 
-			<!-- User settings dropdown -->
+			<!-- User settings -->
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#settings" class="digest-link">Settings</a></li>
 				<li><a href="/" class="logout-button">Logout</a></li>
@@ -47,19 +48,25 @@
 
 	<!-- TRAFFIC SECTION -->
 	<div class="container" id="traffic">
-		<br>
 		<h4>Traffic</h4>
 		<hr>
 
+		<!-- Locate me button -->
+		<div id="map-locate-btn"></div>
+
+		<!-- Destination input -->
+		<div id="address-input"></div>
+
+		<!-- Geocode button -->
+		<div id="geocode-btn"></div>
+
+		<br>
 		<!-- Google Map object -->
 		<div id="googleMap"></div>
-		<br>
-		<div id="map-locate-btn"></div>
 	</div>
 
 	<!-- WEATHER SECTION -->
 	<div class="container" id="weather">
-		<br>
 		<h4>Weather</h4>
 		<hr>
 
@@ -69,22 +76,21 @@
 
 	<!-- NOTES SECTION -->
 	<div class="container" id="notes">
-		<br>
 		<h4>Notes</h4>
 		<hr>
+
 		<p id="notespace"></p>
 		<textarea id="notetext"> </textarea>
 		<div>
-		<button id="newnotebutton" class = "btn btn-primary btn-hg btn-block" onclick="showNote()">Add New Note</button>
-</div>
-			<br><br>
-
-
+			<button id="newnotebutton" class = "btn btn-inverse btn-block" onclick="showNote()">Add New Note</button>
+		</div>
+		
+		<br>
+		<br>
 	</div>
 
 	<!-- CALENDAR SECTION -->
 	<div class="container" id="calendar">
-		<br>
 		<h4>Calendar</h4>
 		<hr>
 
@@ -128,7 +134,6 @@
 				
 	<!-- SETTINGS SECTION -->
 	<div class="container" id="settings">
-		<br>
 		<h4>Settings</h4>
 		<hr>
 		<p><b>Developed by:</b><br>
@@ -159,6 +164,6 @@
 
     <!-- Google Sign in -->
     <script type="text/javascript" src="https:apis.google.com/js/client.js?onload=init"></script>
-<script type="text/javascript" src="https://addthisevent.com/libs/1.5.8/ate.min.js"></script>
+	<script type="text/javascript" src="https://addthisevent.com/libs/1.5.8/ate.min.js"></script>
 </body>
 </html>
