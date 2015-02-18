@@ -1,0 +1,44 @@
+/**
+ * home-page.css
+ * Custom styling for home page
+ * 
+ * Weyaka
+ * Wes Okuhara, Yashna Bowen, Kathy Hoang
+ */
+
+/******** HOME PAGE  ********/
+.icon {
+    padding: 13px;
+    width: 50%; /* fill half width of static container */
+    float: left;
+    position: relative;
+}
+
+/* Styling for the temperature on the weather icon */
+.weather-icon div {
+    position: absolute; /* the position of the temperature is fixed */
+    padding: 50% 20% 20% 25%;
+    float: left;
+}
+
+/* styling for the temperature text on the weather icon */
+#simpleWeatherHome h2 {
+    font-size: 9vmin;
+    color: #fff;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling for the glyphicon ban-icon */
+#simpleWeatherHome .glyphicon {
+    font-size: 10vmin;
+}
+
+/* In mobile, edit the font size of the temperature on the weather icon */
+@media (max-width: 767px) {
+    #simpleWeatherHome h2 {
+        font-size: 11vmin;
+    }
+    .weather-icon div {
+        padding-left: 19%;
+    }
+}

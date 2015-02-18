@@ -1,6 +1,4 @@
- function showNote(event)
-
-   {
+function showNote(event){
 
   
    var title = document.getElementById("notetext").value;
