@@ -10,6 +10,7 @@
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/flat-ui.css" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">
+	<link href="css/digest-page.css" rel="stylesheet">
 	<link href="css/simple-weather.css" rel="stylesheet">
 	<link href="css/calendarevent.css" rel="stylesheet">
 </head>
@@ -37,34 +38,35 @@
 				<li class="nav-divider"></li>
 			</ul>
 
-			<!-- User settings dropdown -->
+			<!-- User settings -->
 			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">{{username}}<span class="caret"></span></a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="#settings" class="digest-link">Settings</a></li>
-						<li><a href="/" class="logout-button">Logout</a></li>
-					</ul>
-				</li>
+				<li><a href="#settings" class="digest-link">Settings</a></li>
+				<li><a href="/" class="logout-button">Logout</a></li>
 			</ul>
 		</div>
 	</nav>
 
 	<!-- TRAFFIC SECTION -->
 	<div class="container" id="traffic">
-		<br>
 		<h4>Traffic</h4>
 		<hr>
 
+		<!-- Locate me button -->
+		<div id="map-locate-btn"></div>
+
+		<!-- Destination input -->
+		<div id="address-input"></div>
+
+		<!-- Geocode button -->
+		<div id="geocode-btn"></div>
+
+		<br>
 		<!-- Google Map object -->
 		<div id="googleMap"></div>
-		<br>
-		<div id="map-locate-btn"></div>
 	</div>
 
 	<!-- WEATHER SECTION -->
 	<div class="container" id="weather">
-		<br>
 		<h4>Weather</h4>
 		<hr>
 
@@ -74,24 +76,24 @@
 
 	<!-- NOTES SECTION -->
 	<div class="container" id="notes">
-		<br>
 		<h4>Notes</h4>
 		<hr>
+
 		<p id="notespace"></p>
 		<textarea id="notetext"> </textarea>
 		<div>
-		<button id="newnotebutton" class = "btn btn-primary btn-hg btn-block" onclick="showNote()">Add New Note</button>
-</div>
-			<br><br>
-
-
+			<button id="newnotebutton" class = "btn btn-inverse btn-block" onclick="showNote()">Add New Note</button>
+		</div>
+		
+		<br>
+		<br>
 	</div>
 
 	<!-- CALENDAR SECTION -->
 	<div class="container" id="calendar">
 		<h4>Calendar</h4>
 		<hr>
-		
+
 		<div class="container" id="formbegins">
 			<form id="calendarform">
 				New Sceduled Event Title:
@@ -103,6 +105,7 @@
 				<br>Event Time:
 				<input type = "time">
 				<br><br>
+				
 			</form>
 			<div id="submitbutton">
 			<button id = "calendarsubmit" class ="btn btn-primary btn-hg btn-block" onclick="showEvent()">SUBMIT</button>
@@ -123,7 +126,6 @@
 		<!--<button id="loggedin"> Create Event</button>
 		<iframe	id="googleCalendar"  src="https://www.google.com/calendar/embed?src=qqjra2o5r6j02cp33v8no2qp6c%40group.calendar.google.com&ctz=America/Los_Angeles" scrolling="no">
 		</iframe>
-
 		<div style="width:195px; text-align:center;">
   <iframe src="http://www.eventbrite.com/calendar-widget?eid=4653432542" frameborder="0" height="382" width="195" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true"></iframe>
 </div>
@@ -131,7 +133,6 @@
 				
 	<!-- SETTINGS SECTION -->
 	<div class="container" id="settings">
-		<br>
 		<h4>Settings</h4>
 		<hr>
 		<p><b>Developed by:</b><br>
@@ -140,7 +141,7 @@
 			Kathy Hoang<br>
 			<br>
 
-			&copy 2015</p>
+			2015</p>
 	</div>
 
   	<!-- Link Javascript -->
@@ -158,10 +159,10 @@
 
     <!-- Simple Weather JS imports -->
     <script src="js/jquery.simpleWeather.js"></script>
-    <script src="js/moment.js"></script>
+    <script src="js/jquery.moment.js"></script>
 
     <!-- Google Sign in -->
     <script type="text/javascript" src="https:apis.google.com/js/client.js?onload=init"></script>
-<script type="text/javascript" src="https://addthisevent.com/libs/1.5.8/ate.min.js"></script>
+	<script type="text/javascript" src="https://addthisevent.com/libs/1.5.8/ate.min.js"></script>
 </body>
 </html>
