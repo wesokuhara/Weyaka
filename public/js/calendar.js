@@ -1,6 +1,7 @@
 
 
-  
+  var events = require("../../events.json");
+
       $("#googleLink").click(
         function init(event){
 
@@ -28,12 +29,14 @@
    
       		window.open(url);
    }
-var timecount=0;
+
+
+    var timecount=0;
    function showEvent(event)
 
    {
 
-  
+   
    var title = document.getElementById("calendarform").elements[0].value;
    var location = document.getElementById("calendarform").elements[1].value;
    var date = document.getElementById("calendarform").elements[2].value;
@@ -43,7 +46,23 @@ var timecount=0;
 
           
 
+
+
         $("#currenteventlist").html(eventhtml);
+
+        var storing = {
+
+          "title":document.getElementById("calendarform").elements[0].value,
+          "location": document.getElementById("calendarform").elements[1].value,
+          "date": document.getElementById("calendarform").elements[2].value,
+          "time": document.getElementById("calendarform").elements[3].value
+        }
+
+        //events["events"].push(storing);
+      //res.render("index", events);
+      //document.write(storing);
+
+
 
    console.log(eventhtml);
 }
