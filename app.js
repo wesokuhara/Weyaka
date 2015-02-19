@@ -15,6 +15,7 @@ var handlebars = require('express3-handlebars')
 var login = require('./routes/login');
 var home = require('./routes/home');
 var digest = require('./routes/digest');
+var help = require('./routes/help');
 /////////////////////////////////////////////////////////////////////
 
 var app = express();
@@ -45,6 +46,8 @@ app.get('/', login.view); //login page
 app.get('/home', home.view); //home page
 
 app.get('/digest', digest.view); //digest page
+
+app.get('/help', help.view); //help page
 /////////////////////////////////////////////////////////////////////
 
 http.createServer(app).listen(app.get('port'), function(){

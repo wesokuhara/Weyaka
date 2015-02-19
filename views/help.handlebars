@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>Weyaka - {{username}}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<!-- Import CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/flat-ui.css" rel="stylesheet">
+	<link href="css/global.css" rel="stylesheet">
+   
+</head>
+
+<body>
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+				<span class="sr-only">Toggle navigation</span>
+			</button>
+
+			<!-- Weyaka home button -->
+			<a class="navbar-brand" href="/home"><span class="fui-home"></span></a>
+		</div>
+
+		<!-- Navbar contents -->
+		<div class="collapse navbar-collapse" id="menu">
+			<!-- Navbar links -->
+			<ul class="nav navbar-nav">
+				<li><a href="#traffic" class="digest-link">Traffic</a></li>
+				<li><a href="#weather" class="digest-link">Weather</a></li>
+				<li><a href="#notes" class="digest-link">Notes</a></li>
+				<li><a href="#calendar" class="digest-link">Calendar</a></li>
+				<li class="nav-divider"></li>
+			</ul>
+
+			<!-- User settings -->
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#settings" class="digest-link">Settings</a></li>
+				<li><a href="/help">Help</a></li>
+				<li><a href="/" class="logout-button">Logout</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	  	<!-- Link Javascript -->
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/bootstrap.js"></script>
+
+</body>
+</html>
