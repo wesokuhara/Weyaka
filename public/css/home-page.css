@@ -14,7 +14,7 @@
     position: relative;
 }
 
-/* Styling for the temperature on the weather icon */
+/* Styling for the temperature on the weather icon f*/
 .weather-icon div {
     position: absolute; /* the position of the temperature is fixed */
     padding: 50% 20% 20% 25%;
