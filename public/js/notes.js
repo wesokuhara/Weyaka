@@ -3,7 +3,7 @@ function showNote(event){
   
    var title = document.getElementById("notetext").value;
    
-  $("#notespace").html(eventhtml);
+  window.alert("New Note Added");
 
-   console.log(eventhtml);
+   
 }

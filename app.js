@@ -16,6 +16,7 @@ var login = require('./routes/login');
 var home = require('./routes/home');
 var digest = require('./routes/digest');
 var help = require('./routes/help');
+var notes = require('./routes/notes');
 
 var events = require('./routes/events');
 
@@ -54,6 +55,7 @@ app.get('/help', help.view); //help page
 
 app.get('/events', events.view); //should go to digest page
 
+app.get('/notes', notes.view); 
 /////////////////////////////////////////////////////////////////////
 
 http.createServer(app).listen(app.get('port'), function(){

@@ -81,14 +81,22 @@
 		<h4>Notes</h4>
 		<hr>
 
-		<p id="notespace"></p>
-		<textarea id="notetext"> </textarea>
-		<div>
-			<button id="newnotebutton" class = "btn btn-inverse btn-block" onclick="showNote()">Add New Note</button>
+		<div style="height:50%;width:100%;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+			
+			{{#each notes}}
+			<p>Event Title: {{title}} <br>
+			   Summary: {{summary}} <br><hr></p>
+			{{/each}}
 		</div>
-		
-		<br>
-		<br>
+
+
+		<div>
+			<a href="/notes">
+				<button id = "addnotebutton">  Add Note </button>
+			</a>
+
+		</div>
+
 	</div>
 
 	<!-- CALENDAR SECTION -->
@@ -101,7 +109,7 @@
 		<div style="height:50%;width:100%;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
 			
 			{{#each events}}
-			<p> &middot <br>Event Title: {{title}} <br>
+			<p>Event Title: {{title}} <br>
 			   Location : {{location}} <br>
 			   Date: {{date}} <br>
 			   Time: {{time}} <br><hr></p>
