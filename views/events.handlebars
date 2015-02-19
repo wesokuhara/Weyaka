@@ -9,13 +9,12 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/flat-ui.css" rel="stylesheet">
     <link href="css/global.css" rel="stylesheet">
-    <link href="css/digest-page.css" rel="stylesheet">
-    <link href="../public/css/calendarevent.css" rel="stylesheet">
+    <link href="css/calendarevent.css" rel="stylesheet">
    
 </head>
 <body>
-<div class="container" id="calendar">
-        <h4>Calendar</h4>
+<div class="container">
+        <h4>Add Event to Schedule</h4>
         <hr>
 
         <div class="container" id="formbegins">
@@ -29,17 +28,19 @@
                 <br>Event Time:
                 <input type = "time">
                 <br><br>
-                </form>
+            </form>
         </div>
+
             <div id="submitbutton">
-           <button id = "calendarsubmit" class ="btn btn-primary btn-hg btn-block" onclick="showEvent()">SUBMIT EVENT</button>
+            <button id = "calendarsubmit" class ="btn btn-inverse" onclick="showEvent()">SUBMIT EVENT</button>
             </div>
 
             <!--<h5 id="googleHeader">Optional Scheduler:</h5>-->
             <div id="googleLinkDiv">
-            <a href="/digest">
-            <button id="googleLink" class = "btn btn-primary btn-hg btn-block">Return after Adding</button>
-            <a/></div>
+                <a href="/digest">
+                    <button id="googleLink" class = "btn btn-inverse">Cancel</button>
+                <a/>
+            </div>
         
     </div>
 
