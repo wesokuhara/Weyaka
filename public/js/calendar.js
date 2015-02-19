@@ -30,10 +30,10 @@ function popup(event){
 function showEvent(event) {
   var timecount=0;
  
- var title = document.getElementById("calendarform").elements[0].value;
- var location = document.getElementById("calendarform").elements[1].value;
- var date = document.getElementById("calendarform").elements[2].value;
- var time = document.getElementById("calendarform").elements[3].value;
+ var title = document.getElementById("add-event-form").elements[0].value;
+ var location = document.getElementById("add-event-form").elements[1].value;
+ var date = document.getElementById("add-event-form").elements[2].value;
+ var time = document.getElementById("add-event-form").elements[3].value;
 
  window.alert("Event Successfully Added");
   
@@ -46,10 +46,10 @@ function showEvent(event) {
 
       var storing = {
 
-        "title":document.getElementById("calendarform").elements[0].value,
-        "location": document.getElementById("calendarform").elements[1].value,
-        "date": document.getElementById("calendarform").elements[2].value,
-        "time": document.getElementById("calendarform").elements[3].value
+        "title":document.getElementById("add-event-form").elements[0].value,
+        "location": document.getElementById("add-event-form").elements[1].value,
+        "date": document.getElementById("add-event-form").elements[2].value,
+        "time": document.getElementById("add-event-form").elements[3].value
       }
 
       //events["events"].push(storing);

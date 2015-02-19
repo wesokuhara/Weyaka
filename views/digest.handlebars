@@ -82,8 +82,7 @@
 		<h4>Notes</h4>
 		<hr>
 
-		<div style="height:50%;width:100%;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
-			
+		<div style="height:50%;width:100%; overflow:auto;">
 			{{#each notes}}
 			<p>Event Title: {{title}} <br>
 			   Summary: {{summary}} <br><hr></p>
@@ -92,8 +91,8 @@
 
 
 		<div>
-			<a href="/notes">
-				<button id = "addnotebutton">  Add Note </button>
+			<a href="/notes" >
+				<button id = "addnotebutton" class="btn btn-inverse">Add Note</button>
 			</a>
 
 		</div>
@@ -105,13 +104,9 @@
 		<h4>Schedule</h4>
 		<hr>
 		
-		<div id="event-list">
+		<div style="height:50%;width:100%; overflow:auto;">
 			{{#each events}}
-<<<<<<< HEAD
 			<p>Event Title: {{title}} <br>
-=======
-			<p>&middot <b>{{title}}</b> <br>
->>>>>>> 5618b8267c18baa2ad1f48b5bff32f75451c8f35
 			   Location : {{location}} <br>
 			   Date: {{date}} <br>
 			   Time: {{time}} <br>
