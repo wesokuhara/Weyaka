@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-
 <html>
 <head>
-	<title>Weyaka - {{username}}</title>
+	<title>Weyaka - Help</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -10,12 +8,10 @@
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/flat-ui.css" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">
-	<link href="css/home-page.css" rel="stylesheet">
    
 </head>
 
 <body>
-
 	<!-- NAVBAR -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="navbar-header">
@@ -24,12 +20,12 @@
 			</button>
 
 			<!-- Weyaka home button -->
-			<a class="navbar-brand" href="/home">Weyaka</a>
+			<a class="navbar-brand" href="/home"><span class="fui-home"></span></a>
 		</div>
 
 		<!-- Navbar contents -->
 		<div class="collapse navbar-collapse" id="menu">
-			<!--  Navbar links -->
+			<!-- Navbar links -->
 			<ul class="nav navbar-nav">
 				<li><a href="digest#traffic">Traffic</a></li>
 				<li><a href="digest#weather">Weather</a></li>
@@ -41,65 +37,16 @@
 			<!-- User settings -->
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="digest#settings">Settings</a></li>
-				<li><a href="/help">Help</a></li>
+				<li><a href="#">Help</a></li>
 				<li><a href="/" class="logout-button">Logout</a></li>
 			</ul>
 		</div>
 	</nav>
-	
-	<div class="container">
 
-		<br>
-		<br>
-
-		<!-- TOP ROW -->
-		<div class="row">
-			<!-- TRAFFIC -->
-			<div class="icon">
-				<a href="digest#traffic">
-					<img src="images/home/mapGreen.png" 
-					class="img-responsive">
-					<!-- could be mapRed or mapYellow -->
-				</a>
-			</div>
-
-			<!-- WEATHER -->
-			<div class="icon weather-icon">
-				<a href="digest#weather">
-					<div id="simpleWeatherHome"></div>
-					<img src="images/home/weather.png"
-					class="img-responsive"/>
-				</a>
-			</div>
-		</div>
-
-		<!-- BOTTOM ROW -->
-		<div class="row">
-			<!-- NOTES -->
-			<div class="icon">
-				<a href="digest#notes">
-					<img src="images/home/notes.png" 
-					class="img-responsive">
-				</a>
-			</div>
-
-			<!-- CALENDAR -->
-			<div class="icon">
-				<a href="digest#calendar">
-					<img src="images/home/calendar.png" 
-					class="img-responsive">
-				</a>
-			</div>
-		</div>
-
-	</div>
-
-  	<!-- Link Javascript -->
+	  	<!-- Link Javascript -->
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/weyaka.js"></script>
 
-	<!-- Weather Temperature JS -->
-	<script src="js/temp-home.js"></script>
 </body>
 </html>

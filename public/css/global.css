@@ -58,6 +58,12 @@ hr {
     font-size: 18px;
 }
 
+/* Increase the maximum height for the menu dropdown */
+.navbar-fixed-top .navbar-collapse,
+.navbar-fixed-bottom .navbar-collapse {
+    max-height: 370px;
+}
+
 /* In mobile view, space out each link in the menu */
 @media (max-width: 767px) {
     .navbar-nav li a {

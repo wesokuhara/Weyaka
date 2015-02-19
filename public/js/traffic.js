@@ -60,7 +60,7 @@ function initMap(lat, lng) {
 	$("#address-input").html('<input id="address" type="text" class="form-control" placeholder="Enter Destination">');
 
 	//add geocode button
-	$("#geocode-btn").html('<button type="button" class="btn btn-inverse" onclick="codeAddress()">Check Traffic!</button>');
+	$("#geocode-btn").html('<button type="button" class="btn btn-inverse" onclick="codeAddress()">Submit</button>');
 }
 
 
