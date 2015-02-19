@@ -1,12 +1,17 @@
 {
 	"events": [
 		{
-			"title": ,
-			"location":,  
-			"date": ,		
-			"time": ""
-
-
+			"title": "COGS 120",
+			"location": "CICC",  
+			"date":  "ehgejr",		
+			"time": "rerere"
 		},
+
+		{
+			"title": "COGS asas120",
+			"location": "ejhgjrg",  
+			"date":  "ehgejr",		
+			"time": "rerere"
+		}
 	]
 }
