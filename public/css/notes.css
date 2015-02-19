@@ -1,1 +1,13 @@
-notes.css
+
+#notetext
+{
+  height: 50%;
+  overflow: scroll;
+  box-shadow: 10px, 10px, 10px, 10px;
+   width:100%;
+}
+
+#newnotediv
+{
+  padding-top: 20%;
+}

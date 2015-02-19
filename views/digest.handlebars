@@ -94,44 +94,26 @@
 	<div class="container" id="calendar">
 		<h4>Calendar</h4>
 		<hr>
+		<div style="height:50%;width:100%;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+			<p>Event Title: <hr> </p>
 
-		<div class="container" id="formbegins">
-			<form id="calendarform">
-				New Sceduled Event Title:
-				<input type="text" name="title" >
-				<br>Event Location:
-				<input type="text" name="location">
-				<br>Event Date:
-				<input type = "date" name = "date">
-				<br>Event Time:
-				<input type = "time">
-				<br><br>
-				
-			</form>
+
+
 		</div>
-			<div id="submitbutton">
-			<button id = "calendarsubmit" class ="btn btn-primary btn-hg btn-block" onclick="showEvent()">SUBMIT</button>
-			</div>
+		</div>
+			<div id="addbutton">
+			<a href="/events"><button id = "calendarsubmit" class ="btn btn-primary btn-hg btn-block">
+				SUBMIT</button></a>
+		</div>
 
 			<!--<h5 id="googleHeader">Optional Scheduler:</h5>-->
 			
 			<div id="googleLinkDiv">
 			<button id="googleLink" class = "btn btn-primary btn-hg btn-block">Login to Google Calendar</button>
 			</div>
-
-			<div class = "container" id="currenteventlist">
-			<p class = "details"></p>
-			</div>
 		
 	</div>
 
-		<!--<button id="loggedin"> Create Event</button>
-		<iframe	id="googleCalendar"  src="https://www.google.com/calendar/embed?src=qqjra2o5r6j02cp33v8no2qp6c%40group.calendar.google.com&ctz=America/Los_Angeles" scrolling="no">
-		</iframe>
-		<div style="width:195px; text-align:center;">
-  <iframe src="http://www.eventbrite.com/calendar-widget?eid=4653432542" frameborder="0" height="382" width="195" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true"></iframe>
-</div>
--->
 				
 	<!-- SETTINGS SECTION -->
 	<div class="container" id="settings">
