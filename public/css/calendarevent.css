@@ -93,3 +93,12 @@ input, textarea {
   padding-top: 2px;
   margin-left: 55%;
 }
+
+#addbutton
+{
+  float: left;
+  padding-top:1%;
+  position: center;
+  margin-left: 25%;
+  width: 50%;
+}
