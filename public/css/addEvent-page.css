@@ -6,33 +6,7 @@
  * Wes Okuhara, Yashna Bowen, Kathy Hoang
  */
 
-.login-form {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-#currenteventlist
-{
-	overflow:scroll;
-	box-shadow: 10px, 10px 10px 10px;
-	height: 50%;
-	width: 100%;
-  overflow:scroll;
-}
-
-#details
-{
-  width: 100%;
-	font-size: 10px;
-  float: left;
-  text-align: left;
-}
-
-#submitbutton
-{
-  float: left;
-	padding-top:1%;
-	position: center;
-  margin-left: 25%;
-  width: 50%;
+#add-event-form, #submit-event-btn {
+  max-width: 400px;
+  margin: 0 auto;
 }
