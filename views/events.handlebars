@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Weyaka - {{username}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Import CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/flat-ui.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/calendarevent.css" rel="stylesheet">
+   
+</head>
+<body>
+<div class="container">
+        <h4>Add Event to Schedule</h4>
+        <hr>
+
+        <div class="container" id="formbegins">
+            <form id="calendarform">
+                New Sceduled Event Title:
+                <input type="text" name="title" >
+                <br>Event Location:
+                <input type="text" name="location">
+                <br>Event Date:
+                <input type = "date" name = "date">
+                <br>Event Time:
+                <input type = "time">
+                <br><br>
+            </form>
+        </div>
+
+            <div id="submitbutton">
+                <a href="/digest#schedule">
+            <button id = "calendarsubmit" class ="btn btn-inverse" onclick="showEvent()">SUBMIT EVENT</button>
+            </a></div>
+
+            <!--<h5 id="googleHeader">Optional Scheduler:</h5>-->
+            <div id="googleLinkDiv">
+                <a href="/digest">
+                    <button id="googleLink" class = "btn btn-inverse">Cancel</button>
+                <a/>
+           
+    </div>
+
+        <script src="/js/calendar.js"></script>
+</body>
+</html>

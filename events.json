@@ -20,16 +20,16 @@
 	"events": [
 		{
 			"title": "COGS 120",
-			"location": "CICC",  
-			"date":  "ehgejr",		
-			"time": "rerere"
+			"location": "Cogs sci building",  
+			"date":  "02/20/2015",		
+			"time": "11:40 am"
 		},
 
 		{
-			"title": "COGS asas120",
-			"location": "ejhgjrg",  
-			"date":  "ehgejr",		
-			"time": "rerere"
+			"title": "UCSDxTED",
+			"location": "Atkinson Auditorium",  
+			"date":  "2/25/2015",		
+			"time": "6:00 pm"
 		}
 	]
 }
