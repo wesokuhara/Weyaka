@@ -31,6 +31,14 @@
    }
 
 
+  function popup(event)
+   {
+
+    window.open("../../views/test.html");
+
+   }
+
+
     var timecount=0;
    function showEvent(event)
 
@@ -42,7 +50,8 @@
    var date = document.getElementById("calendarform").elements[2].value;
    var time = document.getElementById("calendarform").elements[3].value;
 
-   var eventhtml = "Event Added :"+"<br>Event title= \"" + title +"\""+"<br>Location= \" "+ location + "\" "+"<br>Date: " + date+"\""+"<br>Time: "+ time +"\"<br> <br>";
+     window.alert("Event Successfully Added");
+    
 
           
 
@@ -61,6 +70,8 @@
         //events["events"].push(storing);
       //res.render("index", events);
       //document.write(storing);
+
+
 
 
 

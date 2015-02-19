@@ -95,14 +95,24 @@
 	<div class="container" id="calendar">
 		<h4>Calendar</h4>
 		<hr>
+		
+		
+		
 		<div style="height:50%;width:100%;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
-			<p>Event Title: <hr> </p>
-
-
-
+			
+			{{#each events}}
+			<p> &middot <br>Event Title: {{title}} <br>
+			   Location : {{location}} <br>
+			   Date: {{date}} <br>
+			   Time: {{time}} <br><hr></p>
+			{{/each}}
 		</div>
+		
+		
 		</div>
-			<div id="addbutton">
+
+
+		<div id="addbutton">
 			<a href="/events"><button id = "calendarsubmit" class ="btn btn-primary btn-hg btn-block">
 				SUBMIT</button></a>
 		</div>
