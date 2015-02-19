@@ -1,0 +1,12 @@
+/**
+ * addEvent-page.css
+ * Custom styling for add Event page
+ * 
+ * Weyaka
+ * Wes Okuhara, Yashna Bowen, Kathy Hoang
+ */
+
+#add-event-form, #submit-event-btn {
+  max-width: 400px;
+  margin: 0 auto;
+}
