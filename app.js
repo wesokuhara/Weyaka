@@ -59,6 +59,10 @@ app.get('/addEvent', addEvent.view); //add event page
 app.get('/notes', notes.view);
 
 
+//post request from form schedule
+app.get('/digestform', digest.schedule);
+
+
 /////////////////////////////////////////////////////////////////////
 
 http.createServer(app).listen(app.get('port'), function(){

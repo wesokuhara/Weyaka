@@ -38,10 +38,6 @@ function showEvent(event) {
  window.alert("Event Successfully Added");
   
 
-        
-
-
-
       $("#currenteventlist").html(eventhtml);
 
       var storing = {
