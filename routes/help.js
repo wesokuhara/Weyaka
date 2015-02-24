@@ -1,17 +1,14 @@
 /**
  * help.js
- * Controller class to render the full digest page
+ * Controller class to render the help page.
  * 
  * Weyaka
  * Wes Okuhara, Yashna Bowen, Kathy Hoang
  */
 
  //Load JSON data
-var data = require('../data.json');
-
 exports.view = function(req, res) {
 	console.log("# Loading help page...");
-	console.log(data);
 	
-	res.render('help', data);
+	res.render('help');
 };

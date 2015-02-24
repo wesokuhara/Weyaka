@@ -9,10 +9,10 @@
 	<!-- Import CSS -->
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/flat-ui.css" rel="stylesheet">
+	<link href="css/simple-weather.css" rel="stylesheet">
 
 	<link href="css/global.css" rel="stylesheet">
 	<link href="css/digest-page.css" rel="stylesheet">
-	<link href="css/simple-weather.css" rel="stylesheet">
 	<link href="css/notes.css" rel="stylesheet">
 </head>
 
@@ -53,10 +53,6 @@
 		<h4>Traffic</h4>
 		<hr>
 
-		<!-- Locate me button 
-		<div id="map-locate-btn"></div>
-		-->
-
 		<!-- Destination input -->
 		<div id="address-input"></div>
 
@@ -82,21 +78,43 @@
 		<h4>Notes</h4>
 		<hr>
 
-		<div style="height:75%;width:100%; overflow:auto;">
+		<div id="add-note-popup">
+			<div class="popup-wrapper">
+				<div class="popup-content">
+					<h5>Add Note</h5>
+
+
+			        <form id="add-note-form">
+			            <!-- Title -->
+			            <div class="form-group">
+			                <input id="title-field" type="text" class="form-control" name="title" placeholder="Title">
+			            </div>
+
+			            <!-- Details -->
+			            <div class="form-group">
+			                <textarea id="details-field" name="details" class="form-control" placeholder="Add details here"></textarea>
+			            </div>
+			        </form>
+
+			        <button id="submit-note-btn" class="btn btn-inverse">Submit</button>
+
+					<button id="cancel-note-btn" class="btn btn-inverse" onclick="toggle_visibility('add-note-popup')">Cancel</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- List of notes -->
+		<div id="notes-list">
 			{{#each notes}}
-			<p>Event Title: {{title}} <br>
-			   Summary: {{summary}} <br><hr></p>
+			<p><b>{{title}}</b><br>
+			   {{summary}} <br>
+			   <hr>
+			</p>
 			{{/each}}
 		</div>
 
-
-		<div>
-			<a href="/notes" >
-				<button id = "addnotebutton" class="btn btn-inverse">Add Note</button>
-			</a>
-
-		</div>
-
+		<!-- Add Note button -->
+		<button class="btn btn-inverse" onclick="toggle_visibility('add-note-popup')">Add Note</button>
 	</div>
 
 	<!-- SCHEDULE SECTION -->
@@ -148,6 +166,7 @@
 	<script src="js/bootstrap.js"></script>
 	<script src="js/weyaka.js"></script>
 	<script src="js/calendar.js"></script>
+	<script src="js/notes.js"></script>
 
 	<!-- Google Maps API Javascript imports -->
 	<script type="text/javascript"

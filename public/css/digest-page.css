@@ -6,12 +6,6 @@
  * Wes Okuhara, Yashna Bowen, Kathy Hoang
  */
 
-/* Spacing on the header for scrolling */
-h4 {
-    padding-top: 30px;
-}
-
-
 /***** TRAFFIC SECTION *****/
 #googleMap {
     width: 85%; /* fill 85% width of static container for scrolling */
@@ -41,7 +35,51 @@ h4 {
     border-radius: 10px;
 }
 
+/****** NOTES SECTION *****/
+#notes-list {
+    height: 75%;
+    width: 100%;
+    overflow: auto;
+}
 
+/** Styling for the shaded overlay */
+#add-note-popup {
+    top: 0; 
+    left: 0;
+    position: fixed; 
+    width: 100%; 
+    height: 120%;
+    background-color: rgba(0,0,0,0.7);
+    display: none; /* default hide */
+    padding-top: 40px;
+}
+
+.popup-wrapper {
+    padding-top: 40px;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto; /* center the popup */ 
+    text-align: left;
+}
+
+.popup-content {
+    border-radius: 10px; 
+    background-color: #FFF; 
+    padding: 30px;
+    padding-bottom: 70px;
+}
+
+#details-field {
+    height: 200px;
+}
+
+#submit-note-btn {
+    float: left;
+}
+
+#cancel-note-btn {
+    float: right;
+}
 
 /****** SCHEDULE SECTION *****/ 
 /* Formatting for list of events */

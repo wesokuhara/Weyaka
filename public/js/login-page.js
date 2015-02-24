@@ -7,7 +7,6 @@
  */
 
 $(document).ready( function() {
-
  	/* Handle validation */
  	$("#login-btn").click( function (event) {
 

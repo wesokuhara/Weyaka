@@ -17,8 +17,6 @@ var home = require('./routes/home');
 var digest = require('./routes/digest');
 var help = require('./routes/help');
 
-var notes = require('./routes/notes');
-
 var addEvent = require('./routes/addEvent');
 
 /////////////////////////////////////////////////////////////////////
@@ -55,9 +53,6 @@ app.get('/digest', digest.view); //digest page
 app.get('/help', help.view); //help page
 
 app.get('/addEvent', addEvent.view); //add event page
-
-app.get('/notes', notes.view);
-
 
 /////////////////////////////////////////////////////////////////////
 

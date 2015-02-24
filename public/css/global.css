@@ -22,6 +22,10 @@ hr {
     border-radius: 10px;
 }
 
+h4 {
+    padding-top: 30px;
+}
+
 
 .jumbotron {
     background-color: #edeff1;
