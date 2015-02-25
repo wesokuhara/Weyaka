@@ -63,6 +63,8 @@ app.get('/notes', notes.view);
 app.get('/digestform', digest.schedule);
 
 
+app.post('/digestgoogle', digest.googlecal);
+
 /////////////////////////////////////////////////////////////////////
 
 http.createServer(app).listen(app.get('port'), function(){

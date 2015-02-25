@@ -14,11 +14,21 @@ var events = require('../events.json');
 exports.view = function(req, res) {
 	console.log("# Loading digest page...");
 	
+		var token = req.query;
+		console.log(token);
+	
 	res.render('digest', events);
 };
 
 
+exports.googlecal = function(req, res)
+{
 
+
+
+res.render('/digest', events);
+
+}
 
 
 exports.schedule= function(req, res) {
