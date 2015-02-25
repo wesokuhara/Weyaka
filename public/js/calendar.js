@@ -13,7 +13,7 @@ function startAuth (event) {
   var clientId = '897711787704-7qrcp98444ftfkuo21qfkshq1c0eth61.apps.googleusercontent.com';
   var scopes = 'https://www.googleapis.com/auth/calendar';
 	var url = authorizationUrlBase;
-	url += '?response_type=token'
+	url += '?response_type=code'
 		+ '&redirect_uri='+encodeURIComponent(redirect)
 		+ '&client_id=' +encodeURIComponent(clientId)
 		+ '&scope=' + encodeURIComponent(scopes);

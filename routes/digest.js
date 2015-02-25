@@ -15,7 +15,7 @@ exports.view = function(req, res) {
 	console.log("# Loading digest page...");
 	
 		var token = req.query;
-		console.log(token);
+		console.log(req.query);
 	
 	res.render('digest', events);
 };
