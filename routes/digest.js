@@ -64,8 +64,6 @@ exports.view = function(req, res) {
 exports.googlecall = function(req, res)
 {
 
-
-
 res.render('/digest', events);
 
 }
@@ -79,7 +77,7 @@ exports.schedule= function(req, res) {
   var jsonobject ={
 	"title": req.query.title,
 	"location": req.query.location,
-	"date": req.query.Date,
+	"date": req.query.date,
 	"time": req.query.time
 }
 
