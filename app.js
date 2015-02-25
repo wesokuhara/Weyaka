@@ -62,8 +62,7 @@ app.get('/notes', notes.view);
 //post request from form schedule
 app.get('/digestform', digest.schedule);
 
-
-app.post('/digestgoogle', digest.googlecal);
+app.get('/digestgoogle', digest.googlecall);
 
 /////////////////////////////////////////////////////////////////////
 

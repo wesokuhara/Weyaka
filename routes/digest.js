@@ -11,17 +11,57 @@ var data = require('../data.json');
 var events = require('../events.json');
 
 
+// This should work both there and elsewhere.
+function isEmpty(obj) {
+    for(var prop in obj) {
+        if(obj.hasOwnProperty(prop))
+            return false;
+    }
+
+    return true;
+}
+
+
 exports.view = function(req, res) {
 	console.log("# Loading digest page...");
 	
-		var token = req.query;
-		console.log(req.query);
+		if(isEmpty(res.query))
+			{
+
+				console.log("hw");
+
+				res.render('digest',events);
+			}
+		else
+		{
+
+			var tokenurl = "https://accounts.google.com/o/oauth2/token?"+
+			"code="+res.query.code+
+			"&redirect_uri="+"http://localhost:3000/digest"+
+			"&client_id="+"897711787704-7qrcp98444ftfkuo21qfkshq1c0eth61.apps.googleusercontent.com"+
+			"&client_secret="+"ySwANfpLuaLhHxOHkpUwp5h-"+
+			"&grant_type=authorization_code";
+
+
+			$.post(tokenurl,tokencallback);
+
+			console.log(tokenurl);
+
+
+			function tokencallback(result)
+			{
+				//console.log(result);
+
+				console.log("boooooooo");
+			}
+
+		}
 	
 	res.render('digest', events);
 };
 
 
-exports.googlecal = function(req, res)
+exports.googlecall = function(req, res)
 {
 
 
