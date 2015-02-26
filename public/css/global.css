@@ -13,7 +13,6 @@ html {
 }
 
 body {
-    padding-top: 80px;
     height: 600px;
     background-color: #D8EBE7;
 } 
@@ -47,27 +46,34 @@ h4 {
 /***** NAVBAR STYLING *****/
 /* Padding to the right of the navbar brand */
 
-.navbar-brand {
-    padding-right: 3%;
+nav ul li .navbar-brand {
+    padding-top: 15px;
+    padding-left: 12px;
+    padding-right: 13px;
 }
 
 .glyphicon {
-    font-size: 21px;
+    font-size: 20px;
+}
+
+.glyphicon-home {
+    font-size: 23px;
 }
 
 /* Increase font size of links */
-.navbar ul li a {
+.user-settings li a{
     text-align: right;
     font-size: 18px;
 }
 
-.navbar-toggle {
-    padding-left: 0;
-}
-
 /* Mobile view settings */
 @media (max-width: 767px) {
-    .navbar-nav li a {
+
+    .navbar-toggle {
+        padding-left: 0;
+    }
+
+    .user-settings li a {
         padding-top: 13px;
         padding-bottom: 13px;
     }
@@ -78,10 +84,6 @@ h4 {
     /* Increase header width so icons do not overflow */
     .navbar-header {
         width: 60%;
-    }
-
-    .navbar-brand {
-        padding-right: 10%;
     }
 
     /* Increase padding for User settings dropdown */
