@@ -5,23 +5,22 @@
   * When the user cancels, hide the form.
   */
 function toggle_visibility(id) {
+    console.log("Visbility toggled.");
 
-	console.log("Visbility toggled.");
+    var popup = document.getElementById(id);
+    if (popup.style.display == 'block') {
 
-  var popup = document.getElementById(id);
-  if (popup.style.display == 'block') {
+        //reset form fields
+        document.getElementById('title-field').value='';
+        document.getElementById('summary-field').value='';
 
-    //reset form fields
-    document.getElementById('title-field').value='';
-    document.getElementById('summary-field').value='';
-
-    //hide the popup
-    popup.style.display = 'none';
-  }
-  else {
-    //display the popup
-    popup.style.display = 'block';
-  }
+        //hide the popup
+        popup.style.display = 'none';
+    }
+    else {
+        //display the popup
+        popup.style.display = 'block';
+    }
 }
 
 
