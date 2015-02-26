@@ -31,25 +31,25 @@
 				<span class="flaticon-house28"></span>
 			</a>
 
-			<!-- nav traffic -->
-			<a class="navbar-brand digest-link" href="#traffic">
-				<span class="flaticon-auto2"></span>
-			</a>
+			<div class="digest-link-icons">
+				<ul class="nav navbar-nav">
+					<li>
+						<a class="navbar-brand digest-link" href="#traffic"><span class="flaticon-auto2"></span></a>
+					</li>
 
-			<!-- nav weather -->
-			<a class="navbar-brand digest-link" href="#weather">
-				<span class="flaticon-sunny18"></span>
-			</a>
+					<li>
+						<a class="navbar-brand digest-link" href="#weather"><span class="flaticon-sunny18"></span></a>
+					</li>
 
-			<!-- nav notes -->
-			<a class="navbar-brand digest-link" href="#notes">
-				<span class="flaticon-document162"></span>
-			</a>
+					<li>
+						<a class="navbar-brand digest-link" href="#notes"><span class="flaticon-document162"></span></a>
+					</li>
 
-			<!-- nav schedule -->
-			<a class="navbar-brand digest-link" href="#schedule">
-				<span class="flaticon-schedule"></span>
-			</a>
+					<li>
+						<a class="navbar-brand digest-link" href="#schedule"><span class="flaticon-schedule"></span></a>
+					</li>
+				</ul>
+			</div>
 
 		</div>
 
@@ -57,7 +57,7 @@
 		<div class="collapse navbar-collapse" id="menu">
 
 			<!-- User settings -->
-			<ul class="nav navbar-nav navbar-right">
+			<ul class="nav navbar-nav navbar-right user-settings">
 				<li><a href="/help">Help and Settings</a></li>
 				<li><a href="/" class="logout-button">Logout</a></li>
 			</ul>
@@ -92,20 +92,16 @@
 
 	<!-- NOTES SECTION -->
 	<div class="container" id="notes">
-		<div>
-			<h4 id="notesheader">Notes
-			<button class="btn btn-inverse" id= "noteeventplus" onclick="toggle_visibility('add-note-popup')">+</button>
-			</h4>
-			<hr>
-
-		</div>
+		<h4>Notes</h4>
+		<hr>
 
 		<div id="add-note-popup">
 			<div class="popup-wrapper">
 				<div class="popup-content">
 					<h5>Add Note</h5>
 
-			        <form id="add-note-form" action="/digestnotes" method= "GET">
+
+			        <form id="add-note-form">
 			            <!-- Title -->
 			            <div class="form-group">
 			                <input id="title-field" type="text" class="form-control" name="title" placeholder="Title">
@@ -113,19 +109,23 @@
 
 			            <!-- Details -->
 			            <div class="form-group">
+
+			                <textarea id="details-field" name="details" class="form-control" placeholder="Add details here"></textarea>
+
 			                <textarea id="summary-field" name="summary" class="form-control" placeholder="Add details here"></textarea>
 			            </div>
 
 			            <div>
-			            	  <input type="submit" id="submit-note-btn" class="btn btn-inverse" name ="Submit" onclick="showNote()">
+			            	  <input type="submit" id="submit-note-btn" class="btn btn-inverse" name ="Submit" onclick="showNote()"onclick="toggle_visibility('add-note-popup')">
 			            </div>
 			        </form>
+
+			        <button id="submit-note-btn" class="btn btn-inverse">Submit</button>
 
 					<button id="cancel-note-btn" class="btn btn-inverse" onclick="toggle_visibility('add-note-popup')">Cancel</button>
 				</div>
 			</div>
 		</div>
-
 
 		<!-- List of notes -->
 		<div id="notes-list">
@@ -138,19 +138,15 @@
 		</div>
 
 		<!-- Add Note button -->
-		
+		<button class="btn btn-inverse" onclick="toggle_visibility('add-note-popup')">Add Note</button>
 	</div>
 
 	<!-- SCHEDULE SECTION -->
 	<div class="container" id="schedule">
-		<h4>Schedule
-
-		<a href="/addEvent">
-			<button id="noteeventplus" class="btn btn-inverse">+</button></a>
-		</h4>
+		<h4>Schedule</h4>
 		<hr>
 		
-		<div id= "event-list">
+		<div id= "schedulelist">
 			{{#each events}}
 			<p>Event Title: {{title}} <br>
 			   Location : {{location}} <br>
@@ -161,7 +157,14 @@
 			{{/each}}
 		</div>
 
-		<br>	
+		<br>
+
+		<!-- Add New Event Button -->
+		<a href="/addEvent"><button id="add-event-btn" class="btn btn-inverse">Add New Event</button></a>
+
+		<br>
+		<br>
+		
 		<!-- Link to Google Calendar -->
 		<button id="googleLink" class="btn btn-inverse">Go to Google Calendar</button>
 	</div>
