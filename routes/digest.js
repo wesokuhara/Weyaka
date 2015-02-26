@@ -15,3 +15,24 @@ exports.view = function(req, res) {
 	
 	res.render('digest', events);
 };
+
+
+
+
+
+exports.schedule= function(req, res) {
+
+	console.log(req.query);
+
+
+  var jsonobject ={
+	"title": req.query.title,
+	"location": req.query.location,
+	"date": req.query.Date,
+	"time": req.query.time
+}
+
+	events["events"].push(jsonobject);
+	res.render('digest', events);
+
+};
