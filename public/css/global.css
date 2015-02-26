@@ -14,7 +14,7 @@ html {
 
 body {
     height: 600px;
-    background-color: #D8EBE7;
+    background-color: #fcfcfc;
 } 
 
 hr {
@@ -42,14 +42,20 @@ h4 {
 
 /***** NAVBAR STYLING *****/
 
-.navbar-brand {
+.navbar-default .navbar-brand {
     text-align: center;
+    color: #5e6364;
+}
+
+.navbar-default{
+     background: linear-gradient(#edf4f6, #d5e5e8);
 }
 
 /* Increase font size of links */
 .user-settings li a{
     text-align: right;
     font-size: 18px;
+    color: #5e6364;
 }
 
 /* Mobile view settings */
@@ -69,6 +75,7 @@ h4 {
     }
 
     .navbar-nav > li > a {
+        color: #5e6364;
         padding: 15px 3.2%;
     }
 }
