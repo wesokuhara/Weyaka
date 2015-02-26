@@ -27,6 +27,11 @@
     float: left;
 }
 
+.note-icon div {
+    position: absolute; /* the position of the temperature is fixed */
+    float: left;
+}
+
 #simpleWeatherHome {
     padding-left: 7%;
     width: 90%;
@@ -48,3 +53,22 @@ i {
 #simpleWeatherHome .glyphicon {
     font-size: 11vmin;
 }
+
+#notecountHome
+{
+    
+    padding-top: 10%;
+    padding-left: 7%;
+    width: 90%;
+    margin: 0 auto;
+
+
+}
+#notecountHome h2
+{
+    text-align: center;
+    font-size: 8vmin;
+    color: #34495e;
+}
+
+

@@ -118,9 +118,12 @@ exports.notes= function(req, res) {
 }
 
 	console.log(events['notecount']);
+	
 	events["notes"].push(jsonobject);
+
 	events['notecount'] =events['notecount']+1;
 	console.log(events['notecount']);
+	
 	res.render('digest', events);
 
 };
