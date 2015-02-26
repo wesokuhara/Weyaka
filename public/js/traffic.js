@@ -53,14 +53,14 @@ function initMap(lat, lng) {
 	//add traffic layer to map
 	trafficLayer.setMap(map);
 
-	//add the locate button
-	//$("#map-locate-btn").html('<button type="button" class="btn btn-inverse" onclick="checkGeolocation()">Locate me!</button>');
-
 	//add address lookup input field
 	$("#address-input").html('<input id="address" type="text" class="form-control" placeholder="Enter Destination">');
 
 	//add geocode button
 	$("#geocode-btn").html('<button type="button" class="btn btn-inverse" onclick="codeAddress()"><span class="fui-search"></span></button>');
+	
+	//add the refresh button
+	$("#refresh-map-btn").html('<button type="button" class="btn btn-inverse" onclick="checkGeolocation()"><span class="glyphicon glyphicon-refresh"></span></button>');
 }
 
 function codeAddress() {

@@ -14,13 +14,10 @@
 }
 
 #address-input, #geocode-btn {
+    max-width: 60%;
     float: left;
     padding-bottom: 10px;
-}
-
-#address-input {
     padding-right: 10px;
-    width: 70%;
 }
 
 /* Paragraphs for weather and map api objects
