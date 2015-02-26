@@ -13,8 +13,8 @@ html {
 }
 
 body {
+    background-color: #e8e9e9;
     height: 100%;
-    background-color: #fcfcfc;
 } 
 
 hr {
@@ -37,7 +37,8 @@ hr {
 
 /***** NAVBAR STYLING *****/
 .navbar-default{
-     background: linear-gradient(#edf4f6, #d5e5e8);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(#edf4f6, #d5e5e8);
 }
 
 /* Change color of digest links on navbar */
