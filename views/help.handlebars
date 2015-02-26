@@ -1,6 +1,8 @@
+<!DOCTYPE html>
+
 <html>
 <head>
-	<title>Weyaka - Help</title>
+	<title>Weyaka - Help and Settings</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -21,36 +23,56 @@
 			</button>
 
 			<!-- Weyaka home button -->
-			<a class="navbar-brand" href="/home"><span class="fui-home"></span></a>
+			<a class="navbar-brand" href="/home">
+				<span class="glyphicon glyphicon-home"></span>
+			</a>
+
+			<!-- nav traffic -->
+			<a class="navbar-brand" href="/digest#traffic">
+				<span class="glyphicon glyphicon-road"></span>
+			</a>
+
+			<!-- nav weather -->
+			<a class="navbar-brand" href="/digest#weather">
+				<span class="glyphicon glyphicon-cloud"></span>
+			</a>
+
+			<!-- nav notes -->
+			<a class="navbar-brand" href="/digest#notes">
+				<span class="glyphicon glyphicon-pencil"></span>
+			</a>
+
+			<!-- nav schedule -->
+			<a class="navbar-brand" href="/digest#schedule">
+				<span class="glyphicon glyphicon-list-alt"></span>
+			</a>
+
 		</div>
 
 		<!-- Navbar contents -->
 		<div class="collapse navbar-collapse" id="menu">
-			<!-- Navbar links -->
-			<ul class="nav navbar-nav">
-				<li><a href="digest#traffic">Traffic</a></li>
-				<li><a href="digest#weather">Weather</a></li>
-				<li><a href="digest#notes">Notes</a></li>
-				<li><a href="digest#schedule">Schedule</a></li>
-				<li class="nav-divider"></li>
-			</ul>
-
 			<!-- User settings -->
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="digest#settings">Settings</a></li>
-				<li><a href="#">Help</a></li>
 				<li><a href="/" class="logout-button">Logout</a></li>
 			</ul>
 		</div>
 	</nav>
 
 	<div class="container">
-		<h4>Help and Documentation</h4>
+		<h4>Help and Settings</h4>
+
+		<p>
+			<b>Developed by:</b><br>
+			Wes Okuhara<br>
+			Yashna Bowen<br>
+			Kathy Hoang<br>
+			<br>
+
+			2015
+		</p>
 	</div>
 
-	
-
-	  	<!-- Link Javascript -->
+	<!-- Link Javascript -->
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/weyaka.js"></script>
