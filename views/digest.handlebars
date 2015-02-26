@@ -14,7 +14,6 @@
 
 	<link href="css/global.css" rel="stylesheet">
 	<link href="css/digest-page.css" rel="stylesheet">
-	<link href="css/notes.css" rel="stylesheet">
 	
 </head>
 
@@ -91,7 +90,9 @@
 	<!-- NOTES SECTION -->
 	<div class="container" id="notes">
 		<h4>Notes
-		<button id ="noteeventplus" class="btn btn-inverse" onclick="toggle_visibility('add-note-popup')">+</button>
+		<button id ="add-note-btn" class="btn btn-inverse" onclick="toggle_visibility('add-note-popup')">
+			<span class="fui-plus"></span>
+		</button>
 		</h4>
 		<hr>
 
@@ -142,7 +143,11 @@
 	<!-- SCHEDULE SECTION -->
 	<div class="container" id="schedule">
 		<h4>Schedule
-			<a href="/addEvent"><button id="noteeventplus" class="btn btn-inverse">+</button></a>
+			<a href="/addEvent">
+				<button id="add-event-btn" class="btn btn-inverse">
+					<span class="fui-plus"></span>
+				</button>
+			</a>
 
 		</h4>
 		<hr>
