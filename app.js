@@ -57,6 +57,8 @@ app.get('/addEvent', addEvent.view); //add event page
 //post request from form schedule
 app.get('/digestform', digest.schedule);
 
+app.get('/digestgoogle', digest.googlecall);
+
 /////////////////////////////////////////////////////////////////////
 
 http.createServer(app).listen(app.get('port'), function(){

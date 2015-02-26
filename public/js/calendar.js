@@ -13,12 +13,12 @@ function startAuth (event) {
   var clientId = '897711787704-k22vac8ld5e5duptvne3fjjbtvgl01ss.apps.googleusercontent.com';
   var scopes = 'https://www.googleapis.com/auth/calendar';
 	var url = authorizationUrlBase;
-	url += '?response_type=token'
+	url += '?response_type=code'
 		+ '&redirect_uri='+encodeURIComponent(redirect)
 		+ '&client_id=' +encodeURIComponent(clientId)
 		+ '&scope=' + encodeURIComponent(scopes);
 
-	window.open(url);
+	window.open(url,1);
 }
 
 function popup(event){

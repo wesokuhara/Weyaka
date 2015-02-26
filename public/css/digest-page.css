@@ -96,3 +96,13 @@
 #event-list hr {
     border-color: rgba(52,73,94,0.8);
 }
+
+#schedulelist
+{
+    padding-left: 2%;
+    height:75%;
+    width:100%;
+    overflow:auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px #888888;
+}
