@@ -1,5 +1,8 @@
 
 {
+
+	"notecount":2,
+
 	"notes": [
        {
 		"summary":"Milk, eggs, bread (whole wheat), elderberry jam, hot cheetos!!!",
@@ -13,6 +16,9 @@
 
 	],
 
+
+
+	"eventcount":2,
 	"events": [
 		{
 			"title": "COGS 120",

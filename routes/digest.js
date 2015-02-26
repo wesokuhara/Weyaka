@@ -79,8 +79,29 @@ exports.schedule= function(req, res) {
 	"date": req.query.date,
 	"time": req.query.time
 }
-
+	
 	events["events"].push(jsonobject);
+	res.render('digest', events);
+
+};
+
+
+
+/**cming through notes*/
+exports.notes= function(req, res) {
+
+	console.log(req.query);
+
+	var jsonobject ={
+	"title": req.query.title,
+	"summary": req.query.summary
+}
+
+	console.log(events['notecount']);
+
+	events["notes"].push(jsonobject);
+	events['notecount'] =events['notecount']+1;
+	console.log(events['notecount']);
 	res.render('digest', events);
 
 };

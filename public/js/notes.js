@@ -13,7 +13,7 @@ function toggle_visibility(id) {
 
     //reset form fields
     document.getElementById('title-field').value='';
-    document.getElementById('details-field').value='';
+    document.getElementById('summary-field').value='';
 
     //hide the popup
     popup.style.display = 'none';
@@ -23,3 +23,16 @@ function toggle_visibility(id) {
     popup.style.display = 'block';
   }
 }
+
+
+/**Number of notes added*/
+var notecount = 0;
+
+function showNote(event)
+{
+//Displaying note popup and incrementing
+window.alert("Note Successfully Added");
+notecount = notecount+1;
+}
+
+

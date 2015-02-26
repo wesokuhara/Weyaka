@@ -56,6 +56,7 @@ app.get('/addEvent', addEvent.view); //add event page
 
 //post request from form schedule
 app.get('/digestform', digest.schedule);
+app.get('/digestnotes', digest.notes);
 
 app.get('/digestgoogle', digest.googlecall);
 

@@ -81,28 +81,19 @@
     float: right;
 }
 
-/****** SCHEDULE SECTION *****/ 
-/* Formatting for list of events */
-#event-list {
-    background-color: rgba(255,255,255,0.8);
-    padding: 10px;
-    height: 60%;
-    width: 90%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    overflow:auto;
-}
 
-#event-list hr {
-    border-color: rgba(52,73,94,0.8);
-}
-
-#schedulelist
+#event-list
 {
     padding-left: 2%;
-    height:75%;
-    width:100%;
-    overflow:auto;
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px 5px #888888;
-}
+    height: 75%;
+    width: 100%;
+    overflow: auto;
+    outline-color: #888888;
+    opacity: 30%;
+    
+  }
+
+
+/****** SCHEDULE SECTION *****/ 
+/* Formatting for list of events */
+
