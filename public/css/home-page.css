@@ -28,9 +28,9 @@
 }
 
 #simpleWeatherHome {
-    width: 100%;
+    padding-left: 7%;
+    width: 90%;
     margin: 0 auto;
-    padding-right: 5px;
 }
 
 /* styling for the temperature text on the weather icon */
