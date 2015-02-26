@@ -24,8 +24,10 @@
 /* styling for the temperature text on the weather icon */
 #simpleWeatherHome h2 {
     font-size: 9vmin;
-    color: #fff;
+    color: #34495e;
+    /*
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    */
 }
 
 /* Styling for the glyphicon ban-icon */
