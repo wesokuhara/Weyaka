@@ -92,7 +92,9 @@
 
 	<!-- NOTES SECTION -->
 	<div class="container" id="notes">
-		<h4>Notes</h4>
+		<h4>Notes
+		<button id ="noteeventplus" class="btn btn-inverse" onclick="toggle_visibility('add-note-popup')">+</button>
+		</h4>
 		<hr>
 
 		<div id="add-note-popup">
@@ -101,7 +103,7 @@
 					<h5>Add Note</h5>
 
 
-			        <form id="add-note-form">
+			        <form id="add-note-form" action="/digestnotes" method="GET">
 			            <!-- Title -->
 			            <div class="form-group">
 			                <input id="title-field" type="text" class="form-control" name="title" placeholder="Title">
@@ -109,7 +111,9 @@
 
 			            <!-- Details -->
 			            <div class="form-group">
+
 			                <textarea id="summary-field" name="summary" class="form-control" placeholder="Add details here"></textarea>
+
 			            </div>
 
 			            <div>
@@ -117,7 +121,8 @@
 			            </div>
 			        </form>
 
-					<button id="cancel-note-btn" class="btn btn-inverse" onclick="toggle_visibility('add-note-popup')">Cancel</button>
+
+			       <button id="cancel-note-btn" class="btn btn-inverse" onclick="toggle_visibility('add-note-popup')">Cancel</button>
 				</div>
 			</div>
 		</div>
@@ -133,15 +138,18 @@
 		</div>
 
 		<!-- Add Note button -->
-		<button class="btn btn-inverse" onclick="toggle_visibility('add-note-popup')">Add Note</button>
+		
 	</div>
 
 	<!-- SCHEDULE SECTION -->
 	<div class="container" id="schedule">
-		<h4>Schedule</h4>
+		<h4>Schedule
+			<a href="/addEvent"><button id="noteeventplus" class="btn btn-inverse">+</button></a>
+
+		</h4>
 		<hr>
 		
-		<div id= "schedulelist">
+		<div id="events-list">
 			{{#each events}}
 			<p>Event Title: {{title}} <br>
 			   Location : {{location}} <br>
@@ -152,12 +160,6 @@
 			{{/each}}
 		</div>
 
-		<br>
-
-		<!-- Add New Event Button -->
-		<a href="/addEvent"><button id="add-event-btn" class="btn btn-inverse">Add New Event</button></a>
-
-		<br>
 		<br>
 		
 		<!-- Link to Google Calendar -->
