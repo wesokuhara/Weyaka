@@ -17,8 +17,7 @@ $(document).ready(function() {
   //if geolocation is disabled, notify user
   function (error) {
     if (error.code == error.PERMISSION_DENIED) {
-      $("#simpleWeatherHome").html("<span class='glyphicon glyphicon-ban-circle'></span>");
-      //$(".weather-icon a").html("<span class='glyphicon glyphicon-ban-circle'></span>");
+      $("#simpleWeatherHome").html("<i class='glyphicon glyphicon-ban-circle'></i>");
     }
   });
 });
@@ -29,7 +28,7 @@ function loadWeather(location, woeid) {
     woeid: woeid,
     unit: 'f',
     success: function(weather) {
-      html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      html = '<h2><i class="icon-'+weather.code+'"></i><br>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
 
       $("#simpleWeatherHome").html(html);
     },
