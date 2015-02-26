@@ -18,8 +18,8 @@ body {
 } 
 
 hr {
-    border-top: 3px solid #F3F3F3;
-    border-radius: 10px;
+    border-top: 2px solid #334245;
+    border-radius: 20px;
 }
 
 h4 {
@@ -34,53 +34,63 @@ h4 {
 
 .container {
     padding-top: 30px;
-    padding-bottom: 115px;
+    margin-bottom: 115px;
     max-width: 540px;
     height: 100%; /* fill width of static body */
 }
 
 
 /***** NAVBAR STYLING *****/
+.navbar-default{
+     background: linear-gradient(#edf4f6, #d5e5e8);
+}
+
+/* Change color of digest links on navbar */
+.navbar-default .navbar-nav > li > a {
+    color: #334245;
+}
+
+.navbar-default .navbar-toggle:before {
+    color: #334245;
+}
+
+.navbar-toggle {
+    padding-left: 0;
+}
 
 .navbar-default .navbar-brand {
     text-align: center;
-    color: #5e6364;
-}
-
-.navbar-default{
-     background: linear-gradient(#edf4f6, #d5e5e8);
+    color: #334245;
 }
 
 /* Increase font size of links */
 .user-settings li a{
     text-align: right;
     font-size: 18px;
-    color: #5e6364;
+    color: #334245;
 }
 
 /* Mobile view settings */
 @media (max-width: 767px) {
 
+    /* Lower the right padding of the home button */
     .navbar-brand {
         padding-right: 20px;
     }
 
-    .navbar-toggle {
-        padding-left: 0;
-    }
-
+    /* Increase padding of user settings dropdown */
     .user-settings li a {
         padding-top: 13px;
         padding-bottom: 13px;
     }
 
+    /* To make sure all digest links on navbar fit */
     .navbar-nav > li > a {
-        color: #5e6364;
-        padding: 15px 3.2%;
+        padding: 16px 3.2%;
     }
 }
 
-/* Desktop view settings */
+/* DESKTOP view settings */
 @media (min-width: 768px) {
     /* Increase header width so icons do not overflow */
     .navbar-header {
