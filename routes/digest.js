@@ -60,19 +60,22 @@ exports.view = function(req, res) {
 };
 
 
+
+
+
 exports.googlecall = function(req, res)
 {
-
 res.render('/digest', events);
-
 }
+
+
 
 
 exports.schedule= function(req, res) {
 
-	console.log(req.query);
+console.log(req.query);
 
-
+/**creating object to put into events.json*/
   var jsonobject ={
 	"title": req.query.title,
 	"location": req.query.location,
@@ -80,7 +83,24 @@ exports.schedule= function(req, res) {
 	"time": req.query.time
 }
 	
+		
 	events["events"].push(jsonobject);
+	
+	for(var i = 0; i< events['events'].length; i++)	
+	{
+	for(var j = 0; j < events['events'].length-1;j++)
+	{
+		if(events['events'][j]['time']<events['events'][j+1]['time'])
+		{
+			var temp = ['events'][j];
+			['events'][j]= ['events'][j+1];
+			['events'][j+1]=temp;
+			}
+	}
+}
+
+
+
 	res.render('digest', events);
 
 };
@@ -98,7 +118,6 @@ exports.notes= function(req, res) {
 }
 
 	console.log(events['notecount']);
-
 	events["notes"].push(jsonobject);
 	events['notecount'] =events['notecount']+1;
 	console.log(events['notecount']);
