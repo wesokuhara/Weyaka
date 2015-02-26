@@ -40,18 +40,10 @@ h4 {
 }
 
 
-
-
-
 /***** NAVBAR STYLING *****/
-/* Padding to the right of the navbar brand */
 
-nav ul li .navbar-brand {
-    padding-top: 15px;
+.navbar-brand {
     text-align: center;
-}
-
-.flaticon-auto2, .flaticon-sunny18, .flaticon-document162, .flaticon-schedule {
 }
 
 /* Increase font size of links */
@@ -63,6 +55,10 @@ nav ul li .navbar-brand {
 /* Mobile view settings */
 @media (max-width: 767px) {
 
+    .navbar-brand {
+        padding-right: 20px;
+    }
+
     .navbar-toggle {
         padding-left: 0;
     }
@@ -70,6 +66,10 @@ nav ul li .navbar-brand {
     .user-settings li a {
         padding-top: 13px;
         padding-bottom: 13px;
+    }
+
+    .navbar-nav > li > a {
+        padding: 15px 3.25%;
     }
 }
 
