@@ -28,54 +28,7 @@ function popup(event){
 
 
 function showEvent(event) {
-  var timecount=0;
- 
- var title = document.getElementById("add-event-form").elements[0].value;
- var location = document.getElementById("add-event-form").elements[1].value;
- var date = document.getElementById("add-event-form").elements[2].value;
- var time = document.getElementById("add-event-form").elements[3].value;
-
+  
  window.alert("Event Successfully Added");
   
-
-      $("#currenteventlist").html(eventhtml);
-
-      var storing = {
-
-        "title":document.getElementById("add-event-form").elements[0].value,
-        "location": document.getElementById("add-event-form").elements[1].value,
-        "date": document.getElementById("add-event-form").elements[2].value,
-        "time": document.getElementById("add-event-form").elements[3].value
-      }
-
-      //events["events"].push(storing);
-    //res.render("index", events);
-    //document.write(storing);
-
-    console.log(storing);
-
- console.log(eventhtml);
 }
-
-   /**
-
-    $("#loggedin").click(function dothis(event){
-
-    console.log("posting");
-
-    $.get("https://accounts.google.com/o/oauth2/v3/token", listEvent);
-
-
-   });
-
-
-
-
-
-
-function listEvent(result)
-{
-  console.log(result['access_token']);
-}
-
-*/
