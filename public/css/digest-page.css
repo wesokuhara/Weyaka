@@ -82,15 +82,13 @@
 }
 
 
-#event-list
+#events-list
 {
     padding-left: 2%;
     height: 75%;
     width: 100%;
     overflow: auto;
-    outline-color: #888888;
-    opacity: 30%;
-    
+   
   }
 
 
