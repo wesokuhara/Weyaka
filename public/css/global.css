@@ -48,16 +48,10 @@ h4 {
 
 nav ul li .navbar-brand {
     padding-top: 15px;
-    padding-left: 12px;
-    padding-right: 13px;
+    text-align: center;
 }
 
-.glyphicon {
-    font-size: 20px;
-}
-
-.glyphicon-home {
-    font-size: 23px;
+.flaticon-auto2, .flaticon-sunny18, .flaticon-document162, .flaticon-schedule {
 }
 
 /* Increase font size of links */
