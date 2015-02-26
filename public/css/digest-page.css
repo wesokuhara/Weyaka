@@ -14,13 +14,10 @@
 }
 
 #address-input, #geocode-btn {
+    max-width: 60%;
     float: left;
     padding-bottom: 10px;
-}
-
-#address-input {
     padding-right: 10px;
-    width: 70%;
 }
 
 /* Paragraphs for weather and map api objects
@@ -35,10 +32,17 @@
     border-radius: 10px;
 }
 
+
+
+
+
+
+
 /****** NOTES SECTION *****/
 #notes-list {
     height: 75%;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     overflow: auto;
 }
 
@@ -81,16 +85,25 @@
     float: right;
 }
 
+#add-note-btn {
+    float: right;  
+}
 
-#events-list
-{
-    padding-left: 2%;
+
+
+
+
+
+
+
+/****** SCHEDULE SECTION ******/
+#add-event-btn {
+    float: right;  
+}
+
+#events-list {
     height: 75%;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     overflow: auto;
-   
-  }
-
-
-/****** SCHEDULE SECTION *****/ 
-/* Formatting for list of events */
+}

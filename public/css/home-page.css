@@ -7,6 +7,13 @@
  */
 
 /******** HOME PAGE  ********/
+
+/* Set the height of the homepage */
+.container {
+    padding-top: 100px;
+    height: 500px;
+}
+
 .icon {
     padding: 13px;
     width: 50%; /* fill half width of static container */
