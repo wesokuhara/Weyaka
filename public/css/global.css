@@ -13,6 +13,7 @@ html {
 }
 
 body {
+    padding-top: 80px;
     height: 600px;
     background-color: #D8EBE7;
 } 
@@ -39,18 +40,24 @@ h4 {
     height: 100%; /* fill width of static body */
 }
 
+
+
+
+
 /***** NAVBAR STYLING *****/
 /* Padding to the right of the navbar brand */
+
 .navbar-brand {
-    padding-right: 4%;
+    padding-right: 3%;
 }
 
 .glyphicon {
-    font-size: 18px;
+    font-size: 21px;
 }
 
 /* Increase font size of links */
 .navbar ul li a {
+    text-align: right;
     font-size: 18px;
 }
 
@@ -58,7 +65,7 @@ h4 {
     padding-left: 0;
 }
 
-/* In mobile view, space out each link in the menu */
+/* Mobile view settings */
 @media (max-width: 767px) {
     .navbar-nav li a {
         padding-top: 13px;
@@ -66,7 +73,19 @@ h4 {
     }
 }
 
-/* Increase padding for User settings dropdown */
-.navbar-right {
-    padding-right: 25px;
+/* Desktop view settings */
+@media (min-width: 768px) {
+    /* Increase header width so icons do not overflow */
+    .navbar-header {
+        width: 60%;
+    }
+
+    .navbar-brand {
+        padding-right: 10%;
+    }
+
+    /* Increase padding for User settings dropdown */
+    .navbar-right {
+        padding-right: 25px;
+    }
 }
