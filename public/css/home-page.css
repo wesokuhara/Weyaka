@@ -15,42 +15,38 @@
 }
 
 .icon {
-    padding: 10px;
+    padding: 7px;
     width: 50%; /* fill half width of static container */
     float: left;
     position: relative;
 }
 
-/* The position of the overlay information is fixed */
-.weather-icon div, .note-icon div, .schedule-icon div {
-    position: absolute;
-    float: left;
-}
 
-
-#simpleWeatherHome {
-    padding-left: 7%;
+#simpleWeatherHome, #notecountHome, #schedulecountHome, #traffic-ETA-home{
+    padding-left: 10%;
     width: 90%;
     margin: 0 auto;
     text-align: center;
     color: #34495e;
+    position: absolute;
+    float: left;
 }
 
 #simpleWeatherHome .glyphicon-ban-circle {
     padding-top: 25%;
 }
 
-#notecountHome, #schedulecountHome {
-    padding-top: 10%;
-    padding-left: 7%;
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-    color: #34495e;
+#notecountHome, #schedulecountHome, #traffic-ETA-home {
+    padding-top: 12%;
 }
 
 /* MOBILE VIEW FONT SIZES SCALE WITH SCREEN WIDTH */
 @media (max-width: 767px) {
+
+    #traffic-ETA-home h2 {
+        font-size: 8vw;
+    }
+    
     #simpleWeatherHome h2 {
         font-size: 11vw;
     }
