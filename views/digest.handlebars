@@ -150,22 +150,19 @@
 					<span class="fui-plus"></span>
 				</button>
 			</a>
-
 		</h4>
+		
 		<hr>
 		
 		<div id="events-list">
 			{{#each events}}
-			<p>Event Title: {{title}} <br>
+			<p><b>{{title}}</b> <br>
+			   {{date}} @ {{time}} <br>
 			   Location : {{location}} <br>
-			   Date: {{date}} <br>
-			   Time: {{time}} <br>
 			   <hr>
 			</p>
 			{{/each}}
 		</div>
-
-		<br>
 		
 		<!-- Link to Google Calendar -->
 		<button id="googleLink" class="btn btn-inverse">Go to Google Calendar</button>

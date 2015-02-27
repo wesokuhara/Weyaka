@@ -82,16 +82,16 @@
 			<div class="icon schedule-icon">
 				<a href="digest#schedule">
 					<div id="schedulecountHome">
-
+						<p>Up Next:</p>
 						{{#if events}}
-							<h4>&middot {{events.0.title}}<br>
-							{{events.0.location}}<br>
-							{{events.0.date}} <br>
-							{{events.0.time}}
-							<br></h4><p>and <b>{{eventcount}}</b> more
-							{{/if}}
-							</p>
-								
+							<h4><b>{{events.0.title}}</b><br>
+							{{events.0.date}}<br>
+							{{events.0.time}} <br>
+							{{events.0.location}}
+							</h4>
+							<p>and <b>{{eventcount}}</b> more </p>
+						{{/if}}
+															
 					</div>
 					<img src="images/boxes/schedule-box.png" 
 					class="img-responsive">

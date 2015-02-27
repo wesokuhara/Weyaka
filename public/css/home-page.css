@@ -21,91 +21,96 @@
     position: relative;
 }
 
-/* Styling for the temperature on the weather icon f*/
-.weather-icon div {
-    position: absolute; /* the position of the temperature is fixed */
+/* The position of the overlay information is fixed */
+.weather-icon div, .note-icon div, .schedule-icon div {
+    position: absolute;
     float: left;
 }
 
-
-
-.schedule-icon div {
-    position: absolute; /* the position of the temperature is fixed */
-    float: left;
-}
-
-
-
-.note-icon div {
-    position: absolute; /* the position of the temperature is fixed */
-    float: left;
-}
 
 #simpleWeatherHome {
     padding-left: 7%;
     width: 90%;
     margin: 0 auto;
-}
-
-/* styling for the temperature text on the weather icon */
-#simpleWeatherHome h2 {
     text-align: center;
-    font-size: 11vmin;
     color: #34495e;
 }
 
-i {
-    font-size: 16vmin;
+#simpleWeatherHome .glyphicon-ban-circle {
+    padding-top: 25%;
 }
 
-/* Styling for the glyphicon ban-icon */
-#simpleWeatherHome .glyphicon {
-    font-size: 11vmin;
-}
-
-#notecountHome
-{
-    
+#notecountHome, #schedulecountHome {
     padding-top: 10%;
     padding-left: 7%;
     width: 90%;
     margin: 0 auto;
-
-
-}
-#notecountHome h2
-{
     text-align: center;
-    font-size: 8vmin;
     color: #34495e;
 }
 
+/* MOBILE VIEW FONT SIZES SCALE WITH SCREEN WIDTH */
+@media (max-width: 767px) {
+    #simpleWeatherHome h2 {
+        font-size: 11vw;
+    }
 
-#schedulecountHome
-{
+    i {
+        font-size: 16vw;
+    }
 
-    padding-top: 10%;
-    padding-left: 7%;
-    width: 90%;
-    margin: 0 auto;
+    /* Styling for the glyphicon ban-icon */
+    #simpleWeatherHome .glyphicon-ban-circle {
+        font-size: 14vw;
+    }
 
+    #simpleWeatherHome p {
+        font-size: 3.6vw;
+    }
+
+    /* Scaling font size of note details */
+    #notecountHome h2 {
+        font-size: 9vw;
+    }
+
+    #schedulecountHome h4 {
+        margin: 0;
+        font-size: 4.3vw;
+    }
+
+    #schedulecountHome p {
+        font-size: 3.5vw;
+    }
 }
 
-#schedulecountHome p
-{
+/* Static font sizes for DESKTOP view */
+@media (min-width: 768px) {
+    #simpleWeatherHome h2 {
+        font-size: 75px;
+    }
 
-    text-align: center;
-    font-size: 3.5vmin;
-    color: #34495e;
+    i {
+        font-size: 150px;
+    }
+
+    #simpleWeatherHome .glyphicon-ban-circle {
+        font-size: 105px;
+    }
+
+    #simpleWeatherHome p {
+        font-size: 25px;
+    }
+
+    /* Scaling font size of note details */
+    #notecountHome h2 {
+        font-size: 65px;
+    }
+
+    #schedulecountHome h4 {
+        font-size: 30px;
+    }
+
+    #schedulecountHome p {
+        font-size: 20px;
+    }
 }
-
-
-#schedulecountHome h4
-{
-
-    text-align: center;
-    font-size: 4vmin;
-    color: #34495e;
-
-}
-

@@ -17,7 +17,7 @@ $(document).ready(function() {
   //if geolocation is disabled, notify user
   function (error) {
     if (error.code == error.PERMISSION_DENIED) {
-      $("#simpleWeatherHome").html("<i class='glyphicon glyphicon-ban-circle'></i>");
+      $("#simpleWeatherHome").html("<span class='glyphicon glyphicon-ban-circle'></span><p>Location Service<br>Disabled.</p>");
     }
   });
 });

@@ -39,7 +39,7 @@
 
 
 /****** NOTES SECTION *****/
-#notes-list {
+#notes-list, #events-list {
     height: 75%;
     width: 90%;
     margin: 0 auto;
@@ -99,11 +99,4 @@
 /****** SCHEDULE SECTION ******/
 #add-event-btn {
     float: right;  
-}
-
-#events-list {
-    height: 75%;
-    width: 90%;
-    margin: 0 auto;
-    overflow: auto;
 }
