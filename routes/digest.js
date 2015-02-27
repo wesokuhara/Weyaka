@@ -85,7 +85,9 @@ console.log(req.query);
 	
 		
 	events["events"].push(jsonobject);
+    events['eventcount'] =events['eventcount']+1;	
 	
+
 	for(var i = 0; i< events['events'].length; i++)	
 	{
 	for(var j = 0; j < events['events'].length-1;j++)
@@ -95,7 +97,8 @@ console.log(req.query);
 			var temp = ['events'][j];
 			['events'][j]= ['events'][j+1];
 			['events'][j+1]=temp;
-			}
+			console.log("seitched");
+		}
 	}
 }
 
@@ -118,9 +121,12 @@ exports.notes= function(req, res) {
 }
 
 	console.log(events['notecount']);
+	
 	events["notes"].push(jsonobject);
+
 	events['notecount'] =events['notecount']+1;
 	console.log(events['notecount']);
+	
 	res.render('digest', events);
 
 };

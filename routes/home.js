@@ -7,11 +7,11 @@
  */
 
 // Load JSON data
-var data = require('../data.json'); 
+var events = require('../events.json'); 
 
 exports.view = function(req, res) {
 	console.log("# Loading home page...");
-	console.log(data);
+	
 
-	res.render('home', data); //pass data into the home page
+	res.render('home', events); //pass data into the home page
 };
