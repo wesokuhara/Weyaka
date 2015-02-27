@@ -111,7 +111,7 @@ console.log(req.query);
 
 
 /**cming through notes*/
-exports.notes= function(req, res) {
+exports.notes = function(req, res) {
 
 	console.log(req.query);
 

@@ -46,14 +46,4 @@ $(document).ready( function() {
 			}
 		});
 	});
-
-	/* When a link is clicked, add the active class */
-	$('.nav li').on('click', function(){
-
-		//remove active class from all li elements
-	    $('.nav li').removeClass('active');
-
-	    //add active class to the li clicked
-	    $(this).addClass('active');
-	});
 });
