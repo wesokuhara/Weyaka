@@ -27,6 +27,15 @@
     float: left;
 }
 
+
+
+.schedule-icon div {
+    position: absolute; /* the position of the temperature is fixed */
+    float: left;
+}
+
+
+
 .note-icon div {
     position: absolute; /* the position of the temperature is fixed */
     float: left;
@@ -71,4 +80,32 @@ i {
     color: #34495e;
 }
 
+
+#schedulecountHome
+{
+
+    padding-top: 10%;
+    padding-left: 7%;
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+#schedulecountHome p
+{
+
+    text-align: center;
+    font-size: 2vmin;
+    color: #34495e;
+}
+
+
+#schedulecountHome h4
+{
+
+    text-align: center;
+    font-size: 4vmin;
+    color: #34495e;
+
+}
 

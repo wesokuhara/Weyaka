@@ -19,12 +19,13 @@
 
 
 	"eventcount":2,
+
 	"events": [
 		{
-			"title": "COGS 120",
-			"location": "Cogs sci building",  
-			"date":  "2015-02-01",		
-			"time": "11:40 am"
+			"title": "COGS 101B",
+			"location": "Peterson Hall",  
+			"date":  "2015-02-27",		
+			"time": "03:00 pm"
 		},
 
 		{
