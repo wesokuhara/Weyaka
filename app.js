@@ -9,7 +9,8 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
+//var mongoose = require('mongoose');
 
 // LOAD JS MODULES //////////////////////////////////////////////////
 var login = require('./routes/login');
@@ -18,7 +19,6 @@ var digest = require('./routes/digest');
 var help = require('./routes/help');
 
 var addEvent = require('./routes/addEvent');
-
 /////////////////////////////////////////////////////////////////////
 
 var app = express();
@@ -45,18 +45,16 @@ if ('development' == app.get('env')) {
 
 // ROUTES - CALLS JS CONTROLLER METHOD //////////////////////////////
 app.get('/', home.view); //login page
-
 app.get('/home', home.view); //home page
-
 app.get('/digest', digest.view); //digest page
-
 app.get('/help', help.view); //help page
+
+app.get('/addNote', digest.addNote); //add note
 
 app.get('/addEvent', addEvent.view); //add event page
 
 //post request from form schedule
 app.get('/digestform', digest.schedule);
-app.get('/digestnotes', digest.notes);
 app.get('/digestgoogle', digest.googlecall);
 
 /////////////////////////////////////////////////////////////////////

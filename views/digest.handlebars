@@ -91,39 +91,45 @@
 
 	<!-- NOTES SECTION -->
 	<div class="container" id="notes">
+		<!--Notes header and add button (toggles modal) -->
 		<h4>Notes
-		<button id ="add-note-btn" class="btn btn-inverse" onclick="toggle_visibility('add-note-popup')">
+		<button type="button" id="add-note-btn" class="btn btn-inverse" data-toggle="modal" data-target="#noteModal">
 			<span class="fui-plus"></span>
 		</button>
 		</h4>
 		<hr>
 
-		<div id="add-note-popup">
-			<div class="popup-wrapper">
-				<div class="popup-content">
-					<h5>Add Note</h5>
+		<!-- Note Modal -->
+		<div class="modal fade" id="noteModal" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- popup header -->
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							Cancel
+						</button>
+						<h4 class="modal-title">Add Note</h4>
+					</div>
 
+					<!-- popup body (form) -->
+					<div class="modal-body">
+						<form id="add-note-form" href="/addNote" method="GET">
+				            <!-- Title -->
+				            <div class="form-group">
+				                <input type="text" id="title-field" name="title" class="form-control" placeholder="Title" required>
+				            </div>
 
-			        <form id="add-note-form" action="/digestnotes" method="GET">
-			            <!-- Title -->
-			            <div class="form-group">
-			                <input id="title-field" type="text" class="form-control" name="title" placeholder="Title">
-			            </div>
+				            <!-- Details -->
+				            <div class="form-group">
+				                <textarea id="details-field" name="details" class="form-control" placeholder="Add details here"></textarea>
+				            </div>
+			        	</form>
+					</div>
 
-			            <!-- Details -->
-			            <div class="form-group">
-
-			                <textarea id="summary-field" name="summary" class="form-control" placeholder="Add details here"></textarea>
-
-			            </div>
-
-			            <div>
-			            	  <input type="submit" id="submit-note-btn" class="btn btn-inverse" name="Submit" onclick="showNote()" onclick="toggle_visibility('add-note-popup')">
-			            </div>
-			        </form>
-
-
-			       <button id="cancel-note-btn" class="btn btn-inverse" onclick="toggle_visibility('add-note-popup')">Cancel</button>
+					<!-- popup footer -->
+					<div class="modal-footer">
+						<input id="submit-note-button" type="submit" class="btn btn-inverse" form="add-note-form">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -132,14 +138,11 @@
 		<div id="notes-list">
 			{{#each notes}}
 			<p><b>{{title}}</b><br>
-			   {{summary}} <br>
-			   <hr>
+			   	{{details}}<br>
+			   	<hr>
 			</p>
 			{{/each}}
-		</div>
-
-		<!-- Add Note button -->
-		
+		</div>	
 	</div>
 
 	<!-- SCHEDULE SECTION -->
@@ -174,7 +177,6 @@
 	<script src="js/bootstrap.js"></script>
 	<script src="js/weyaka.js"></script>
 	<script src="js/calendar.js"></script>
-	<script src="js/notes.js"></script>
 
 	<!-- Google Maps API Javascript imports -->
 	<script type="text/javascript"

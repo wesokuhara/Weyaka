@@ -16,7 +16,6 @@ function isEmpty(obj) {
         if(obj.hasOwnProperty(prop))
             return false;
     }
-
     return true;
 }
 
@@ -110,15 +109,15 @@ console.log(req.query);
 
 
 
-/**cming through notes*/
+/**cming through notes
 exports.notes = function(req, res) {
 
 	console.log(req.query);
 
-	var jsonobject ={
-	"title": req.query.title,
-	"summary": req.query.summary
-}
+	var jsonobject = {
+		"title": req.query.title,
+		"summary": req.query.summary
+	}
 
 	console.log(events['notecount']);
 	
@@ -128,5 +127,22 @@ exports.notes = function(req, res) {
 	console.log(events['notecount']);
 	
 	res.render('digest', events);
-
 };
+*/
+
+exports.addNote = function(req, res) {
+	console.log("adding note...");
+	var noteData = req.query;
+
+	var json = {
+		"title": noteData.title,
+		"details": noteData.details
+	}
+
+	console.log(json);
+
+	events["notes"].push(json);
+	events['notecount'] = events['notecount']+1;
+
+	res.render("digest", events);
+}

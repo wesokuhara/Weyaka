@@ -4,16 +4,15 @@
 	"notecount":2,
 
 	"notes": [
-       {
-		"summary":"Milk, eggs, bread (whole wheat), elderberry jam, hot cheetos!!!",
-		"title": "Stuff to buy"
+    	{
+			"title":"Milk, eggs, bread (whole wheat), elderberry jam, hot cheetos!!!",
+			"details": "Stuff to buy"
 		},
 
 		{
-			"summary": " Uhh poem maybe, print pics of mom n dad",
-			"title":" mom's bday soon"
+			"title": " Uhh poem maybe, print pics of mom n dad",
+			"details":" mom's bday soon"
 		}
-
 	],
 
 
