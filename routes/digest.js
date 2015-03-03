@@ -107,29 +107,6 @@ console.log(req.query);
 
 };
 
-
-
-/**cming through notes
-exports.notes = function(req, res) {
-
-	console.log(req.query);
-
-	var jsonobject = {
-		"title": req.query.title,
-		"summary": req.query.summary
-	}
-
-	console.log(events['notecount']);
-	
-	events["notes"].push(jsonobject);
-
-	events['notecount'] =events['notecount']+1;
-	console.log(events['notecount']);
-	
-	res.render('digest', events);
-};
-*/
-
 exports.addNote = function(req, res) {
 	console.log("adding note...");
 	var noteData = req.query;
@@ -139,10 +116,25 @@ exports.addNote = function(req, res) {
 		"details": noteData.details
 	}
 
-	console.log(json);
-
 	events["notes"].push(json);
 	events['notecount'] = events['notecount']+1;
+
+	res.render("digest", events);
+};
+
+exports.addEvent = function(req, res) {
+	console.log("adding event...");
+	var eventData = req.query;
+
+	var json = {
+		"title": eventData.title,
+		"date": eventData.date,
+		"time": eventData.time,
+		"location": eventData.location
+	}
+
+	events["events"].push(json);
+	events['eventcount'] = events['eventcount']+1;
 
 	res.render("digest", events);
 }

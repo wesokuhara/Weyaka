@@ -17,8 +17,6 @@ var login = require('./routes/login');
 var home = require('./routes/home');
 var digest = require('./routes/digest');
 var help = require('./routes/help');
-
-var addEvent = require('./routes/addEvent');
 /////////////////////////////////////////////////////////////////////
 
 var app = express();
@@ -50,8 +48,7 @@ app.get('/digest', digest.view); //digest page
 app.get('/help', help.view); //help page
 
 app.get('/addNote', digest.addNote); //add note
-
-app.get('/addEvent', addEvent.view); //add event page
+app.get('/addEvent', digest.addEvent); //add event
 
 //post request from form schedule
 app.get('/digestform', digest.schedule);

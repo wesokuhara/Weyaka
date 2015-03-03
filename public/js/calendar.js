@@ -24,11 +24,3 @@ function startAuth (event) {
 function popup(event){
   window.open("../../views/test.html");
 }
-
-
-
-function showEvent(event) {
-  
- window.alert("Event Successfully Added");
-  
-}
