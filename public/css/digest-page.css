@@ -45,7 +45,7 @@
 /****** NOTES & SCHEDULE SECTION *****/
 #notes-list, #events-list {
     padding: 25px;
-    height: 80%;
+    height: 60%;
     width: 90%;
     margin: 0 auto;
     overflow: auto;

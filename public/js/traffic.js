@@ -19,7 +19,6 @@ var rendererOptions = {
 }
 var directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);;
 var geocoder = new google.maps.Geocoder();
-var distanceMatrix = new google.maps.DistanceMatrixService();
 
 /* Check geolocation is enabled first */
 function checkGeolocation() {
@@ -90,7 +89,8 @@ function codeAddress() {
 			var request = {
 				origin: start,
 				destination: end,
-				travelMode: google.maps.TravelMode.DRIVING
+				travelMode: google.maps.TravelMode.DRIVING,
+				durationInTraffic: true
 			};
 
 			//display the directions on the map
@@ -98,6 +98,7 @@ function codeAddress() {
 				if (status2 == google.maps.DirectionsStatus.OK) {
 					directionsDisplay.setDirections(response);
 
+					console.log(response);
 					//get ETA
 					var ETA = response.routes[0].legs[0].duration.text;
 					var distance = response.routes[0].legs[0].distance.value;
@@ -106,17 +107,17 @@ function codeAddress() {
 
 					var routeCondition;
 
-					// 0 to 30mph
+					// 0 to 25mph
 					if (ratio < 10) {
 						routeCondition = "Slow"
 					}
 
-					// 30 to 50mph
-					else if (ratio >= 10 && ratio < 22) {
+					// 25 to 60mph
+					else if (ratio >= 10 && ratio < 26) {
 						routeCondition = "Moderate";
 					}
 
-					// 50mph +
+					// 60mph +
 					else {
 						routeCondition = "Fast";
 					}

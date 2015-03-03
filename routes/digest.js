@@ -136,5 +136,8 @@ exports.addEvent = function(req, res) {
 	events["events"].push(json);
 	events['eventcount'] = events['eventcount']+1;
 
+	//increment the count to display on the homescreen
+	events['additionalEvents'] = events['additionalEvents']+1;
+
 	res.render("digest", events);
 }

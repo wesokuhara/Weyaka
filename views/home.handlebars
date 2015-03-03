@@ -50,7 +50,7 @@
 			<!-- TRAFFIC -->
 			<div class="icon">
 				<a href="digest#traffic">
-					<div id="traffic-ETA-home"><h2>ETA<br>20 min.</h2><p>Light</p></div>
+					<div id="traffic-home"></div>
 					<img src="images/boxes/traffic-box.png" 
 					class="img-responsive">
 				</a>
@@ -88,7 +88,7 @@
 							{{events.0.date}}<br>
 							{{events.0.time}} <br>
 							</h4>
-							<p>and <b>{{eventcount}}</b> more </p>
+							<p>and <b>{{additionalEvents}}</b> more </p>
 						{{/if}}
 															
 					</div>
@@ -107,5 +107,10 @@
 
 	<!-- Weather Temperature JS -->
 	<script src="js/temp-home.js"></script>
+
+	<!-- ETA Traffic Info JS -->
+	<script type="text/javascript"
+      	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB2vaEbg0YNSzZt2WDARdb27113XOSSjo"></script>
+	<script src="js/traffic-home.js"></script>
 </body>
 </html>

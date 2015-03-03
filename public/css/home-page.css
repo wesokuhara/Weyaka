@@ -22,7 +22,7 @@
 }
 
 
-#simpleWeatherHome, #notecountHome, #schedulecountHome, #traffic-ETA-home{
+#simpleWeatherHome, #notecountHome, #schedulecountHome, #traffic-home{
     padding-left: 10%;
     width: 90%;
     margin: 0 auto;
@@ -32,19 +32,29 @@
     float: left;
 }
 
-#simpleWeatherHome .glyphicon-ban-circle {
+/** Padding for the top of the ban circle */
+#simpleWeatherHome .glyphicon-ban-circle,
+#traffic-home .glyphicon-ban-circle  {
     padding-top: 25%;
 }
 
-#notecountHome, #schedulecountHome, #traffic-ETA-home {
+#notecountHome, #schedulecountHome {
     padding-top: 12%;
+}
+
+#traffic-home h4 {
+    padding-top: 25px;
 }
 
 /* MOBILE VIEW FONT SIZES SCALE WITH SCREEN WIDTH */
 @media (max-width: 720px) {
 
-    #traffic-ETA-home h2 {
-        font-size: 8vw;
+    #traffic-home h2 {
+        margin: 0;
+        font-size: 7vw;
+    } 
+    #traffic-home h4 {
+        font-size: 4.5vw;
     }
     
     #simpleWeatherHome h2 {
@@ -57,11 +67,13 @@
     }
 
     /* Styling for the glyphicon ban-icon */
-    #simpleWeatherHome .glyphicon-ban-circle {
+    #simpleWeatherHome .glyphicon-ban-circle,
+    #traffic-home .glyphicon-ban-circle {
         font-size: 14vw;
     }
 
-    #simpleWeatherHome p {
+    #simpleWeatherHome p,
+    #traffic-home p {
         font-size: 4vw;
     }
 
@@ -86,15 +98,21 @@
         font-size: 75px;
     }
 
+    #traffic-home h2 {
+        font-size: 50px;
+    }
+
     i {
         font-size: 100px;
     }
 
-    #simpleWeatherHome .glyphicon-ban-circle {
+    #simpleWeatherHome .glyphicon-ban-circle,
+    #traffic-home .glyphicon-ban-circle {
         font-size: 105px;
     }
 
-    #simpleWeatherHome p {
+    #simpleWeatherHome p,
+    #traffic-home p  {
         font-size: 25px;
     }
 

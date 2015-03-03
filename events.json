@@ -18,7 +18,8 @@
 
 
 	"eventcount":2,
-
+	"additionalEvents":1,
+	
 	"events": [
 		{
 			"title": "COGS 101B",
