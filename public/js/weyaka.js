@@ -82,11 +82,26 @@ $(document).ready( function() {
         }
 
         //format the date
-    	var dateArray = date.split("-");
-		var year = dateArray[0];
-		var month = dateArray[1];
-		var day = dateArray[2];
-		date = month.concat("/", day, "/", year);
+        if (date != "") {
+        	var dateArray = date.split("-");
+    		var year = dateArray[0];
+    		var month = dateArray[1];
+    		var day = dateArray[2];
+    		date = month.concat("/", day, "/", year);
+        }
+        else {
+            date = "None";
+        }
+
+        //check location field
+        if (location == "") {
+            location = "None";
+        }
+
+        //check time field
+        if (time == "") {
+            time = "None";
+        }
 
         var json = {
             'title': title,
