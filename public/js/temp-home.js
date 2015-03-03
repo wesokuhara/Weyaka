@@ -9,7 +9,6 @@
 
 /* When the page loads, get the weather */
 $(document).ready(function() {
-
   //Try to get the weather
   navigator.geolocation.getCurrentPosition(function(position) {
     loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
@@ -29,7 +28,7 @@ function loadWeather(location, woeid) {
     unit: 'f',
     success: function(weather) {
       html = '<h2><i class="icon-'+weather.code+'"></i><br>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-
+      html += '<p>'+weather.currently+'</p>'
       $("#simpleWeatherHome").html(html);
     },
     error: function(error) {

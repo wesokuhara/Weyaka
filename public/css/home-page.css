@@ -15,7 +15,7 @@
 }
 
 .icon {
-    padding: 7px;
+    padding: 10px;
     width: 50%; /* fill half width of static container */
     float: left;
     position: relative;
@@ -41,13 +41,14 @@
 }
 
 /* MOBILE VIEW FONT SIZES SCALE WITH SCREEN WIDTH */
-@media (max-width: 767px) {
+@media (max-width: 720px) {
 
     #traffic-ETA-home h2 {
         font-size: 8vw;
     }
     
     #simpleWeatherHome h2 {
+        margin-top: 20px;
         font-size: 11vw;
     }
 
@@ -61,7 +62,7 @@
     }
 
     #simpleWeatherHome p {
-        font-size: 3.6vw;
+        font-size: 4vw;
     }
 
     /* Scaling font size of note details */
@@ -71,22 +72,22 @@
 
     #schedulecountHome h4 {
         margin: 0;
-        font-size: 4.3vw;
+        font-size: 5vw;
     }
 
     #schedulecountHome p {
-        font-size: 3.5vw;
+        font-size: 5vw;
     }
 }
 
 /* Static font sizes for DESKTOP view */
-@media (min-width: 768px) {
+@media (min-width: 721px) {
     #simpleWeatherHome h2 {
         font-size: 75px;
     }
 
     i {
-        font-size: 150px;
+        font-size: 100px;
     }
 
     #simpleWeatherHome .glyphicon-ban-circle {

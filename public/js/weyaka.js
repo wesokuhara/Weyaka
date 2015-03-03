@@ -46,4 +46,57 @@ $(document).ready( function() {
 			}
 		});
 	});
+
+
+	/** Adding a note... */
+	$('#submit-note-button').click(function (e) {
+        //get all form data
+        var title = $('#add-note-form #title-field').val();
+        var details = $('#add-note-form #details-field').val();
+
+        if (title == "") {
+            return;
+        }
+
+        var json = {
+            'title': title,
+            'details': details
+        };
+        
+        console.log("submitting new note...");
+
+        $.get('/addNote', json);
+    });
+
+
+    /** Adding an event... */
+    $('#submit-event-button').click(function (e) {
+    	//get all form data
+        var title = $('#add-event-form #title-field').val();
+        var date = $('#add-event-form #date-field').val();
+        var time = $('#add-event-form #time-field').val();
+        var location = $('#add-event-form #location-field').val();
+
+        if (title == "") {
+            return;
+        }
+
+        //format the date
+    	var dateArray = date.split("-");
+		var year = dateArray[0];
+		var month = dateArray[1];
+		var day = dateArray[2];
+		date = month.concat("/", day, "/", year);
+
+        var json = {
+            'title': title,
+            'date': date,
+            'time': time,
+            'location': location
+        };
+
+        console.log("submitting new event...");
+
+        $.get('/addEvent', json);
+    });
 });

@@ -10,8 +10,16 @@ var map;
 var pos;
 var trafficLayer = new google.maps.TrafficLayer();
 var directionsService = new google.maps.DirectionsService();
-var directionsDisplay = new google.maps.DirectionsRenderer();;
-var geocoder = new google.maps.Geocoder();;
+var rendererOptions = {
+	polylineOptions:{
+		strokeColor:'#052EE6', 
+		strokeOpacity: 0.5,
+		strokeWeight: 2.5
+	}
+}
+var directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);;
+var geocoder = new google.maps.Geocoder();
+var distanceMatrix = new google.maps.DistanceMatrixService();
 
 /* Check geolocation is enabled first */
 function checkGeolocation() {
@@ -61,6 +69,9 @@ function initMap(lat, lng) {
 	
 	//add the refresh button
 	$("#refresh-map-btn").html('<button type="button" class="btn btn-inverse" onclick="checkGeolocation()"><span class="glyphicon glyphicon-refresh"></span></button>');
+
+	//add the ETA text
+	$('#route-eta').html('ETA: Please enter a destination');
 }
 
 function codeAddress() {
@@ -86,6 +97,31 @@ function codeAddress() {
 			directionsService.route(request, function (response, status2) {
 				if (status2 == google.maps.DirectionsStatus.OK) {
 					directionsDisplay.setDirections(response);
+
+					//get ETA
+					var ETA = response.routes[0].legs[0].duration.text;
+					var distance = response.routes[0].legs[0].distance.value;
+					var time = response.routes[0].legs[0].duration.value;
+					var ratio = distance/time;
+
+					var routeCondition;
+
+					// 0 to 30mph
+					if (ratio < 10) {
+						routeCondition = "Slow"
+					}
+
+					// 30 to 50mph
+					else if (ratio >= 10 && ratio < 22) {
+						routeCondition = "Moderate";
+					}
+
+					// 50mph +
+					else {
+						routeCondition = "Fast";
+					}
+
+					$("#route-eta").html('ETA: ' + ETA + " (" + routeCondition+ ")");
 				}
 			});
 		}
