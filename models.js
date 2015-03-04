@@ -9,7 +9,7 @@ var NoteSchema = new Mongoose.Schema({
 });
 
 //create the note schema in Mongoose
-exports.Note = mongoose.model('Note', NoteSchema);
+exports.Note = Mongoose.model('Note', NoteSchema);
 
 
 
@@ -22,4 +22,4 @@ var EventSchema = new Mongoose.Schema({
 	"time": String
 });
 
-exports.Event = mongoose.model('Event', EventSchema);
+exports.Event = Mongoose.model('Event', EventSchema);

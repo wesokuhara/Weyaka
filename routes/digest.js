@@ -8,54 +8,22 @@
 
  //Load JSON data
 var events = require('../events.json');
-
-
-// This should work both there and elsewhere.
-function isEmpty(obj) {
-    for(var prop in obj) {
-        if(obj.hasOwnProperty(prop))
-            return false;
-    }
-    return true;
-}
+var models = require("../models");
 
 
 exports.view = function(req, res) {
 	console.log("# Loading digest page...");
 	
-		if(isEmpty(res.query))
-			{
+	//find the events from the database
+	models.Event.find()
+		.exec(displayEvents);
 
-				console.log("hw");
-
-				res.render('digest',events);
-			}
-		else
-		{
-
-			var tokenurl = "https://accounts.google.com/o/oauth2/token?"+
-			"code="+res.query.code+
-			"&redirect_uri="+"http://localhost:3000/digest"+
-			"&client_id="+"897711787704-7qrcp98444ftfkuo21qfkshq1c0eth61.apps.googleusercontent.com"+
-			"&client_secret="+"ySwANfpLuaLhHxOHkpUwp5h-"+
-			"&grant_type=authorization_code";
-
-
-			$.post(tokenurl,tokencallback);
-
-			console.log(tokenurl);
-
-
-			function tokencallback(result)
-			{
-				//console.log(result);
-
-				console.log("boooooooo");
-			}
-
-		}
-	
-	res.render('digest', events);
+	function displayEvents (err, events) {
+		//find the notes from the database
+		models.Note.find(function (err, notes) {
+			res.render('digest', {'events': events, "notes": notes});
+		});
+	}
 };
 
 
@@ -68,64 +36,60 @@ res.render('/digest', events);
 }
 
 
-
-
-exports.schedule= function(req, res) {
-
-console.log(req.query);
-
-/**creating object to put into events.json*/
-  var jsonobject ={
-	"title": req.query.title,
-	"location": req.query.location,
-	"date": req.query.date,
-	"time": req.query.time
-}
-	
-		
-	events["events"].push(jsonobject);
-    events['eventcount'] =events['eventcount']+1;	
-	
-
-	for(var i = 0; i< events['events'].length; i++)	
-	{
-	for(var j = 0; j < events['events'].length-1;j++)
-	{
-		if(events['events'][j]['time']<events['events'][j+1]['time'])
-		{
-			var temp = ['events'][j];
-			['events'][j]= ['events'][j+1];
-			['events'][j+1]=temp;
-			console.log("seitched");
-		}
-	}
-}
-
-
-
-	res.render('digest', events);
-
-};
-
 exports.addNote = function(req, res) {
 	console.log("adding note...");
 	var noteData = req.query;
 
+	var newNote = new models.Note({
+		"title": noteData.title,
+		"details": noteData.details
+	});
+
+	newNote.save(afterSaving);
+
+	function afterSaving(err) {
+		if (err) {
+			console.log(err);
+			res.send(500);
+		}
+		res.redirect("digest");
+	}
+
+	/*
 	var json = {
 		"title": noteData.title,
 		"details": noteData.details
 	}
-
 	events["notes"].push(json);
 	events['notecount'] = events['notecount']+1;
 
 	res.render("digest", events);
+	*/
 };
 
 exports.addEvent = function(req, res) {
 	console.log("adding event...");
 	var eventData = req.query;
 
+	var newEvent = new models.Event({
+		"title": eventData.title,
+		"date": eventData.date,
+		"time": eventData.time,
+		"location": eventData.location
+	});
+
+	console.log(newEvent);
+
+	newEvent.save(afterSaving);
+
+	function afterSaving(err) {
+		if (err) {
+			console.log(err);
+			res.send(500);			
+		}
+		res.redirect("digest#schedule");
+	}
+/*
 	var json = {
 		"title": eventData.title,
 		"date": eventData.date,
@@ -140,4 +104,5 @@ exports.addEvent = function(req, res) {
 	events['additionalEvents'] = events['additionalEvents']+1;
 
 	res.render("digest", events);
+	*/
 }
