@@ -1,4 +1,4 @@
-/* Schemas for MongoDB go here 
+// Schemas for MongoDB go here 
 
 var Mongoose = require('mongoose');
 
@@ -10,4 +10,16 @@ var NoteSchema = new Mongoose.Schema({
 
 //create the note schema in Mongoose
 exports.Note = mongoose.model('Note', NoteSchema);
-*/
+
+
+
+
+var EventSchema = new Mongoose.Schema({
+	//key : value pairs
+	"title": String,
+	"location": String,
+	"date": String,
+	"time": String
+});
+
+exports.Event = mongoose.model('Event', EventSchema);
