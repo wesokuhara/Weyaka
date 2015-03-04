@@ -49,7 +49,21 @@
 		<div class="row">
 			<!-- TRAFFIC -->
 			<div class="icon">
-				<a href="digest#traffic">
+				<a href="digest#traffic" onclick="traffic_click()">
+
+
+					<!--Woopra Visitor Tracking code-->
+					<script type="text/javascript">
+					 /**adding Woopra tracking code for version mouseover traffic module*/
+						function traffic_click(){
+  						console.log("Home Traffic Clicked");
+  						woopra.track("traffic_click");
+  					}
+					</script>
+
+
+
+
 					<div id="traffic-home"></div>
 					<img src="images/boxes/traffic-box.png" 
 					class="img-responsive">
@@ -58,8 +72,20 @@
 
 			<!-- WEATHER -->
 			<div class="icon weather-icon">
-				<a href="digest#weather">
-					<div id="simpleWeatherHome"></div>
+				<a href="digest#weather" onclick="weather_click()">
+
+					
+					<!--Woopra Visitor Tracking code-->
+					<script type="text/javascript">
+					 /**adding Woopra tracking code for version mouseover traffic module*/
+						function weather_click(){
+  						console.log("Home Weather Clicked");
+  						woopra.track("weather_click");
+  					}
+					</script>
+
+
+				<div id="simpleWeatherHome"></div>
 					<img src="images/boxes/weather-box.png"
 					class="img-responsive"/>
 				</a>
@@ -70,7 +96,20 @@
 		<div class="row">
 			<!-- NOTES -->
 			<div class="icon note-icon">
-				<a href="digest#notes">
+				<a href="digest#notes" onclick="note_click()">
+
+
+					<!--Woopra Visitor Tracking code-->
+					<script type="text/javascript">
+					 /**adding Woopra tracking code for version mouseover traffic module*/
+						function note_click(){
+  						console.log("Home Note Clicked");
+  						woopra.track("note_click");
+  					}
+					</script>
+
+
+
 					<div id="notecountHome"> <h2>{{notecount}}<br>Notes</h2></div>
 					<img src="images/boxes/notes-box.png" 
 					class="img-responsive">
@@ -80,7 +119,18 @@
 
 			<!-- SCHEDULE -->
 			<div class="icon schedule-icon">
-				<a href="digest#schedule">
+				<a href="digest#schedule" onclick="schedule_click()">
+
+
+					<!--Woopra Visitor Tracking code-->
+					<script type="text/javascript">
+					 /**adding Woopra tracking code for version mouseover traffic module*/
+						function schedule_click(){
+  						console.log("Scedule mouseover event");
+  						woopra.track("schedule_click");
+  					}
+					</script>
+
 					<div id="schedulecountHome">
 						<p>Up Next:</p>
 						{{#if events}}
