@@ -25,7 +25,6 @@
   src: url('../fonts/lato/lato-light.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-light.woff') format('woff'), url('../fonts/lato/lato-light.ttf') format('truetype'), url('../fonts/lato/lato-light.svg#latolight') format('svg');
 }
 .icon {
-    /* padding: 10px; */
     width: 50%; /* fill half width of static container */
     float: left;
     position: relative;
