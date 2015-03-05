@@ -4,6 +4,13 @@
  */
 
 @font-face {
+  font-family: 'Bebas';
+  font-style: normal;
+
+  src: url ('../fonts/bebas/bebas-neue-regular.ttf') format('truetype');
+  }
+
+@font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 900;

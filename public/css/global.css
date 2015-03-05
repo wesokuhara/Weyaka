@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background-color: #e8e9e9;
+    background-color: #ffffff;
     height: 100%;
 } 
 
@@ -37,17 +37,17 @@ hr {
 
 /***** NAVBAR STYLING *****/
 .navbar-default{
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(#edf4f6, #d5e5e8);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    background-color: #4d6889;
 }
 
 /* Change color of digest links on navbar */
 .navbar-default .navbar-nav > li > a {
-    color: #334245;
+    color: #ffffff;
 }
 
 .navbar-default .navbar-toggle:before {
-    color: #334245;
+    color: #ffffff;
 }
 
 .navbar-toggle {
@@ -56,7 +56,7 @@ hr {
 
 .navbar-default .navbar-brand {
     text-align: center;
-    color: #334245;
+    color: #ffffff;
 }
 
 /* Increase font size of links */
