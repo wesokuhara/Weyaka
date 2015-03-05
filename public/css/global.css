@@ -36,65 +36,71 @@ hr {
 
 
 /***** NAVBAR STYLING *****/
-.navbar-default{
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-    background-color: #4d6889;
+/* Color to the navbar */
+.navbar-inverse, .navbar-collapse {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    background-color: #2980B9;
 }
 
-/* Change color of digest links on navbar */
-.navbar-default .navbar-nav > li > a {
-    color: #ffffff;
-}
-
-.navbar-default .navbar-toggle:before {
-    color: #ffffff;
-}
-
+/* Remove left padding on menu button */
 .navbar-toggle {
     padding-left: 0;
 }
 
-.navbar-default .navbar-brand {
-    text-align: center;
-    color: #ffffff;
-}
-
-/* Increase font size of links */
-.user-settings li a{
+/* Increase font size of menu links */
+.user-settings li a {
     text-align: right;
-    font-size: 18px;
-    color: #334245;
+    font-size: 20px;
 }
 
-/* Mobile view settings */
+/* When the brand or menu button is hovered, font color remains white */
+.navbar-inverse .navbar-header > a:hover,
+.navbar-inverse .navbar-header > a:focus, 
+.navbar-inverse .navbar-toggle:hover:before, 
+.navbar-inverse .navbar-toggle:focus:before {
+    color: #D4D4D4;
+}
+
+
+/* When a link is hovered or clicked, background color changes
+   and font color remains white. */
+.navbar-inverse .navbar-nav > li > a:hover, 
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #054066;
+    color: #fff;
+}
+
+/* MOBILE view settings */
 @media (max-width: 767px) {
 
-    /* Lower the right padding of the home button */
-    .navbar-brand {
-        padding-right: 20px;
-    }
-
-    /* Increase padding of user settings dropdown */
-    .user-settings li a {
-        padding-top: 13px;
-        padding-bottom: 13px;
-    }
-
-    /* To make sure all digest links on navbar fit */
+    /* Padding to make sure all digest links on navbar fit */
     .navbar-nav > li > a {
         padding: 17px 3.2%;
     }
 }
 
+
 /* DESKTOP view settings */
 @media (min-width: 768px) {
+    .navbar-brand {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
     /* Increase header width so icons do not overflow */
     .navbar-header {
-        width: 60%;
+        width: 500px;
     }
 
-    /* Increase padding for User settings dropdown */
+    /* Maintain top and bottom padding */
+    .navbar-nav > li > a{
+        padding: 15px 30px;
+    }
+
+    /* padding so user settings do not hit the edge of the screen */
     .navbar-right {
-        padding-right: 25px;
+        padding-right: 20px;
     }
 }

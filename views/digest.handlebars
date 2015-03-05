@@ -19,7 +19,7 @@
 
 <body>
 	<!-- NAVBAR -->
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
 				<span class="sr-only">Toggle navigation</span>
@@ -101,7 +101,7 @@
 		<div class="collapse navbar-collapse" id="menu">
 			<!-- User settings -->
 			<ul class="nav navbar-nav navbar-right user-settings">
-				<li><a href="/help">Help and Settings</a></li>
+				<li><a href="/help">About</a></li>
 				<li><a href="/" class="logout-button">Logout</a></li>
 			</ul>
 
@@ -187,7 +187,7 @@
 		<!-- List of notes -->
 		<div id="notes-list">
 			{{#each notes}}
-			<div class="note" id="note{{id}}">
+			<div class="row note" id="note{{id}}">
 				<!-- Delete note button -->
 				<button class="note-delete btn btn-inverse">
 					<span class="fui-cross"></span>
@@ -195,8 +195,8 @@
 				<p>
 				<b>{{title}}</b><br>
 			   	{{details}}<br>
-			   	<hr>
 				</p>
+				<hr>
 			</div>
 			{{/each}}
 		</div>	

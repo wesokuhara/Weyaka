@@ -7,38 +7,48 @@
  */
 
 /******** HOME PAGE  ********/
-
 /* Set the height of the homepage */
 .container {
-    padding-top: 85px;
+    padding-top: 120px; /* padding for the homescreen container */
     height: 500px;
 }
 
-
-.navbar-brand
-{ 
+/* Weyaka logo */
+.navbar-brand { 
+    padding-top: 14px;
     font-family: 'Lato';
-  font-style: normal;
-  font-weight: 300;
-
-  src: url('../fonts/lato/lato-light.eot');
-  src: url('../fonts/lato/lato-light.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-light.woff') format('woff'), url('../fonts/lato/lato-light.ttf') format('truetype'), url('../fonts/lato/lato-light.svg#latolight') format('svg');
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lato/lato-light.eot');
+    src: url('../fonts/lato/lato-light.eot?#iefix') format('embedded-opentype'), 
+    url('../fonts/lato/lato-light.woff') format('woff'), 
+    url('../fonts/lato/lato-light.ttf') format('truetype'), 
+    url('../fonts/lato/lato-light.svg#latolight') format('svg');
 }
+
+/* each individual icon */
 .icon {
+    padding: 1px;
     width: 50%; /* fill half width of static container */
     float: left;
     position: relative;
 }
 
 
+/* Text styling for the home page */
 #simpleWeatherHome, #notecountHome, #schedulecountHome, #traffic-home{
     padding-left: 10%;
     width: 90%;
     margin: 0 auto;
     text-align: center;
-    color: #34495e;
+    color: #ECF0F1;
     position: absolute;
     float: left;
+}
+
+/* Color of the weather icon */
+i {
+    color: #ECF0F1;
 }
 
 /** Padding for the top of the ban circle */
@@ -52,7 +62,7 @@
 }
 
 #traffic-home h4 {
-    padding-top: 25px;
+    padding-top: 30px;
 }
 
 /* MOBILE VIEW FONT SIZES SCALE WITH SCREEN WIDTH */
