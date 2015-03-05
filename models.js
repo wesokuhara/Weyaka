@@ -18,7 +18,7 @@ var EventSchema = new Mongoose.Schema({
 	//key : value pairs
 	"title": String,
 	"location": String,
-	"date": Date,
+	"date": String,
 	"time": String
 });
 
