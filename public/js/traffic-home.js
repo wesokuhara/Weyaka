@@ -48,28 +48,8 @@ function loadETA(lat, lng) {
 				if (status2 == google.maps.DirectionsStatus.OK) {
 					//get ETA
 					var ETA = response.routes[0].legs[0].duration.text;
-					var distance = response.routes[0].legs[0].distance.value;
-					var time = response.routes[0].legs[0].duration.value;
-					var ratio = distance/time;
 
-					var routeCondition;
-
-					// 0 to 25mph
-					if (ratio < 10) {
-						routeCondition = "Slow"
-					}
-
-					// 25 to 60mph
-					else if (ratio >= 10 && ratio < 26) {
-						routeCondition = "Moderate";
-					}
-
-					// 60mph +
-					else {
-						routeCondition = "Fast";
-					}
-
-					$("#traffic-home").html('<h4>To ' + address + "</h4><h2>ETA:<br>" + ETA + "</h2><p>" + routeCondition+ "</p>");
+					$("#traffic-home").html('<h4>To ' + address + "</h4><h2>ETA:<br>" + ETA + "</h2>");
 				}
 			});
 		}

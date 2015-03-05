@@ -101,28 +101,8 @@ function codeAddress() {
 					console.log(response);
 					//get ETA
 					var ETA = response.routes[0].legs[0].duration.text;
-					var distance = response.routes[0].legs[0].distance.value;
-					var time = response.routes[0].legs[0].duration.value;
-					var ratio = distance/time;
-
-					var routeCondition;
-
-					// 0 to 25mph
-					if (ratio < 10) {
-						routeCondition = "Slow"
-					}
-
-					// 25 to 60mph
-					else if (ratio >= 10 && ratio < 26) {
-						routeCondition = "Moderate";
-					}
-
-					// 60mph +
-					else {
-						routeCondition = "Fast";
-					}
-
-					$("#route-eta").html('ETA: ' + ETA + " (" + routeCondition+ ")");
+					
+					$("#route-eta").html('ETA: ' + ETA);
 				}
 			});
 		}
