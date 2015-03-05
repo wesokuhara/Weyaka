@@ -53,17 +53,24 @@ hr {
     font-size: 20px;
 }
 
-/* active color for digest links */
+/* When the brand or menu button is hovered, font color remains white */
+.navbar-inverse .navbar-header > a:hover,
+.navbar-inverse .navbar-header > a:focus, 
+.navbar-inverse .navbar-toggle:hover:before, 
+.navbar-inverse .navbar-toggle:focus:before {
+    color: #D4D4D4;
+}
+
+
+/* When a link is hovered or clicked, background color changes
+   and font color remains white. */
+.navbar-inverse .navbar-nav > li > a:hover, 
+.navbar-inverse .navbar-nav > li > a:focus,
 .navbar-inverse .navbar-nav > .active > a, 
 .navbar-inverse .navbar-nav > .active > a:hover, 
 .navbar-inverse .navbar-nav > .active > a:focus {
-    background-color: #024673;
-}
-
-.navbar-inverse .navbar-nav > a, 
-.navbar-inverse .navbar-nav > a:hover, 
-.navbar-inverse .navbar-nav > a:focus {
-    background-color: #024673;
+    background-color: #054066;
+    color: #fff;
 }
 
 /* MOBILE view settings */
@@ -89,11 +96,11 @@ hr {
 
     /* Maintain top and bottom padding */
     .navbar-nav > li > a{
-        padding: 17px 30px;
+        padding: 15px 30px;
     }
 
     /* padding so user settings do not hit the edge of the screen */
     .navbar-right {
-        padding-right: 25px;
+        padding-right: 20px;
     }
 }
