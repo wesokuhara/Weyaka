@@ -60,6 +60,12 @@ hr {
     background-color: #024673;
 }
 
+.navbar-inverse .navbar-nav > a, 
+.navbar-inverse .navbar-nav > a:hover, 
+.navbar-inverse .navbar-nav > a:focus {
+    background-color: #024673;
+}
+
 /* MOBILE view settings */
 @media (max-width: 767px) {
 
