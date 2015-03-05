@@ -61,8 +61,6 @@ hr {
 
 /* When a link or home button is hovered or clicked, 
    background color changes and font color remains white. */
-.navbar-inverse .navbar-header > a:hover,
-.navbar-inverse .navbar-header > a:focus, 
 .navbar-inverse .navbar-nav > li > a:hover, 
 .navbar-inverse .navbar-nav > li > a:focus,
 .navbar-inverse .navbar-nav > .active > a, 

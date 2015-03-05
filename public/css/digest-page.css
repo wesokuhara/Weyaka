@@ -6,6 +6,13 @@
  * Wes Okuhara, Yashna Bowen, Kathy Hoang
  */
 
+/* When the home icon is hovered, change the background */
+.navbar-inverse .navbar-header > a:hover,
+.navbar-inverse .navbar-header > a:focus {
+    background-color: #054066;
+    color: #fff;
+}
+
 /***** TRAFFIC SECTION *****/
 #googleMap {
     width: 90%; /* fill 85% width of static container for scrolling */

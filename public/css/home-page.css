@@ -26,6 +26,13 @@
     url('../fonts/lato/lato-light.svg#latolight') format('svg');
 }
 
+/* When the weyaka Logo is hovered on the home page, change
+the font color */
+.navbar-inverse .navbar-header > a:hover,
+.navbar-inverse .navbar-header > a:focus {
+    color: #003557;
+}
+
 /* each individual icon */
 .icon {
     padding: 1px;
