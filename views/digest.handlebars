@@ -96,7 +96,7 @@
 	<!-- NOTES SECTION -->
 	<div class="container" id="notes">
 		<!--Notes header and add button (toggles modal) -->
-		<h4>Notes
+		<h4>Notes ({{noteCount}})
 			<button type="button" id="add-note-btn" class="btn btn-inverse" data-toggle="modal" data-target="#noteModal">
 				<span class="fui-plus"></span>
 			</button>
@@ -109,13 +109,15 @@
 				<div class="modal-content">
 					<!-- popup header -->
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">Cancel</button>
+						<button type="button" class="close" data-dismiss="modal">
+							<span class="fui-cross"></span>
+						</button>
 						<h4 class="modal-title">Add Note</h4>
 					</div>
 
 					<!-- popup body (form) -->
 					<div class="modal-body">
-						<form id="add-note-form">
+						<form id="add-note-form" action="/addNote" method="POST">
 				            <!-- Title -->
 				            <div class="form-group">
 				                <input type="text" id="title-field" name="title" class="form-control" placeholder="Title" required>
@@ -130,7 +132,7 @@
 
 					<!-- popup footer -->
 					<div class="modal-footer">
-						<input id="submit-note-button" type="submit" class="btn btn-inverse" form="add-note-form">
+						<input type="submit" class="btn btn-inverse" form="add-note-form">
 					</div>
 				</div>
 			</div>
@@ -139,17 +141,24 @@
 		<!-- List of notes -->
 		<div id="notes-list">
 			{{#each notes}}
-			<p><b>{{title}}</b><br>
+			<div class="note" id="note{{id}}">
+				<!-- Delete note button -->
+				<button class="note-delete btn btn-inverse">
+					<span class="fui-cross"></span>
+				</button>
+				<p>
+				<b>{{title}}</b><br>
 			   	{{details}}<br>
 			   	<hr>
-			</p>
+				</p>
+			</div>
 			{{/each}}
 		</div>	
 	</div>
 
 	<!-- SCHEDULE SECTION -->
 	<div class="container" id="schedule">
-		<h4>Schedule
+		<h4>Schedule ({{eventCount}})
 			<button type="button" id="add-event-btn" class="btn btn-inverse" data-toggle="modal" data-target="#eventModal">
 				<span class="fui-plus"></span>
 			</button>
@@ -162,13 +171,15 @@
 				<div class="modal-content">
 					<!-- popup header -->
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">Cancel</button>
+						<button type="button" class="close" data-dismiss="modal">
+							<span class="fui-cross"></span>
+						</button>
 						<h4 class="modal-title">Add Event</h4>
 					</div>
 
 					<!-- popup body (form) -->
 					<div class="modal-body">
-						<form id="add-event-form">
+						<form id="add-event-form" action="/addEvent" method="POST">
 				            <!-- Title -->
 				            <div class="form-group">
 				                <input type="text" id="title-field" name="title" class="form-control" placeholder="Title" required>
@@ -193,7 +204,7 @@
 
 					<!-- popup footer -->
 					<div class="modal-footer">
-						<input id="submit-event-button" type="submit" class="btn btn-inverse" form="add-event-form">
+						<input type="submit" class="btn btn-inverse" form="add-event-form">
 					</div>
 				</div>
 			</div>
@@ -201,11 +212,18 @@
 
 		<div id="events-list">
 			{{#each events}}
-			<p><b>{{title}}</b> <br>
-			   {{date}} @ {{time}} <br>
-			   Location : {{location}} <br>
-			   <hr>
-			</p>
+			<div id="event{{id}}">
+				<!-- Delete event button -->
+				<button class="event-delete btn btn-inverse">
+					<span class="fui-cross"></span>
+				</button>
+				<p>
+				<b>{{title}}</b> <br>
+			   	{{date}} @ {{time}} <br>
+			   	Location : {{location}} <br>
+			   	<hr>
+				</p>
+			</div>
 			{{/each}}
 		</div>
 		

@@ -1,0 +1,47 @@
+[
+	{
+		"username": "Guest",
+		"notes": [
+			{
+				"title": "Stuff to buy",
+				"details": "Milk, eggs, bread, elderberry jam, Hot Pockets!"
+			},
+			{
+				"title": "Remember to:",
+				"details":"Send emails to family"
+			}
+		],
+		"noteCount":2,
+
+		"events": [
+			{
+				"title": "COGS 120",
+				"location": "CICC",  
+				"date":  "3/5/2015",		
+				"time": "12:30 pm"
+			}
+		],
+		"eventCount":1
+	},
+
+	{
+		"username": "Wes",
+		"notes": [
+			{
+				"title": "Hello",
+				"details": "Hi Wes!"
+			}
+		],
+		"noteCount":1,
+
+		"events": [
+			{
+				"title": "SASE OM",
+				"location": "Center Hall",  
+				"date":  "3/8/2015",		
+				"time": "5:00 pm"
+			}
+		],
+		"eventCount":1
+	}
+]

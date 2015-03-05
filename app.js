@@ -53,11 +53,10 @@ app.get('/home', home.view); //home page
 app.get('/digest', digest.view); //digest page
 app.get('/help', help.view); //help page
 
-app.get('/addNote', digest.addNote); //add note
-app.get('/addEvent', digest.addEvent); //add event
+app.post('/addNote', digest.addNote); //add note
+app.post('/addEvent', digest.addEvent); //add event
 
-//post request from form schedule
-app.get('/digestgoogle', digest.googlecall);
+app.post('/deleteNote/:id', digest.deleteNote); //delete a note
 /////////////////////////////////////////////////////////////////////
 
 http.createServer(app).listen(app.get('port'), function(){

@@ -64,3 +64,7 @@
 #googleLink {
     margin-top: 15px;
 }
+
+.note-delete, .event-delete {
+    float: right;
+}

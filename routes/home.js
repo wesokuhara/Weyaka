@@ -7,11 +7,19 @@
  */
 
 // Load JSON data
-var events = require('../events.json'); 
+var models = require("../models");
+var guest = "Guest";
 
 exports.view = function(req, res) {
-	console.log("# Loading home page...");
-	
+	//find the Guest from the database
+	models.User.findOne({"username": guest})
+		.exec(displayUser);
 
-	res.render('home', events); //pass data into the home page
+
+	//callback function to render the page with users info
+	function displayUser (err, user) {
+		console.log("########### Loading home page...");
+
+		res.render('home', user);
+	}
 };
