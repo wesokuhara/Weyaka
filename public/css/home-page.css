@@ -41,14 +41,14 @@
     width: 90%;
     margin: 0 auto;
     text-align: center;
-    color: #ECF0F1;
+    color: #ffffff;
     position: absolute;
     float: left;
 }
 
 /* Color of the weather icon */
 i {
-    color: #ECF0F1;
+    color: #ffffff;
 }
 
 /** Padding for the top of the ban circle */
