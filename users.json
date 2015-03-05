@@ -3,22 +3,18 @@
 		"username": "Guest",
 		"notes": [
 			{
-				"title": "Stuff to buy",
-				"details": "Milk, eggs, bread, elderberry jam, Hot Pockets!"
-			},
-			{
-				"title": "Remember to:",
-				"details":"Send emails to family"
+				"title": "This is an example of a note!",
+				"details": "Simply click the add button to create a new note or click the delete button to remove this one"
 			}
 		],
-		"noteCount":2,
+		"noteCount":1,
 
 		"events": [
 			{
-				"title": "COGS 120",
-				"location": "CICC",  
+				"title": "Use Weyaka",
+				"location": "Home",  
 				"date":  "3/5/2015",		
-				"time": "12:30 pm"
+				"time": "8:30 pm"
 			}
 		],
 		"eventCount":1

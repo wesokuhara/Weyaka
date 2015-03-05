@@ -50,7 +50,7 @@ exports.addNote = function(req, res) {
 		{safe: true, upsert: true},
 		//callback function
 		function (err, user) {
-			console.log(err);
+			if (err) console.log(err);
 			console.log("########### Added new note.");
 			res.redirect("digest#notes");
 		}
@@ -78,7 +78,7 @@ exports.addEvent = function(req, res) {
 		{safe: true, upsert: true},
 		//callback function
 		function (err, user) {
-			console.log(err);
+			if (err) console.log(err);
 			console.log("########### Added new event to schedule.");
 			res.redirect("digest#schedule");
 		}
@@ -89,22 +89,58 @@ exports.addEvent = function(req, res) {
 
 
 
-
-
 exports.deleteNote = function(req, res) {
 	var noteID = req.params.id;
 
 	models.User.findOneAndUpdate(
+		//query the user
 		{"username": guest},
-		{$inc: {noteCount: -1}}
+		//decrement the noteCount
+		{$inc: {noteCount: -1}},
+		//options
+		{safe: true, upsert: true},
+		//callback function
+		function (err, user) {
+			if(err) console.log(err);
+
+			//remove the note
+			models.User.findOneAndUpdate(
+				{"username": guest},
+				{$pull: {notes: {_id: noteID}}},
+				{safe: true, upsert: true},
+				function (err, note) {
+					if (err) console.log(err);
+					res.send({
+						status: "success"
+					});
+				}
+			);
+		}
 	);
+}
 
-	models.Note.find({"_id": noteID})
-		.remove()
-		.exec(afterRemoving);
+exports.deleteEvent = function (req, res) {
+	var eventID = req.params.id;
 
-	function afterRemoving(err) {
-		if (err) console.log(err);
-		res.send();
-	}
+	//decrement the eventCount
+	models.User.findOneAndUpdate(
+		{"username": guest},
+		{$inc: {eventCount: -1}},
+		{safe: true, upsert: true},
+		function (err, user) {
+			if(err) console.log(err);
+
+			//remove the event
+			models.User.findOneAndUpdate(
+				{"username": guest},
+				{$pull: {events: {_id: eventID}}},
+				function (err, note) {
+					if (err) console.log(err);
+					res.send({
+						status: "success"
+					});
+				}
+			);
+		}
+	);
 }

@@ -48,11 +48,48 @@ $(document).ready( function() {
 
 	//Delete a note
 	$('.note-delete').click(function (e) {
+		//disable the button
+		$(this).prop('disabled', true);
+		var r = confirm("Delete this note?");
+		if (r !=true) {
+			$(this).prop('disabled', false);
+			console.log("cancel delete");
+			return;
+		}
+
 		//extract the ID Number
 		var noteID = $(this).closest('.note').attr('id');
 		var idNumber = noteID.substr('note'.length);
 		console.log(idNumber);
 
-		$.post('/deleteNote/'+idNumber);
+		$.post('/deleteNote/'+idNumber, function (response) {
+			if (response.status == "success") {
+				window.location.reload();
+			}
+		});
+	});
+
+	
+	//Delete an event
+	$('.event-delete').click(function (e) {
+		//disable the button
+		$(this).prop('disabled', true);
+		var r = confirm("Delete this event?");
+		if (r !=true) {
+			$(this).prop('disabled', false);
+			console.log("cancel delete");
+			return;
+		}
+
+		//extract the ID Number
+		var eventID = $(this).closest('.event').attr('id');
+		var idNumber = eventID.substr('event'.length);
+		console.log(idNumber);
+
+		$.post('/deleteEvent/'+idNumber, function (response) {
+			if (response.status == "success") {
+				window.location.reload();
+			}
+		});
 	});
 });

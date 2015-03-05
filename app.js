@@ -57,6 +57,7 @@ app.post('/addNote', digest.addNote); //add note
 app.post('/addEvent', digest.addEvent); //add event
 
 app.post('/deleteNote/:id', digest.deleteNote); //delete a note
+app.post('/deleteEvent/:id', digest.deleteEvent); //delete an event
 /////////////////////////////////////////////////////////////////////
 
 http.createServer(app).listen(app.get('port'), function(){
