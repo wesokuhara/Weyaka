@@ -14,7 +14,7 @@
 
 	<link href="css/global.css" rel="stylesheet">
 	<link href="css/digest-page.css" rel="stylesheet">
-	
+	{{> tracking_code_script}}
 </head>
 
 <body>
@@ -26,7 +26,20 @@
 			</button>
 
 			<!-- Weyaka home button -->
-			<a class="navbar-brand" href="/home">
+			<a class="navbar-brand" href="/home" onclick="return_to_home()">
+
+
+				<!--Woopra Visitor Tracking code-->
+					<script type="text/javascript">
+					 /**adding Woopra tracking code for version mouseover traffic module*/
+						function return_to_home(){
+  						console.log("Going home from digest");
+  						woopra.track("return_to_home");
+  					}
+					</script>
+
+
+
 				<span class="flaticon-house28"></span>
 			</a>
 

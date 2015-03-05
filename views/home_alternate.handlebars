@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Weyaka - {{username}}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<!-- Import CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/flat-ui.css" rel="stylesheet">
+	
+	<link href="css/global.css" rel="stylesheet">
+	<link href="css/home-page.css" rel="stylesheet">
+	<link href="css/flaticon.css" rel="stylesheet">
+   {{> tracking_code_script}}
+</head>
+<body>
+
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="navbar-header">
+
+			<!-- Menu button -->
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+				<span class="sr-only">Toggle navigation</span>
+			</button>
+
+			<!-- Weyaka home button -->
+			<a class="navbar-brand" href="/home">Weyaka</a>
+		</div>
+
+		<!-- Navbar contents -->
+		<div class="collapse navbar-collapse" id="menu">
+
+			<!-- User settings -->
+			<ul class="nav navbar-nav navbar-right user-settings">
+				<li><a href="/help">Help and Settings</a></li>
+				<li><a href="/" id="logout-button">Logout</a></li>
+			</ul>
+
+		</div>
+	</nav>
+	
+	<div class="container">
+
+		<br><br>
+		
+		<!-- TOP ROW -->
+		<div class="row">
+			<!-- TRAFFIC -->
+			<div class="icon">
+				<a href="digest#traffic">
+					<img src="images/home/mapGreen.png" onmouseover="tracking_traffic()" 
+					class="img-responsive">
+
+
+					<script type="text/javascript">
+
+					 /**adding Woopra tracking code for version mouseover traffic module*/
+						function tracking_traffic(){
+  						console.log("Traffic mouseover event");
+  						woopra.track("alt_traffic_mouseover");
+  					}
+					</script>
+					<!-- could be mapRed or mapYellow -->
+				</a>
+			</div>
+
+			<!-- WEATHER -->
+			<div class="icon weather-icon">
+				<a href="digest#weather">
+					<img src="images/home/weather.png" onmouseover="tracking_weather()"
+					class="img-responsive"/>
+					
+
+					<script type="text/javascript">
+
+					 /**adding Woopra tracking code for version mouseover traffic module*/
+						function tracking_weather(){
+  						console.log("Weather mouseover event");
+  						woopra.track("alt_weather_mouseover");
+  					}
+					</script>
+
+				</a>
+			</div>
+		</div>
+
+		<!-- BOTTOM ROW -->
+		<div class="row">
+			<!-- NOTES -->
+			<div class="icon">
+				<a href="digest#notes">
+					<img src="images/home/notes.png" onmouseover="tracking_notes()" 
+					class="img-responsive">
+
+
+					<script type="text/javascript">
+
+					 /**adding Woopra tracking code for version mouseover traffic module*/
+						function tracking_notes(){
+  						console.log("Notes mouseover event");
+  						woopra.track("alt_notes_mouseover");
+  					}
+					</script>
+
+
+				</a>
+			</div>
+
+			<!-- SCHEDULE -->
+			<div class="icon">
+				<a href="digest#schedule">
+					<img src="images/home/schedule.png" onmouseover="tracking_schedule()"
+					class="img-responsive">
+
+
+					<script type="text/javascript">
+
+					 /**adding Woopra tracking code for version mouseover traffic module*/
+						function tracking_schedule(){
+  						console.log("Schedule mouseover event");
+  						woopra.track("alt_schedule_mouseover");
+  					}
+					</script>
+				</a>
+			</div>
+		</div>
+
+	</div>
+
+  	<!-- Link Javascript -->
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/weyaka.js"></script>
+
+	<!-- Weather Temperature JS -->
+	<script src="js/temp-home.js"></script>
+	<script scr="js/woopracode.js"></script>
+</body>
+</html>

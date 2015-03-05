@@ -14,7 +14,7 @@
 	
 	<link href="css/global.css" rel="stylesheet">
 	<link href="css/home-page.css" rel="stylesheet">
-   
+   {{> tracking_code_script}}
 </head>
 <body>
 
@@ -49,7 +49,21 @@
 		<div class="row">
 			<!-- TRAFFIC -->
 			<div class="icon">
-				<a href="digest#traffic">
+				<a href="digest#traffic" onclick="traffic_click()">
+
+
+					<!--Woopra Visitor Tracking code-->
+					<script type="text/javascript">
+					 /**adding Woopra tracking code for version mouseover traffic module*/
+						function traffic_click(){
+  						console.log("Home Traffic Clicked");
+  						woopra.track("traffic_click");
+  					}
+					</script>
+
+
+
+
 					<div id="traffic-home"></div>
 					<img src="images/boxes/traffic-box.png" 
 					class="img-responsive">
@@ -58,8 +72,20 @@
 
 			<!-- WEATHER -->
 			<div class="icon weather-icon">
-				<a href="digest#weather">
-					<div id="simpleWeatherHome"></div>
+				<a href="digest#weather" onclick="weather_click()">
+
+					
+					<!--Woopra Visitor Tracking code-->
+					<script type="text/javascript">
+					 /**adding Woopra tracking code for version mouseover traffic module*/
+						function weather_click(){
+  						console.log("Home Weather Clicked");
+  						woopra.track("weather_click");
+  					}
+					</script>
+
+
+				<div id="simpleWeatherHome"></div>
 					<img src="images/boxes/weather-box.png"
 					class="img-responsive"/>
 				</a>
@@ -70,8 +96,26 @@
 		<div class="row">
 			<!-- NOTES -->
 			<div class="icon note-icon">
+<<<<<<< HEAD
 				<a href="digest#notes">
 					<div id="notecountHome"> <h2>{{noteCount}}<br>Notes</h2></div>
+=======
+				<a href="digest#notes" onclick="note_click()">
+
+
+					<!--Woopra Visitor Tracking code-->
+					<script type="text/javascript">
+					 /**adding Woopra tracking code for version mouseover traffic module*/
+						function note_click(){
+  						console.log("Home Note Clicked");
+  						woopra.track("note_click");
+  					}
+					</script>
+
+
+
+					<div id="notecountHome"> <h2>{{notecount}}<br>Notes</h2></div>
+>>>>>>> 36019686b2c9045f81f53f2a5dbf9c980d96ed53
 					<img src="images/boxes/notes-box.png" 
 					class="img-responsive">
 				</a>
@@ -80,7 +124,18 @@
 
 			<!-- SCHEDULE -->
 			<div class="icon schedule-icon">
-				<a href="digest#schedule">
+				<a href="digest#schedule" onclick="schedule_click()">
+
+
+					<!--Woopra Visitor Tracking code-->
+					<script type="text/javascript">
+					 /**adding Woopra tracking code for version mouseover traffic module*/
+						function schedule_click(){
+  						console.log("Scedule mouseover event");
+  						woopra.track("schedule_click");
+  					}
+					</script>
+
 					<div id="schedulecountHome">
 						<p>Up Next:</p>
 						{{#if events}}
@@ -112,5 +167,6 @@
 	<script type="text/javascript"
       	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB2vaEbg0YNSzZt2WDARdb27113XOSSjo"></script>
 	<script src="js/traffic-home.js"></script>
+	<script scr="js/woopracode.js"></script>
 </body>
 </html>

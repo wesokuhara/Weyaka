@@ -15,11 +15,16 @@ exports.view = function(req, res) {
 	models.User.findOne({"username": guest})
 		.exec(displayUser);
 
-
 	//callback function to render the page with users info
 	function displayUser (err, user) {
 		console.log("########### Loading home page...");
 
-		res.render('home', user);
+		var random_num = Math.random();
+		if (random_num > 0.5) {
+			res.render('home', user);
+		}
+		else {
+			res.render('home_alternate', user);
+		}
 	}
 };
