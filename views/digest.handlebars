@@ -46,20 +46,53 @@
 			<div class="digest-link-icons">
 				<ul class="nav navbar-nav">
 					<li>
-						<a class="navbar-brand digest-link" href="#traffic"><span class="flaticon-auto2"></span></a>
+						<a class="navbar-brand digest-link" href="#traffic" onclick="digest_traffic_click()"><span class="flaticon-auto2"></span></a>
 					</li>
 
-					<li>
-						<a class="navbar-brand digest-link" href="#weather"><span class="flaticon-sunny18"></span></a>
-					</li>
+					<script type="text/javascript">
+					 /**adding Woopra tracking code for version mouseover traffic module*/
+						function digest_traffic_click(){
+  						console.log("Digest Traffic Clicked");
+  						woopra.track("digest_traffic_click");
+  					}
+					</script>
 
 					<li>
-						<a class="navbar-brand digest-link" href="#notes"><span class="flaticon-document162"></span></a>
+						<a class="navbar-brand digest-link" href="#weather" onclick="digest_weather_click()"><span class="flaticon-sunny18"></span></a>
 					</li>
 
+					<script type="text/javascript">
+					 /**adding Woopra tracking code for version mouseover traffic module*/
+						function digest_weather_click(){
+  						console.log("Digest Weather Clicked");
+  						woopra.track("digest_weather_click");
+  					}
+					</script>
+
 					<li>
-						<a class="navbar-brand digest-link" href="#schedule"><span class="flaticon-calendar159"></span></a>
+						<a class="navbar-brand digest-link" href="#notes" onclick="digest_notes_click()"><span class="flaticon-document162"></span></a>
 					</li>
+
+					<script type="text/javascript">
+					 /**adding Woopra tracking code for version mouseover traffic module*/
+						function digest_notes_click(){
+  						console.log("Digest Notes Clicked");
+  						woopra.track("digest_notes_click");
+  					}
+					</script>
+
+					<li>
+						<a class="navbar-brand digest-link" href="#schedule" onclick="digest_schedule_click()"><span class="flaticon-calendar159"></span></a>
+					</li>
+
+
+					<script type="text/javascript">
+					 /**adding Woopra tracking code for version mouseover traffic module*/
+						function digest_schedule_click(){
+  						console.log("Digest Schedule Clicked");
+  						woopra.track("digest_schedule_click");
+  					}
+					</script>
 				</ul>
 			</div>
 		</div>
