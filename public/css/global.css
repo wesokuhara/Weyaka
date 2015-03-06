@@ -97,6 +97,7 @@ h2, h4 {
 
 /* DESKTOP view settings */
 @media (min-width: 768px) {
+    
     .navbar-brand {
         padding-left: 40px;
         padding-right: 40px;

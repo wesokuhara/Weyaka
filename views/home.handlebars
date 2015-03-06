@@ -131,12 +131,10 @@
 					</script>
 
 					<div id="schedulecountHome">
-						<h4>Up Next</h4>
 						{{#if events}}
-							<h2><b>{{events.0.title}}</b><br>
-							{{events.0.date}}<br>
-							{{events.0.time}} <br>
-							</h2>
+							<h4>{{events.0.time}}<br>
+							{{events.0.date}}</h4>
+							<h2><b>{{events.0.title}}</b></h2>
 						{{/if}}
 															
 					</div>

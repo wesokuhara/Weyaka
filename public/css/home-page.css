@@ -40,7 +40,7 @@ the font color */
 
 /* Center all text */
 #simpleWeatherHome, #notecountHome, #schedulecountHome, #traffic-home{
-    padding-left: 10%;
+    padding-left: 12%;
     width: 90%;
     margin: 0 auto;
     text-align: center;
@@ -60,11 +60,15 @@ i {
 
 /* Schedule top padding */
 #schedulecountHome {
-    padding-top: 12%;
+    padding-top: 4%;
+}
+
+#notecountHome {
+    padding-top: 10%;
 }
 
 /* traffic top padding */
-#traffic-home h4 {
+#traffic-home {
     padding-top: 12%;
 }
 
@@ -75,34 +79,34 @@ i {
 }
 
 /* MOBILE VIEW FONT SIZES */
-@media (max-width: 720px) {
+@media (max-width: 700px) {
 
     /* ETA */
     #traffic-home h2 {
         margin: 0;
-        font-size: 9vw;
+        font-size: 11vw;
     } 
 
     /* Event item */
     #schedulecountHome h2 {
         margin: 0;
-        font-size: 5.5vw;
+        font-size: 8vw;
     }
 
-    /* "To UCSD", "Up Next" */
+    /* "To UCSD", "Time" */
     #traffic-home h4, #schedulecountHome h4 {
-        font-size: 4.5vw;
+        font-size: 5.5vw;
     }
 
     /* Temperature */
     #simpleWeatherHome h2 {
         margin-top: 20px;
-        font-size: 14vw;
+        font-size: 17vw;
     }
 
     /* weather icon */
     i {
-        font-size: 16vw;
+        font-size: 18vw;
     }
 
     /* Note Details */
@@ -124,38 +128,38 @@ i {
 }
 
 /* DESKTOP VIEW FONT SIZES */
-@media (min-width: 721px) {
+@media (min-width: 701px) {
 
     /* Temperature */
     #simpleWeatherHome h2 {
-        font-size: 85px;
+        font-size: 110px;
     }
 
     /* Weather icon */
     i {
-        font-size: 100px;
+        font-size: 110px;
     }
 
     /* ETA */
     #traffic-home h2 {
         margin: 0;
-        font-size: 60px;
+        font-size: 70px;
     }
 
     /* "To UCSD" */
     #traffic-home h4 {
-        font-size: 30px;
+        font-size: 40px;
     }
 
     /* Event item */
     #schedulecountHome h2 {
         margin: 0;
-        font-size: 40px;
+        font-size: 50px;
     }
 
-    /* "Up Next" */
+    /* Event date and time */
     #schedulecountHome h4 {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     /* Note details */

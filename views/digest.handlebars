@@ -124,7 +124,7 @@
 		<br>
 
 		<!-- ETA Information -->
-		<p id="route-eta"></p>
+		<h5 id="route-eta"></h5>
 
 		<!-- Google Map object -->
 		<div id="googleMap"></div>
@@ -192,10 +192,8 @@
 				<button class="note-delete btn btn-inverse">
 					<span class="fui-cross"></span>
 				</button>
-				<p>
-				<b>{{title}}</b><br>
-			   	{{details}}<br>
-				</p>
+				<h5>{{title}}</h5>
+				<p>{{details}}</p>
 				<hr>
 			</div>
 			{{/each}}
@@ -228,7 +226,7 @@
 						<form id="add-event-form" action="/addEvent" method="POST">
 				            <!-- Title -->
 				            <div class="form-group">
-				                <input type="text" id="title-field" name="title" class="form-control" placeholder="Title" required>
+				                <input type="text" id="title-field" name="title" class="form-control" placeholder="Title" maxlength="22" required>
 				            </div>
 
 				            <!-- Location -->
@@ -263,12 +261,12 @@
 				<button class="event-delete btn btn-inverse">
 					<span class="fui-cross"></span>
 				</button>
+				<h5>{{title}}</h5>
 				<p>
-				<b>{{title}}</b> <br>
-			   	{{date}} @ {{time}} <br>
-			   	Location : {{location}} <br>
-			   	<hr>
+				{{date}} @ {{time}}<br>
+			   	Location : {{location}}
 				</p>
+			   	<hr>
 			</div>
 			{{/each}}
 		</div>
