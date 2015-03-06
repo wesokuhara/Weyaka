@@ -16,7 +16,7 @@ var mongoose = require('mongoose');
 var login = require('./routes/login');
 var home = require('./routes/home');
 var digest = require('./routes/digest');
-var help = require('./routes/help');
+var about = require('./routes/about');
 /////////////////////////////////////////////////////////////////////
 
 //Connect to the Mongo database, whether locally or on Heroku
@@ -51,7 +51,7 @@ if ('development' == app.get('env')) {
 app.get('/', home.view); //login page
 app.get('/home', home.view); //home page
 app.get('/digest', digest.view); //digest page
-app.get('/help', help.view); //help page
+app.get('/about', about.view); //help page
 
 app.post('/addNote', digest.addNote); //add note
 app.post('/addEvent', digest.addEvent); //add event
