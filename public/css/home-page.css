@@ -9,7 +9,7 @@
 /******** HOME PAGE  ********/
 /* Set the height of the homepage */
 .container {
-    padding-top: 100px; /* padding for the homescreen container */
+    padding-top: 80px; /* padding for the homescreen container */
     height: 500px;
 }
 
