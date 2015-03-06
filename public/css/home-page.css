@@ -29,10 +29,12 @@ the font color */
 
 /* each individual icon */
 .icon {
-    padding: 1px;
+    padding: 2px;
     width: 50%; /* fill half width of static container */
     float: left;
     position: relative;
+    box-shadow: 2px;
+
 }
 
 
@@ -46,7 +48,11 @@ the font color */
     position: absolute;
     float: left;
 }
-
+.img-responsive
+{
+    box-shadow: 1px 1px 1px 1px #dcdcdc;
+    border-radius: 2%;
+}
 /* Color of the weather icon */
 i {
     color: #fff;
