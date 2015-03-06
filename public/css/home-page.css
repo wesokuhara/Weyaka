@@ -9,21 +9,15 @@
 /******** HOME PAGE  ********/
 /* Set the height of the homepage */
 .container {
-    padding-top: 120px; /* padding for the homescreen container */
+    padding-top: 100px; /* padding for the homescreen container */
     height: 500px;
 }
 
 /* Weyaka logo */
 .navbar-brand { 
-    padding-top: 14px;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/lato/lato-light.eot');
-    src: url('../fonts/lato/lato-light.eot?#iefix') format('embedded-opentype'), 
-    url('../fonts/lato/lato-light.woff') format('woff'), 
-    url('../fonts/lato/lato-light.ttf') format('truetype'), 
-    url('../fonts/lato/lato-light.svg#latolight') format('svg');
+    padding-top: 3px;
+    font-family: bebas;
+    font-size: 45px;
 }
 
 /* When the weyaka Logo is hovered on the home page, change
@@ -42,7 +36,7 @@ the font color */
 }
 
 
-/* Text styling for the home page */
+/* Center all text */
 #simpleWeatherHome, #notecountHome, #schedulecountHome, #traffic-home{
     padding-left: 10%;
     width: 90%;
@@ -55,41 +49,59 @@ the font color */
 
 /* Color of the weather icon */
 i {
-    color: #ffffff;
+    color: #fff;
 }
 
-/** Padding for the top of the ban circle */
+/* Schedule top padding */
+#schedulecountHome {
+    padding-top: 12%;
+}
+
+/* traffic top padding */
+#traffic-home h4 {
+    padding-top: 12%;
+}
+
+/* Padding for the top of the ban circle */
 #simpleWeatherHome .glyphicon-ban-circle,
 #traffic-home .glyphicon-ban-circle  {
     padding-top: 25%;
 }
 
-#notecountHome, #schedulecountHome {
-    padding-top: 12%;
-}
-
-#traffic-home h4 {
-    padding-top: 30px;
-}
-
-/* MOBILE VIEW FONT SIZES SCALE WITH SCREEN WIDTH */
+/* MOBILE VIEW FONT SIZES */
 @media (max-width: 720px) {
 
+    /* ETA */
     #traffic-home h2 {
         margin: 0;
-        font-size: 7vw;
+        font-size: 9vw;
     } 
-    #traffic-home h4 {
-        font-size: 4.5vw;
-    }
-    
-    #simpleWeatherHome h2 {
-        margin-top: 20px;
-        font-size: 11vw;
+
+    /* Event item */
+    #schedulecountHome h2 {
+        margin: 0;
+        font-size: 5.5vw;
     }
 
+    /* "To UCSD", "Up Next" */
+    #traffic-home h4, #schedulecountHome h4 {
+        font-size: 4.5vw;
+    }
+
+    /* Temperature */
+    #simpleWeatherHome h2 {
+        margin-top: 20px;
+        font-size: 14vw;
+    }
+
+    /* weather icon */
     i {
         font-size: 16vw;
+    }
+
+    /* Note Details */
+    #notecountHome h2 {
+        font-size: 12vw;
     }
 
     /* Styling for the glyphicon ban-icon */
@@ -98,60 +110,62 @@ i {
         font-size: 14vw;
     }
 
+    /* No location paragraph */
     #simpleWeatherHome p,
     #traffic-home p {
         font-size: 4vw;
     }
-
-    /* Scaling font size of note details */
-    #notecountHome h2 {
-        font-size: 9vw;
-    }
-
-    #schedulecountHome h4 {
-        margin: 0;
-        font-size: 5vw;
-    }
-
-    #schedulecountHome p {
-        font-size: 5vw;
-    }
 }
 
-/* Static font sizes for DESKTOP view */
+/* DESKTOP VIEW FONT SIZES */
 @media (min-width: 721px) {
+
+    /* Temperature */
     #simpleWeatherHome h2 {
-        font-size: 75px;
+        font-size: 85px;
     }
 
-    #traffic-home h2 {
-        font-size: 50px;
-    }
-
+    /* Weather icon */
     i {
         font-size: 100px;
     }
 
-    #simpleWeatherHome .glyphicon-ban-circle,
-    #traffic-home .glyphicon-ban-circle {
-        font-size: 105px;
+    /* ETA */
+    #traffic-home h2 {
+        margin: 0;
+        font-size: 60px;
     }
 
-    #simpleWeatherHome p,
-    #traffic-home p  {
-        font-size: 25px;
+    /* "To UCSD" */
+    #traffic-home h4 {
+        font-size: 30px;
     }
 
-    /* Scaling font size of note details */
-    #notecountHome h2 {
-        font-size: 65px;
+    /* Event item */
+    #schedulecountHome h2 {
+        margin: 0;
+        font-size: 40px;
     }
 
+    /* "Up Next" */
     #schedulecountHome h4 {
         font-size: 30px;
     }
 
-    #schedulecountHome p {
-        font-size: 20px;
+    /* Note details */
+    #notecountHome h2 {
+        font-size: 80px;
+    }
+
+    /* No location ban circle */
+    #simpleWeatherHome .glyphicon-ban-circle,
+    #traffic-home .glyphicon-ban-circle {
+        font-size: 85px;
+    }
+
+    /* No location paragraph */
+    #simpleWeatherHome p,
+    #traffic-home p  {
+        font-size: 25px;
     }
 }

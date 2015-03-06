@@ -28,7 +28,6 @@ function loadWeather(location, woeid) {
     unit: 'f',
     success: function(weather) {
       html = '<h2><i class="icon-'+weather.code+'"></i><br>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-      html += '<p>'+weather.currently+'</p>'
       $("#simpleWeatherHome").html(html);
     },
     error: function(error) {

@@ -13,13 +13,26 @@ html {
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #ECF0F1;
     height: 100%;
 } 
 
 hr {
     border-top: 2px solid #334245;
     border-radius: 10px;
+}
+
+h2, h4 {
+    font-family: bebas;
+    letter-spacing: 3px;
+}
+
+/* Defines the bebas font */
+@font-face {
+    font-family: 'bebas';
+    src: url("../fonts/bebas/bebas-neue-Regular.ttf");
+    font-style: normal;
+    font-weight: 400;
 }
 
 .jumbotron {
@@ -49,8 +62,10 @@ hr {
 
 /* Increase font size of menu links */
 .user-settings li a {
+    font-family: bebas;
+    letter-spacing: 3px;
     text-align: right;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 /* When the menu is hovered */
