@@ -89,4 +89,5 @@ h5 {
 
 .note-delete, .event-delete {
     float: right;
+    margin-left: 13px;
 }
