@@ -16,7 +16,7 @@
 /***** TRAFFIC SECTION *****/
 #googleMap {
     width: 90%; /* fill 85% width of static container for scrolling */
-    height: 450px; 
+    height: 380px; 
     border-radius: 10px;
 }
 
@@ -52,12 +52,19 @@
 /****** NOTES & SCHEDULE SECTION *****/
 #notes-list, #events-list {
     padding: 25px;
-    height: 60%;
     width: 90%;
     margin: 0 auto;
     overflow: auto;
     background: rgba(255,255,255,0.6);
     border-radius: 10px;
+}
+
+#notes-list {
+    height: 80%;
+}
+
+#events-list {
+    height: 60%;
 }
 
 #details-field {
