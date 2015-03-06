@@ -49,7 +49,7 @@ function loadETA(lat, lng) {
 					//get ETA
 					var ETA = response.routes[0].legs[0].duration.text;
 
-					$("#traffic-home").html('<h4>To ' + address + "</h4><h2>ETA:<br>" + ETA + "</h2>");
+					$("#traffic-home").html('<h4>To ' + address + "</h4><h2>ETA<br>" + ETA + "</h2>");
 				}
 			});
 		}

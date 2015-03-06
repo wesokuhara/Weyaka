@@ -33,9 +33,9 @@ function loadWeather(location, woeid) {
     unit: 'f',
     success: function(weather) {
       html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-      html += '<p>'+weather.city+', '+weather.region+'<br>';
+      html += '<h4>'+weather.city+', '+weather.region+'<br>';
       html += weather.currently+'<br>';
-      html += weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</p><br>';
+      html += weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</h4><br>';
       
       var timestamp = moment(weather.updated);
       html += 'Weather updated '+moment(timestamp).fromNow();

@@ -28,7 +28,7 @@
 			</button>
 
 			<!-- Weyaka home button -->
-			<a class="nav navbar-brand" href="/home">W三YAKA</a>
+			<a class="nav navbar-brand" href="/home">WEYAKA!</a>
 		</div>
 
 		<!-- Navbar contents -->
@@ -131,13 +131,12 @@
 					</script>
 
 					<div id="schedulecountHome">
-						<p>Up Next:</p>
+						<h4>Up Next</h4>
 						{{#if events}}
-							<h4><b>{{events.0.title}}</b><br>
+							<h2><b>{{events.0.title}}</b><br>
 							{{events.0.date}}<br>
 							{{events.0.time}} <br>
-							</h4>
-							<p>{{eventCount}} total</p>
+							</h2>
 						{{/if}}
 															
 					</div>
