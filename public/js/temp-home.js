@@ -15,6 +15,11 @@ $(document).ready(function() {
     $("#simpleWeatherHome").html("<p class='noLocationError'>No geolocation.</p>");
   }
   
+  var geo_options = {
+    enableHighAccuracy: true,
+    timeout           : 20000
+  };
+  
   //Try to get the weather
   navigator.geolocation.getCurrentPosition(function(position) {
     loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
@@ -26,10 +31,13 @@ $(document).ready(function() {
     if (error.code == error.PERMISSION_DENIED) {
       $("#simpleWeatherHome").html("<span class='glyphicon glyphicon-ban-circle'></span><p>Location Service<br>Disabled</p>");
     }
-    else {
-      $("#simpleWeatherHome").html("<span class='glyphicon glyphicon-ban-circle'></span><p>Location Error</p>");
+    else if (error.code == error.TIMEOUT) {
+      $("#simpleWeatherHome").html("<span class='glyphicon glyphicon-warning-sign'></span><p>Location Timeout</p>");
     }
-  });
+    else {
+      $("#simpleWeatherHome").html("<span class='glyphicon glyphicon-warning-sign'></span><p>Location Error</p>");
+    }
+  }, geo_options);
 });
 
 function loadWeather(location, woeid) {

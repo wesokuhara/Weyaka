@@ -29,7 +29,12 @@ function checkGeolocation() {
 	    $("#googleMap").html("<p class='noLocationError'>No geolocation.</p>");
 	  }
 
- 	navigator.geolocation.getCurrentPosition(function(position) {
+	var geo_options = {
+	  enableHighAccuracy: true,
+	  timeout           : 20000
+	};
+
+ 	navigator.geolocation.watchPosition(function(position) {
     	initMap(position.coords.latitude, position.coords.longitude); //load traffic using your lat/lng coordinates
   	},
   	//if geolocation is disabled, notify user
@@ -38,10 +43,13 @@ function checkGeolocation() {
   		if (error.code == error.PERMISSION_DENIED) {
       		$("#googleMap").html("<p class='noLocationError'>Please enable your browser geolocation service to use this feature.</p>");
       	}
+      	else if (error.code == error.TIMEOUT) {
+	    	$("#googleMap").html("<p class='noLocationError'>Location Timeout</p>");
+	    }
       	else {
       		$("#googleMap").html("<p class='noLocationError'>Location Error</p>");
       	}
-  	});
+  	}, geo_options);
 }
 
 /* Initialize the map */

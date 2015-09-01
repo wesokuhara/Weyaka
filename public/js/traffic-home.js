@@ -14,8 +14,13 @@ $(document).ready(function() {
     $("#traffic-home").html("<p class='noLocationError'>No geolocation.</p>");
   }
 
+  var geo_options = {
+	  enableHighAccuracy: true,
+	  timeout           : 20000
+	};
+
   //Try to get the weather
-  navigator.geolocation.getCurrentPosition(function(position) {
+  navigator.geolocation.watchPosition(function(position) {
     loadETA(position.coords.latitude, position.coords.longitude); //load weather using your lat/lng coordinates
   },
   //if geolocation is disabled, notify user
@@ -24,10 +29,13 @@ $(document).ready(function() {
     if (error.code == error.PERMISSION_DENIED) {
       $("#traffic-home").html("<span class='glyphicon glyphicon-ban-circle'></span><p>Location Service<br>Disabled</p>");
     }
-    else {
-	  $("#traffic-home").html("<span class='glyphicon glyphicon-ban-circle'></span><p>Location Error</p>");
+    else if (error.code == error.TIMEOUT) {
+    	$("#traffic-home").html("<span class='glyphicon glyphicon-warning-sign'></span><p>Location Timeout</p>");
     }
-  });
+    else {
+	  $("#traffic-home").html("<span class='glyphicon glyphicon-warning-sign'></span><p>Location Error</p>");
+    }
+  }, geo_options);
 });
 
 function loadETA(lat, lng) {
