@@ -22,7 +22,10 @@ $(document).ready(function() {
   function (error) {
 	console.log(error);
     if (error.code == error.PERMISSION_DENIED) {
-      $("#traffic-home").html("<span class='glyphicon glyphicon-ban-circle'></span><p>Location Service<br>Disabled.</p>");
+      $("#traffic-home").html("<span class='glyphicon glyphicon-ban-circle'></span><p>Location Service<br>Disabled</p>");
+    }
+    else {
+	  $("#traffic-home").html("<span class='glyphicon glyphicon-ban-circle'></span><p>Location Error</p>");
     }
   });
 });

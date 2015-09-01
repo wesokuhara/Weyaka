@@ -1,7 +1,7 @@
 {
-  "name": "IntroHCI",
-  "version": "0.0.1",
-  "author": "Intro HCI Staff",
+  "name": "Weyaka",
+  "version": "1.0.1",
+  "author": "Wes Okuhara, Yashna Bowen, Kathy Hoang",
   "repository": {
     "type": "git",
     "url": "https://github.com/IntroHCI/lab5"

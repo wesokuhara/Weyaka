@@ -35,7 +35,12 @@ function checkGeolocation() {
   	//if geolocation is disabled, notify user
   	function (error) {
   		console.log(error);
-      	$("#googleMap").html("<p class='noLocationError'>Please enable your browser geolocation service to use this feature.</p>");
+  		if (error.code == error.PERMISSION_DENIED) {
+      		$("#googleMap").html("<p class='noLocationError'>Please enable your browser geolocation service to use this feature.</p>");
+      	}
+      	else {
+      		$("#googleMap").html("<p class='noLocationError'>Location Error</p>");
+      	}
   	});
 }
 

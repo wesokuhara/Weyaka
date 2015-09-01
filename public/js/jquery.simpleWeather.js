@@ -29,6 +29,9 @@ $(document).ready(function() {
     if (error.code == error.PERMISSION_DENIED) {
       $("#simpleWeather").html("<p class='noLocationError'>Please enable your browser geolocation service to use this feature.</p>");
     }
+    else {
+      $("#simpleWeather").html("<p class='noLocationError'>Location Error</p>");
+    }
   });
 });
 

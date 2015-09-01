@@ -24,7 +24,10 @@ $(document).ready(function() {
   function(error) {
     console.log(error);
     if (error.code == error.PERMISSION_DENIED) {
-      $("#simpleWeatherHome").html("<span class='glyphicon glyphicon-ban-circle'></span><p>Location Service<br>Disabled.</p>");
+      $("#simpleWeatherHome").html("<span class='glyphicon glyphicon-ban-circle'></span><p>Location Service<br>Disabled</p>");
+    }
+    else {
+      $("#simpleWeatherHome").html("<span class='glyphicon glyphicon-ban-circle'></span><p>Location Error</p>");
     }
   });
 });
