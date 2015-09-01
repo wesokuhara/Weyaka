@@ -11,7 +11,7 @@
 $(document).ready(function() {
   if (!("geolocation" in navigator)) {
     /* geolocation IS NOT available */
-    $("#simpleWeather").html("<p class='noLocationError'>No geolocation.</p>");
+    $("#traffic-home").html("<p class='noLocationError'>No geolocation.</p>");
   }
 
   //Try to get the weather

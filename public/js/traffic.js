@@ -26,7 +26,7 @@ function checkGeolocation() {
 
 	if (!("geolocation" in navigator)) {
 	    /* geolocation IS NOT available */
-	    $("#simpleWeather").html("<p class='noLocationError'>No geolocation.</p>");
+	    $("#googleMap").html("<p class='noLocationError'>No geolocation.</p>");
 	  }
 
  	navigator.geolocation.getCurrentPosition(function(position) {
