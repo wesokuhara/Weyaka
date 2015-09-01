@@ -44,7 +44,7 @@ h2, h4 {
     padding-top: 60px;
     padding-bottom: 30px;
     max-width: 540px;
-    height: 650px;
+    height: 100%;
 }
 
 
@@ -91,6 +91,10 @@ h2, h4 {
     /* Padding to make sure all digest links on navbar fit */
     .navbar-nav > li > a {
         padding: 15px 3.2%;
+    }
+
+    .container {
+        height: 650px;
     }
 }
 
