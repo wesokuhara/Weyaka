@@ -11,17 +11,24 @@ var pos;
 var trafficLayer = new google.maps.TrafficLayer();
 var directionsService = new google.maps.DirectionsService();
 var rendererOptions = {
-	polylineOptions:{
-		strokeColor:'#052EE6', 
+	polylineOptions: {
+		strokeColor:'#052EE6',
 		strokeOpacity: 0.5,
 		strokeWeight: 2.5
 	}
-}
-var directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);;
+};
+
+var directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
 var geocoder = new google.maps.Geocoder();
 
 /* Check geolocation is enabled first */
 function checkGeolocation() {
+
+	if (!("geolocation" in navigator)) {
+	    /* geolocation IS NOT available */
+	    $("#simpleWeather").html("<p class='noLocationError'>No geolocation.</p>");
+	  }
+
  	navigator.geolocation.getCurrentPosition(function(position) {
     	initMap(position.coords.latitude, position.coords.longitude); //load traffic using your lat/lng coordinates
   	},

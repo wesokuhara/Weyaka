@@ -10,6 +10,11 @@
 /* When the page loads, get the weather */
 $(document).ready(function() {
 
+  if (!("geolocation" in navigator)) {
+    /* geolocation IS NOT available */
+    $("#simpleWeather").html("<p class='noLocationError'>No geolocation.</p>");
+  }
+
   //Try to get the weather
   navigator.geolocation.getCurrentPosition(function(position) {
     var lat = position.coords.latitude;
