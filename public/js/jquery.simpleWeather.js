@@ -25,6 +25,7 @@ $(document).ready(function() {
   },
   //if geolocation is disabled, notify user
   function (error) {
+    console.log(error);
     if (error.code == error.PERMISSION_DENIED) {
       $("#simpleWeather").html("<p class='noLocationError'>Please enable your browser geolocation service to use this feature.</p>");
     }

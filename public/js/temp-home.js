@@ -30,13 +30,11 @@ $(document).ready(function() {
 });
 
 function loadWeather(location, woeid) {
-  console.log('Loading weather...');
   $.simpleWeather( {
     location: location,
     woeid: woeid,
     unit: 'f',
     success: function(weather) {
-      console.log("Retrieved weather data.");
       html = '<h2><i class="icon-'+weather.code+'"></i><br>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
       $("#simpleWeatherHome").html(html);
     },

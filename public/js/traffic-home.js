@@ -20,6 +20,7 @@ $(document).ready(function() {
   },
   //if geolocation is disabled, notify user
   function (error) {
+	console.log(error);
     if (error.code == error.PERMISSION_DENIED) {
       $("#traffic-home").html("<span class='glyphicon glyphicon-ban-circle'></span><p>Location Service<br>Disabled.</p>");
     }
