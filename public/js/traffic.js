@@ -34,7 +34,7 @@ function checkGeolocation() {
 	  timeout           : 20000
 	};
 
- 	navigator.geolocation.watchPosition(function(position) {
+ 	navigator.geolocation.getCurrentPosition(function(position) {
     	initMap(position.coords.latitude, position.coords.longitude); //load traffic using your lat/lng coordinates
   	},
   	//if geolocation is disabled, notify user

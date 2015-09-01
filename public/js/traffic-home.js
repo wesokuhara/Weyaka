@@ -20,7 +20,7 @@ $(document).ready(function() {
 	};
 
   //Try to get the weather
-  navigator.geolocation.watchPosition(function(position) {
+  navigator.geolocation.getCurrentPosition(function(position) {
     loadETA(position.coords.latitude, position.coords.longitude); //load weather using your lat/lng coordinates
   },
   //if geolocation is disabled, notify user
