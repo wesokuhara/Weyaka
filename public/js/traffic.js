@@ -82,7 +82,7 @@ function initMap(lat, lng) {
 	trafficLayer.setMap(map);
 
 	//add address lookup input field
-	$("#address-input").html('<input id="address" type="text" class="form-control" placeholder="Enter Destination">');
+	$("#address-input").html('<input id="address" type="text" class="form-control" placeholder="Enter an address, city, etc.">');
 
 	//add geocode button
 	$("#geocode-btn").html('<button type="button" class="btn btn-inverse" onclick="codeAddress()"><span class="fui-search"></span></button>');
@@ -91,7 +91,7 @@ function initMap(lat, lng) {
 	$("#refresh-map-btn").html('<button type="button" class="btn btn-inverse" onclick="checkGeolocation()"><span class="glyphicon glyphicon-refresh"></span></button>');
 
 	//add the ETA text
-	$('#route-eta').html('ETA: Please enter a destination');
+	$('#route-eta').html('ETA: No current destination set.');
 }
 
 function codeAddress() {
