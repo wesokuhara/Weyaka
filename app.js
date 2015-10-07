@@ -11,6 +11,7 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
 var mongoose = require('mongoose');
+var errorhandler = require('errorhandler');
 
 // LOAD JS MODULES //////////////////////////////////////////////////
 var login = require('./routes/login');
@@ -32,19 +33,42 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(express.methodOverride());
-app.use(express.cookieParser('Intro HCI secret key'));
-app.use(express.session());
-app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
+
+var favicon = require('serve-favicon');
+//app.use(favicon(__dirname + '/public/favicon.ico'));
+
+var logger = require('morgan');
+app.use(logger('dev'));
+
+var methodOverride = require('method-override');
+app.use(methodOverride());
+
+var session = require('express-session');
+app.use(session({
+  secret: 'keyboard cat',
+  resave: true,
+  saveUninitialized: true
+}));
+
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+// var multer = require('multer');
+// app.use(multer());
+
+var cookieParser = require('cookie-parser');
+app.use(cookieParser('Intro HCI secret key'));
+
+var serveStatic = require('serve-static');
+app.use(serveStatic(path.join(__dirname, 'public')));
 
 // development only
 if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+  // error handling middleware
+  app.use(errorhandler());
 }
 
 // ROUTES - CALLS JS CONTROLLER METHOD //////////////////////////////
@@ -60,6 +84,7 @@ app.post('/deleteNote/:id', digest.deleteNote); //delete a note
 app.post('/deleteEvent/:id', digest.deleteEvent); //delete an event
 /////////////////////////////////////////////////////////////////////
 
-http.createServer(app).listen(app.get('port'), function(){
+var server = http.createServer(app);
+server.listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

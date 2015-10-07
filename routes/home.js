@@ -11,6 +11,7 @@ var models = require("../models");
 var guest = "Guest";
 
 exports.view = function(req, res) {
+	console.log('HOME');
 	//find the Guest from the database
 	models.User.findOne({"username": guest})
 		.exec(displayUser);
