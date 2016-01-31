@@ -65,9 +65,9 @@ function loadWeather(location, woeid) {
   });
 }
 
-/*! simpleWeather v3.0.2 - http://simpleweatherjs.com */
+/*! simpleWeather v3.1.0 - http://simpleweatherjs.com */
 (function($) {
-  "use strict";
+  'use strict';
 
   function getAltTemp(unit, temp) {
     if(unit === 'f') {
@@ -88,13 +88,22 @@ function loadWeather(location, woeid) {
       }, options);
 
       var now = new Date();
-      var weatherUrl = 'https://query.yahooapis.com/v1/public/yql?format=json&rnd='+now.getFullYear()+now.getMonth()+now.getDay()+now.getHours()+'&diagnostics=true&callback=?&q=';
+      var weatherUrl = 'https://query.yahooapis.com/v1/public/yql?format=json&rnd=' + now.getFullYear() + now.getMonth() + now.getDay() + now.getHours() + '&diagnostics=true&callback=?&q=';
+
       if(options.location !== '') {
-        weatherUrl += 'select * from weather.forecast where woeid in (select woeid from geo.placefinder where text="'+options.location+'" and gflags="R" limit 1) and u="'+options.unit+'"';
+        /* If latitude/longitude coordinates, need to format a little different. */
+        var location = '';
+        if(/^(\-?\d+(\.\d+)?),\s*(\-?\d+(\.\d+)?)$/.test(options.location)) {
+          location = '(' + options.location + ')';
+        } else {
+          location = options.location;
+        }
+
+        weatherUrl += 'select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '") and u="' + options.unit + '"';
       } else if(options.woeid !== '') {
-        weatherUrl += 'select * from weather.forecast where woeid='+options.woeid+' and u="'+options.unit+'"';
+        weatherUrl += 'select * from weather.forecast where woeid=' + options.woeid + ' and u="' + options.unit + '"';
       } else {
-        options.error({message: "Could not retrieve weather due to an invalid location."});
+        options.error('Could not retrieve weather due to an invalid location.');
         return false;
       }
 
@@ -106,7 +115,7 @@ function loadWeather(location, woeid) {
                 weather = {},
                 forecast,
                 compass = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW', 'N'],
-                image404 = "https://s.yimg.com/os/mit/media/m/weather/images/icons/l/44d-100567.png";
+                image404 = 'https://s.yimg.com/os/mit/media/m/weather/images/icons/l/44d-100567.png';
 
             weather.title = result.item.title;
             weather.temp = result.item.condition.temp;
@@ -137,12 +146,12 @@ function loadWeather(location, woeid) {
               weather.heatindex = result.item.condition.temp;
             }
 
-            if(result.item.condition.code == "3200") {
+            if(result.item.condition.code == '3200') {
               weather.thumbnail = image404;
               weather.image = image404;
             } else {
-              weather.thumbnail = "https://s.yimg.com/zz/combo?a/i/us/nws/weather/gr/"+result.item.condition.code+"ds.png";
-              weather.image = "https://s.yimg.com/zz/combo?a/i/us/nws/weather/gr/"+result.item.condition.code+"d.png";
+              weather.thumbnail = 'https://s.yimg.com/zz/combo?a/i/us/nws/weather/gr/' + result.item.condition.code + 'ds.png';
+              weather.image = 'https://s.yimg.com/zz/combo?a/i/us/nws/weather/gr/' + result.item.condition.code + 'd.png';
             }
 
             weather.alt = {temp: getAltTemp(options.unit, result.item.condition.temp), high: getAltTemp(options.unit, result.item.forecast[0].high), low: getAltTemp(options.unit, result.item.forecast[0].low)};
@@ -161,8 +170,8 @@ function loadWeather(location, woeid) {
                 forecast.thumbnail = image404;
                 forecast.image = image404;
               } else {
-                forecast.thumbnail = "https://s.yimg.com/zz/combo?a/i/us/nws/weather/gr/"+result.item.forecast[i].code+"ds.png";
-                forecast.image = "https://s.yimg.com/zz/combo?a/i/us/nws/weather/gr/"+result.item.forecast[i].code+"d.png";
+                forecast.thumbnail = 'https://s.yimg.com/zz/combo?a/i/us/nws/weather/gr/' + result.item.forecast[i].code + 'ds.png';
+                forecast.image = 'https://s.yimg.com/zz/combo?a/i/us/nws/weather/gr/' + result.item.forecast[i].code + 'd.png';
               }
 
               weather.forecast.push(forecast);
@@ -170,7 +179,7 @@ function loadWeather(location, woeid) {
 
             options.success(weather);
           } else {
-            options.error({message: "There was an error retrieving the latest weather information. Please try again.", error: data.query.results.channel.item.title});
+            options.error('There was a problem retrieving the latest weather information.');
           }
         }
       );
