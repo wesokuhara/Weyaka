@@ -40,7 +40,6 @@ mongoose.connect(database_uri)
 
 const app = express()
 
-// all environments
 app.set('port', process.env.PORT || 3000)
 app.set('views', path.join(__dirname, 'views'))
 app.engine('handlebars', handlebars())
@@ -73,7 +72,6 @@ app.get('/about', about.view)
 
 app.post('/addNote', digest.addNote)
 app.post('/addEvent', digest.addEvent)
-
 app.post('/deleteNote/:id', digest.deleteNote)
 app.post('/deleteEvent/:id', digest.deleteEvent)
 
