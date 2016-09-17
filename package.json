@@ -4,10 +4,10 @@
   "author": "Wes Okuhara, Yashna Bowen, Kathy Hoang",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wesokuhara/weyaka"
+    "url": "https://github.com/wesokuhara/weyaka.git"
   },
   "license": "MIT",
-  "private": true,
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
