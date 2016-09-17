@@ -4,29 +4,31 @@
   "author": "Wes Okuhara, Yashna Bowen, Kathy Hoang",
   "repository": {
     "type": "git",
-    "url": "https://github.com/IntroHCI/lab5"
+    "url": "https://github.com/wesokuhara/weyaka"
   },
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "dependencies": {
+    "bluebird": "^3.4.6",
     "body-parser": "^1.14.1",
     "cookie-parser": "^1.4.0",
     "errorhandler": "^1.4.2",
     "express": "*",
+    "express-handlebars": "*",
     "express-session": "^1.11.3",
-    "express3-handlebars": "*",
     "method-override": "^2.3.5",
-    "mongodb": "2.0.45",
-    "mongoose": "3.8.24",
+    "mongoose": "^4.6.0",
     "morgan": "^1.6.1",
-    "multer": "^1.0.6",
-    "serve-favicon": "^2.3.0",
     "serve-static": "^1.10.0"
   },
   "engines": {
-    "node": "4.0.0"
+    "node": "6.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
   }
 }
