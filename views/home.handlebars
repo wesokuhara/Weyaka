@@ -7,11 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<!-- Import CSS -->
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/flat-ui.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" rel="stylesheet">
 	<link href="css/flaticon.css" rel="stylesheet">
 	<link href="css/simple-weather.css" rel="stylesheet">
-	
+
 	<link href="css/global.css" rel="stylesheet">
 	<link href="css/home-page.css" rel="stylesheet">
    {{> tracking_code_script}}
@@ -42,9 +42,9 @@
 
 		</div>
 	</nav>
-	
+
 	<div class="container">
-		
+
 		<!-- TOP ROW -->
 		<div class="row">
 			<!-- TRAFFIC -->
@@ -67,7 +67,7 @@
 					<div id="traffic-home">
 						<p>Loading...</p>
 					</div>
-					<img src="images/boxes/traffic-box.png" 
+					<img src="images/boxes/traffic-box.png"
 					class="img-responsive">
 				</a>
 			</div>
@@ -76,7 +76,7 @@
 			<div class="icon weather-icon">
 				<a href="digest#weather" onclick="weather_click()">
 
-					
+
 					<!--Woopra Visitor Tracking code-->
 					<script type="text/javascript">
 					 /**adding Woopra tracking code for version mouseover traffic module*/
@@ -102,7 +102,7 @@
 			<!-- NOTES -->
 			<div class="icon note-icon">
 				<a href="digest#notes" onclick="note_click()">
-					<div id="notecountHome"> 
+					<div id="notecountHome">
 						<h2>{{noteCount}}<br>Note(s)</h2>
 					</div>
 
@@ -115,11 +115,11 @@
   					}
 					</script>
 
-					<img src="images/boxes/notes-box.png" 
+					<img src="images/boxes/notes-box.png"
 					class="img-responsive">
 				</a>
 			</div>
-		
+
 
 			<!-- SCHEDULE -->
 			<div class="icon schedule-icon">
@@ -141,9 +141,9 @@
 							{{events.0.date}}</h4>
 							<h2><b>{{events.0.title}}</b></h2>
 						{{/if}}
-															
+
 					</div>
-					<img src="images/boxes/schedule-box.png" 
+					<img src="images/boxes/schedule-box.png"
 					class="img-responsive">
 				</a>
 			</div>
@@ -151,8 +151,8 @@
 	</div>
 
   	<!-- Link Javascript -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="js/bootstrap.js"></script>
+	<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="js/weyaka.js"></script>
 
 	<!-- Weather Temperature JS -->

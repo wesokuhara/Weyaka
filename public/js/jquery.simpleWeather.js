@@ -1,6 +1,6 @@
 /**
  * traffic.js
- * 
+ *
  * JS file to inject weather information
  *
  * Weyaka
@@ -11,8 +11,7 @@
 $(document).ready(function() {
 
   if (!("geolocation" in navigator)) {
-    /* geolocation IS NOT available */
-    $("#simpleWeather").html("<p class='noLocationError'>No geolocation.</p>");
+    $("#simpleWeather").html("<p class='noLocationError'>No geolocation.</p>")
   }
 
   var geo_options = {
@@ -32,7 +31,7 @@ $(document).ready(function() {
   function (error) {
     console.log(error);
     if (error.code == error.PERMISSION_DENIED) {
-      $("#simpleWeather").html("<p class='noLocationError'>Please enable your browser geolocation service to use this feature.</p>");
+      $("#simpleWeather").html("<p class='noLocationError'>Location Service Disabled</p>");
     }
     else if (error.code == error.TIMEOUT) {
       $("#simpleWeather").html("<p class='noLocationError'>Location Timeout</p>");
@@ -53,10 +52,10 @@ function loadWeather(location, woeid) {
       html += '<h4>'+weather.city+', '+weather.region+'<br>';
       html += weather.currently+'<br>';
       html += weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</h4><br>';
-      
+
       var timestamp = moment(weather.updated);
       html += 'Weather updated '+moment(timestamp).fromNow();
-          
+
       $("#simpleWeather").html(html);
     },
     error: function(error) {
